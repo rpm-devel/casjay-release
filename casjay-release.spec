@@ -9,15 +9,15 @@ URL: http://casjaysdev.com/
 
 %if 0%{?rhel} < 8
 Source0: casjay.rh.repo
-Source1: https://rpm-devel.sourceforge.io/ZREPO/RHEL/$releasever/keys/RPM-GPG-KEY-casjay
+Source1: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-casjay
 %endif
 %if 0%{?rhel} >= 8
 Source0: casjay.rh8.repo
-Source1: https://rpm-devel.sourceforge.io/ZREPO/RHEL/8/keys/RPM-GPG-KEY-casjay
+Source1: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-casjay
 %endif
 %if 0%{?fedora}
 Source0: casjay.fc.repo
-Source1: https://rpm-devel.sourceforge.io/ZREPO/Fedora/fc$releasever/keys/RPM-GPG-KEY-casjay
+Source1: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-casjay
 %endif
 
 %description
