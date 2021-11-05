@@ -1,0 +1,10 @@
+# This repository only provides GLPI 9.3 and its plugins
+# NOTICE: you need at least PHP 5.6
+
+[remi-glpi93]
+name=Remi's GLPI 9.3 RPM repository for Enterprise Linux $releasever - $basearch
+mirrorlist=http://cdn.remirepo.net/enterprise/$releasever/glpi93/mirror
+enabled=0
+gpgcheck=1
+gpgkey=https://rpm-devel.sourceforge.io/ZREPO/RHEL/$releasever/keys/RPM-GPG-KEY-remi
+

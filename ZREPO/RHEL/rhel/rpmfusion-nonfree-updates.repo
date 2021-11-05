@@ -1,0 +1,21 @@
+[rpmfusion-nonfree-updates]
+name=RPM Fusion for EL $releasever - Nonfree - Updates
+mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-el-updates-released-$releasever&arch=$basearch
+enabled=1
+gpgcheck=1
+gpgkey=https://rpm-devel.sourceforge.io/ZREPO/RHEL/$releasever/keys/RPM-GPG-KEY-rpmfusion-nonfree-el-$releasever
+
+[rpmfusion-nonfree-updates-debuginfo]
+name=RPM Fusion for EL $releasever - Nonfree - Updates Debug
+mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-el-updates-released-debug-$releasever&arch=$basearch
+enabled=0
+gpgcheck=1
+gpgkey=https://rpm-devel.sourceforge.io/ZREPO/RHEL/$releasever/keys/RPM-GPG-KEY-rpmfusion-nonfree-el-$releasever
+
+[rpmfusion-nonfree-updates-source]
+name=RPM Fusion for EL $releasever - Nonfree - Updates Source
+mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-el-updates-released-source-$releasever&arch=$basearch
+enabled=0
+gpgcheck=1
+gpgkey=https://rpm-devel.sourceforge.io/ZREPO/RHEL/$releasever/keys/RPM-GPG-KEY-rpmfusion-nonfree-el-$releasever
+

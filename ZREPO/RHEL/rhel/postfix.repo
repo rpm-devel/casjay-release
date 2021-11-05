@@ -1,0 +1,7 @@
+[postfixrepo]
+name=EL-$releasever Postfix repo
+baseurl=https://repos.oostergo.net/$releasever/postfix-3.4
+gpgkey=https://repos.oostergo.net/RPM-GPG-KEY
+enabled=1
+gpgcheck=1
+

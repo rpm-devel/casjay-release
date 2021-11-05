@@ -1,0 +1,56 @@
+[remi]
+name=Remi's RPM repository for Enterprise Linux $releasever - $basearch
+mirrorlist=http://cdn.remirepo.net/enterprise/$releasever/remi/mirror
+enabled=0
+gpgcheck=1
+gpgkey=https://rpm-devel.sourceforge.io/ZREPO/RHEL/$releasever/keys/RPM-GPG-KEY-remi
+
+[remi-php55]
+name=Remi's PHP 5.5 RPM repository for Enterprise Linux $releasever - $basearch
+mirrorlist=http://cdn.remirepo.net/enterprise/$releasever/php55/mirror
+enabled=0
+gpgcheck=1
+gpgkey=https://rpm-devel.sourceforge.io/ZREPO/RHEL/$releasever/keys/RPM-GPG-KEY-remi
+
+[remi-php56]
+name=Remi's PHP 5.6 RPM repository for Enterprise Linux $releasever - $basearch
+mirrorlist=http://cdn.remirepo.net/enterprise/$releasever/php56/mirror
+enabled=0
+gpgcheck=1
+gpgkey=https://rpm-devel.sourceforge.io/ZREPO/RHEL/$releasever/keys/RPM-GPG-KEY-remi
+
+[remi-test]
+name=Remi's test RPM repository for Enterprise Linux $releasever - $basearch
+mirrorlist=http://cdn.remirepo.net/enterprise/$releasever/test/mirror
+enabled=0
+gpgcheck=1
+gpgkey=https://rpm-devel.sourceforge.io/ZREPO/RHEL/$releasever/keys/RPM-GPG-KEY-remi
+
+[remi-debuginfo]
+name=Remi's RPM repository for Enterprise Linux $releasever - $basearch - debuginfo
+baseurl=http://rpms.remirepo.net/enterprise/$releasever/debug-remi/$basearch/
+enabled=0
+gpgcheck=1
+gpgkey=https://rpm-devel.sourceforge.io/ZREPO/RHEL/$releasever/keys/RPM-GPG-KEY-remi
+
+[remi-php55-debuginfo]
+name=Remi's PHP 5.5 RPM repository for Enterprise Linux $releasever - $basearch - debuginfo
+baseurl=http://rpms.remirepo.net/enterprise/$releasever/debug-php55/$basearch/
+enabled=0
+gpgcheck=1
+gpgkey=https://rpm-devel.sourceforge.io/ZREPO/RHEL/$releasever/keys/RPM-GPG-KEY-remi
+
+[remi-php56-debuginfo]
+name=Remi's PHP 5.6 RPM repository for Enterprise Linux $releasever - $basearch - debuginfo
+baseurl=http://rpms.remirepo.net/enterprise/$releasever/debug-php56/$basearch/
+enabled=0
+gpgcheck=1
+gpgkey=https://rpm-devel.sourceforge.io/ZREPO/RHEL/$releasever/keys/RPM-GPG-KEY-remi
+
+[remi-test-debuginfo]
+name=Remi's test RPM repository for Enterprise Linux $releasever - $basearch - debuginfo
+baseurl=http://rpms.remirepo.net/enterprise/$releasever/debug-test/$basearch/
+enabled=0
+gpgcheck=1
+gpgkey=https://rpm-devel.sourceforge.io/ZREPO/RHEL/$releasever/keys/RPM-GPG-KEY-remi
+

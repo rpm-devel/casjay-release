@@ -1,0 +1,13 @@
+[zabbix]
+name=Zabbix Official Repository - $basearch
+baseurl=http://repo.zabbix.com/zabbix/3.5/rhel/$releasever/$basearch/
+enabled=0
+gpgcheck=1
+gpgkey=https://rpm-devel.sourceforge.io/ZREPO/RHEL/$releasever/keys/RPM-GPG-KEY-ZABBIX-A14FE591
+
+[zabbix-non-supported]
+name=Zabbix Official Repository non-supported - $basearch 
+baseurl=http://repo.zabbix.com/non-supported/rhel/$releasever/$basearch/
+enabled=0
+gpgkey=https://rpm-devel.sourceforge.io/ZREPO/RHEL/$releasever/keys/RPM-GPG-KEY-ZABBIX
+gpgcheck=1

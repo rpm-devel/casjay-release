@@ -1,0 +1,119 @@
+#CasjaysDev Repo Config
+
+[casjay-extras]
+name=Casjays Extras for server use
+mirrorlist=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora/fc/mirrors/extras
+enabled=1
+gpgcheck=1
+gpgkey=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora/fc$releasever/keys/RPM-GPG-KEY-casjay
+protect=0
+
+[casjay-rpms]
+name=Casjays RPMs for server use
+mirrorlist=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora/fc/mirrors/rpms
+enabled=1
+gpgcheck=1
+gpgkey=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora/fc$releasever/keys/RPM-GPG-KEY-casjay
+protect=0
+
+[casjay-addons]
+name=Casjays Addons for server use
+mirrorlist=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora/fc/mirrors/addons
+enabled=1
+gpgcheck=1
+gpgkey=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora/fc$releasever/keys/RPM-GPG-KEY-casjay
+protect=0
+
+[casjay-sources]
+name=Casjays source packages
+mirrorlist=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora/fc/mirrors/srpms
+enabled=0
+gpgcheck=1
+gpgkey=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora/fc$releasever/keys/RPM-GPG-KEY-casjay
+protect=0
+
+[casjay-debug]
+name=Casjays debug packages
+mirrorlist=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora/fc/mirrors/debug
+enabled=0
+gpgcheck=1
+gpgkey=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora/fc$releasever/keys/RPM-GPG-KEY-casjay
+protect=0
+
+[livna]
+name=rpm.livna.org for $releasever - $basearch
+mirrorlist=http://rpm.livna.org/mirrorlist
+failovermethod=roundrobin
+enabled=0
+gpgcheck=1
+gpgkey=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora/fc$releasever/keys/RPM-GPG-KEY-livna
+
+[packages-microsoft-com-prod]
+name=packages-microsoft-com-prod
+baseurl=https://packages.microsoft.com/rhel/7/prod/
+enabled=0
+gpgcheck=1
+gpgkey=https://packages.microsoft.com/keys/microsoft.asc
+
+[opera]
+name=Opera packages
+type=rpm-md
+baseurl=https://rpm.opera.com/rpm
+gpgcheck=0
+gpgkey=https://rpm.opera.com/rpmrepo.key
+enabled=1
+
+[rpmfusion-free]
+name=RPM Fusion for Fedora $releasever - Free
+#baseurl=http://download1.rpmfusion.org/free/Fedora/releases/$releasever/Everything/$basearch/os/
+metalink=https://mirrors.rpmfusion.org/metalink?repo=free-fedora-$releasever&arch=$basearch
+enabled=0
+type=rpm-md
+gpgcheck=1
+repo_gpgcheck=0
+gpgkey=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora/fc$releasever/keys/RPM-GPG-KEY-rpmfusion-free-fedora-$releasever
+
+[rpmfusion-free-updates]
+name=RPM Fusion for Fedora $releasever - Free - Updates
+#baseurl=http://download1.rpmfusion.org/free/Fedora/updates/$releasever/$basearch/
+metalink=https://mirrors.rpmfusion.org/metalink?repo=free-fedora-updates-released-$releasever&arch=$basearch
+enabled=0
+type=rpm-md
+gpgcheck=1
+repo_gpgcheck=0
+gpgkey=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora/fc$releasever/keys/RPM-GPG-KEY-rpmfusion-free-fedora-$releasever
+
+[rpmfusion-nonfree]
+name=RPM Fusion for Fedora $releasever - Nonfree
+#baseurl=http://download1.rpmfusion.org/nonfree/Fedora/releases/$releasever/Everything/$basearch/os/
+metalink=https://mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-$releasever&arch=$basearch
+enabled=0
+type=rpm-md
+gpgcheck=1
+repo_gpgcheck=0
+gpgkey=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora/fc$releasever/keys/RPM-GPG-KEY-rpmfusion-nonfree-fedora-$releasever
+
+[rpmfusion-nonfree-updates]
+name=RPM Fusion for Fedora $releasever - Nonfree - Updates
+#baseurl=http://download1.rpmfusion.org/nonfree/Fedora/updates/$releasever/$basearch/
+metalink=https://mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-updates-released-$releasever&arch=$basearch
+enabled=0
+type=rpm-md
+gpgcheck=1
+repo_gpgcheck=0
+gpgkey=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora/fc$releasever/keys/RPM-GPG-KEY-rpmfusion-nonfree-fedora-$releasever
+
+[vivaldi]
+name=vivaldi
+enabled=0
+baseurl=https://repo.vivaldi.com/archive/rpm/$basearch
+gpgcheck=1
+gpgkey=https://repo.vivaldi.com/archive/linux_signing_key.pub
+
+[code]
+name=Visual Studio Code
+baseurl=https://packages.microsoft.com/yumrepos/vscode
+enabled=0
+gpgcheck=1
+gpgkey=https://packages.microsoft.com/keys/microsoft.asc
+
