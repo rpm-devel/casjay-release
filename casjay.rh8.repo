@@ -45,14 +45,14 @@ name=Remi's RPM repository for Enterprise Linux $releasever - $basearch
 mirrorlist=http://cdn.remirepo.net/enterprise/$releasever/safe/$basearch/mirror
 enabled=0
 gpgcheck=1
-gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-remi
+gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-remi.el8
 
 [casjay-remi-php]
 name=Remi's PHP 8.0 RPM repository for Enterprise Linux $releasever - $basearch
 mirrorlist=https://rpms.remirepo.net/enterprise/$releasever/php80/$basearch/mirror
 enabled=1
 gpgcheck=1
-gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-remi
+gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-remi.el8
 protect=0
 
 [casjay-remi-safe]
@@ -60,7 +60,7 @@ name=Safe Remi's RPM repository for Enterprise Linux $releasever - $basearch
 mirrorlist=http://cdn.remirepo.net/enterprise/$releasever/safe/$basearch/mirror
 enabled=1
 gpgcheck=1
-gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-remi
+gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-remi.el8
 protect=0
 
 [casjay-elrepo]
