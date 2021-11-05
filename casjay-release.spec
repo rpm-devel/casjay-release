@@ -40,7 +40,7 @@ This package contains yum configuration for the casjaysdev.com Linux Repository,
 %post
 %if 0%{?rhel} >= 8
 if grep -vq 'best=' /etc/yum.conf; then
-  sed '/^\[main\]/a best=False' /etc/yum.conf &>/dev/null
+  sed -i '/^\[main\]/a best=False' /etc/yum.conf &>/dev/null
 fi
 %endif
 
