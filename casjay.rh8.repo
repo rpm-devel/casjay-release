@@ -16,6 +16,14 @@ gpgcheck=1
 gpgkey=https://download.rockylinux.org/pub/rocky/$releasever/AppStream/$basearch/os/RPM-GPG-KEY-rockyofficial
 module_hotfixes=true
 
+[casjay-powertools]
+name=Casjays powertools for server use
+baseurl=https://download.rockylinux.org/pub/rocky/$releasever/PowerTools/$basearch/os
+enabled=1
+gpgcheck=1
+gpgkey=https://download.rockylinux.org/pub/rocky/$releasever/AppStream/$basearch/os/RPM-GPG-KEY-rockyofficial
+module_hotfixes=true
+
 [casjay-extras]
 name=Casjays Extras for server use
 mirrorlist=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/RHEL/rhel/mirrors/extras
