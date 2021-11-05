@@ -6,9 +6,7 @@ baseurl=https://download.rockylinux.org/pub/rocky/$releasever/BaseOS/$basearch/o
 enabled=1
 gpgcheck=1
 gpgkey=https://download.rockylinux.org/pub/rocky/$releasever/BaseOS/$basearch/os/RPM-GPG-KEY-rockyofficial
-protect=0
 module_hotfixes=true
-best=false
 
 [casjay-updates]
 name=Casjays Updates for server use
@@ -16,9 +14,7 @@ baseurl=https://download.rockylinux.org/pub/rocky/$releasever/AppStream/$basearc
 enabled=1
 gpgcheck=1
 gpgkey=https://download.rockylinux.org/pub/rocky/$releasever/AppStream/$basearch/os/RPM-GPG-KEY-rockyofficial
-protect=0
 module_hotfixes=true
-best=false
 
 [casjay-extras]
 name=Casjays Extras for server use
@@ -26,9 +22,7 @@ mirrorlist=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/RHEL/rhel
 enabled=1
 gpgcheck=1
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-casjay
-protect=0
 module_hotfixes=true
-best=false
 
 [casjay-rpms]
 name=Casjays RPMs for server use
@@ -36,9 +30,7 @@ mirrorlist=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/RHEL/rhel
 enabled=1
 gpgcheck=1
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-casjay
-protect=0
 module_hotfixes=true
-best=false
 
 [casjay-addons]
 name=Casjays Extras for server use
@@ -46,9 +38,7 @@ mirrorlist=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/RHEL/rhel
 enabled=0
 gpgcheck=1
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-casjay
-protect=0
 module_hotfixes=true
-best=false
 
 [casjay-remi]
 name=Remi's RPM repository for Enterprise Linux $releasever - $basearch
@@ -57,7 +47,6 @@ enabled=0
 gpgcheck=1
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-remi.el8
 module_hotfixes=true
-best=false
 
 [casjay-remi-php]
 name=Remi's PHP 8.0 RPM repository for Enterprise Linux $releasever - $basearch
@@ -65,19 +54,15 @@ mirrorlist=https://rpms.remirepo.net/enterprise/$releasever/php80/$basearch/mirr
 enabled=1
 gpgcheck=1
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-remi.el8
-protect=0
 module_hotfixes=true
-best=false
 
 [casjay-remi-safe]
 name=Safe Remi's RPM repository for Enterprise Linux $releasever - $basearch
 mirrorlist=http://cdn.remirepo.net/enterprise/$releasever/safe/$basearch/mirror
-enabled=1
+enabled=0
 gpgcheck=1
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-remi.el8
-protect=0
 module_hotfixes=true
-best=false
 
 [casjay-elrepo]
 name=ELRepo.org Community Enterprise Linux Repository - el$releasever
@@ -85,9 +70,7 @@ mirrorlist=http://mirrors.elrepo.org/mirrors-elrepo.el$releasever
 enabled=1
 gpgcheck=1
 gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
-protect=0
 module_hotfixes=true
-best=false
 
 [casjay-elrepo-kernel]
 name=ELRepo.org Community Enterprise Linux Kernel Repository - el$releasever
@@ -95,9 +78,7 @@ mirrorlist=http://mirrors.elrepo.org/mirrors-elrepo-kernel.el$releasever
 enabled=1
 gpgcheck=1
 gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
-protect=0
 module_hotfixes=true
-best=false
 
 [casjay-elrepo-extras]
 name=ELRepo.org Community Enterprise Linux Extras Repository - el$releasever
@@ -105,9 +86,7 @@ mirrorlist=http://mirrors.elrepo.org/mirrors-elrepo-extras.el$releasever
 enabled=0
 gpgcheck=1
 gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
-protect=0
 module_hotfixes=true
-best=false
 
 [casjay-epel]
 name=Extra Packages for Enterprise Linux $releasever - $basearch
@@ -117,7 +96,6 @@ enabled=1
 gpgcheck=1
 gpgkey=https://archive.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-$releasever
 module_hotfixes=true
-best=false
 
 [casjay-mariadb]
 name=MariaDB
@@ -125,7 +103,6 @@ baseurl=http://yum.mariadb.org/10.6/rhel/8/$basearch
 gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
 gpgcheck=1
 module_hotfixes=true
-best=false
 
 [casjay-postfix]
 name=EL-$releasever Postfix repo
@@ -134,7 +111,6 @@ gpgkey=https://repos.oostergo.net/RPM-GPG-KEY
 enabled=1
 gpgcheck=1
 module_hotfixes=true
-best=false
 
 [casjay-rpmfusion-free-updates]
 name=RPM Fusion for EL $releasever - Free - Updates
@@ -143,7 +119,6 @@ enabled=1
 gpgcheck=1
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-rpmfusion-free-el-$releasever
 module_hotfixes=true
-best=false
 
 [casjay-rpmfusion-nonfree-updates]
 name=RPM Fusion for EL $releasever - Nonfree - Updates
@@ -152,7 +127,6 @@ enabled=1
 gpgcheck=1
 gpgkey=https://rpm-devel.sourceforge.io/ZREPO/RHEL/$releasever/keys/RPM-GPG-KEY-rpmfusion-nonfree-el-$releasever
 module_hotfixes=true
-best=false
 
 [casjay-ntop]
 name=ntop packages
@@ -161,7 +135,6 @@ enabled=0
 gpgcheck=1
 gpgkey=http://packages.ntop.org/centos/RPM-GPG-KEY-deri
 module_hotfixes=true
-best=false
 
 [casjay-ntop-noarch]
 name=ntop packages
@@ -170,7 +143,6 @@ enabled=0
 gpgcheck=1
 gpgkey=http://packages.ntop.org/centos/RPM-GPG-KEY-deri
 module_hotfixes=true
-best=false
 
 [casjay-zabbix]
 name=Zabbix Official Repository - $basearch
@@ -179,7 +151,6 @@ enabled=0
 gpgcheck=1
 gpgkey=https://repo.zabbix.com/RPM-GPG-KEY-ZABBIX
 module_hotfixes=true
-best=false
 
 [casjay-zabbix-non-supported]
 name=Zabbix Official Repository non-supported - $basearch
@@ -188,7 +159,6 @@ enabled=0
 gpgkey=https://repo.zabbix.com/RPM-GPG-KEY-ZABBIX
 gpgcheck=1
 module_hotfixes=true
-best=false
 
 [casjay-nodejs]
 name=nodejs for Centos $releasever - Base
@@ -197,7 +167,6 @@ enabled=1
 gpgcheck=1
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/NODESOURCE-GPG-SIGNING-KEY-EL
 module_hotfixes=true
-best=false
 
 [casjay-mono]
 name=mono-centos$releasever-stable
@@ -206,7 +175,6 @@ enabled=1
 gpgcheck=1
 gpgkey=https://download.mono-project.com/repo/xamarin.gpg
 module_hotfixes=true
-best=false
 
 [casjay-docker]
 name=Casjays docker for server use
@@ -214,7 +182,5 @@ baseurl=https://download.docker.com/linux/centos/$releasever/$basearch/stable
 enabled=1
 gpgcheck=1
 gpgkey=https://download.docker.com/linux/centos/gpg
-protect=0
 module_hotfixes=true
-best=false
 
