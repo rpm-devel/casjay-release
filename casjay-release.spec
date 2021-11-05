@@ -45,6 +45,13 @@ This package contains yum configuration for the casjaysdev.com Linux Repository,
 %dir %{_sysconfdir}/pki/rpm-gpg/
 %{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-casjay
 
+%post
+%if 0%{?rhel} >= 8
+if grep -q 'best=' /etc/yum.conf; then
+  sed '/^[main]=.*/a best=False' /etc/yum.conf
+fi
+%endif
+
 %changelog
 * Thu Nov 04 2021 CasjaysDev <rpm-devel@casjaysdev.com> - 1.4
 - Added rockylinux repos
