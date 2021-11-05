@@ -37,6 +37,14 @@ This package contains yum configuration for the casjaysdev.com Linux Repository,
 %clean
 %{__rm} -rf %{buildroot}
 
+%post
+%if 0%{?rhel} >= 8
+printf 'executing commands\n'
+if grep -vq 'best=' /etc/yum.conf; then
+  sed -i '/[\main\]/a best=False' /etc/yum.conf #&>/dev/null
+fi
+%endif
+
 %files
 %defattr(-, root, root, 0755)
 %pubkey RPM-GPG-KEY-casjay
@@ -44,13 +52,6 @@ This package contains yum configuration for the casjaysdev.com Linux Repository,
 %config %{_sysconfdir}/yum.repos.d/casjay.repo
 %dir %{_sysconfdir}/pki/rpm-gpg/
 %{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-casjay
-
-%post
-%if 0%{?rhel} >= 8
-if grep -vq 'best=' /etc/yum.conf; then
-  sed -i '/[\main\]/a best=False' /etc/yum.conf #&>/dev/null
-fi
-%endif
 
 %changelog
 * Thu Nov 04 2021 CasjaysDev <rpm-devel@casjaysdev.com> - 1.4
