@@ -123,6 +123,21 @@ enabled=1
 gpgcheck=1
 gpgkey=https://archive.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-$releasever
 
+[casjay-webmin]
+name=Webmin and Usermin
+#baseurl=https://download.webmin.com/download/yum
+mirrorlist=https://download.webmin.com/download/yum/mirrorlist
+enabled=1
+gpgkey=https://download.webmin.com/jcameron-key.asc
+gpgcheck=1
+
+[casjay-mongodb]
+name=MongoDB Repository
+baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/5.0/$basearch/
+gpgcheck=1
+enabled=1
+gpgkey=https://www.mongodb.org/static/pgp/server-5.0.asc
+
 [casjay-mariadb]
 name=MariaDB
 baseurl=http://yum.mariadb.org/10.6/rhel/$releasever/$basearch
