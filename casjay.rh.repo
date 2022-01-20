@@ -71,7 +71,7 @@ protect=0
 [casjay-remi]
 name=Remi's RPM repository for Enterprise Linux $releasever - $basearch
 mirrorlist=http://cdn.remirepo.net/enterprise/$releasever/remi/mirror
-enabled=0
+enabled=1
 gpgcheck=1
 gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi
 
@@ -122,27 +122,6 @@ failovermethod=priority
 enabled=1
 gpgcheck=1
 gpgkey=https://archive.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-$releasever
-
-[casjay-webmin]
-name=Webmin and Usermin
-#baseurl=https://download.webmin.com/download/yum
-mirrorlist=https://download.webmin.com/download/yum/mirrorlist
-enabled=1
-gpgkey=https://download.webmin.com/jcameron-key.asc
-gpgcheck=1
-
-[casjay-mongodb]
-name=MongoDB Repository
-baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/5.0/$basearch/
-gpgcheck=1
-enabled=1
-gpgkey=https://www.mongodb.org/static/pgp/server-5.0.asc
-
-[casjay-mariadb]
-name=MariaDB
-baseurl=http://yum.mariadb.org/10.6/rhel/$releasever/$basearch
-gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
-gpgcheck=1
 
 [casjay-postfix]
 name=Postfix repo for $releasever
@@ -213,11 +192,69 @@ enabled=1
 gpgcheck=1
 gpgkey=https://download.mono-project.com/repo/xamarin.gpg
 
-[casjay-docker]
-name=Casjays docker for server use
+[casjay-docker-stable]
+name=Docker CE Stable - $basearch
 baseurl=https://download.docker.com/linux/centos/$releasever/$basearch/stable
 enabled=1
 gpgcheck=1
 gpgkey=https://download.docker.com/linux/centos/gpg
-protect=0
 
+[casjay-docker-nightly]
+name=Docker CE Nightly - $basearch
+baseurl=https://download.docker.com/linux/centos/$releasever/$basearch/nightly
+enabled=0
+gpgcheck=1
+gpgkey=https://download.docker.com/linux/centos/gpg
+
+[casjay-sclo]
+name=CentOS-7 - SCLo sclo
+# baseurl=http://mirror.centos.org/centos/7/sclo/$basearch/sclo/
+mirrorlist=http://mirrorlist.centos.org?arch=$basearch&release=7&repo=sclo-sclo
+gpgcheck=1
+enabled=1
+gpgkey=https://www.centos.org/keys/RPM-GPG-KEY-CentOS-SIG-SCLo
+
+[casjay-sclo-rh]
+name=CentOS-7 - SCLo rh
+#baseurl=http://mirror.centos.org/centos/7/sclo/$basearch/rh/
+mirrorlist=http://mirrorlist.centos.org?arch=$basearch&release=7&repo=sclo-rh
+gpgcheck=1
+enabled=1
+gpgkey=https://www.centos.org/keys/RPM-GPG-KEY-CentOS-SIG-SCLo
+
+[casjay-mongodb]
+name=MongoDB Repository
+baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/5.0/x86_64/
+gpgcheck=1
+enabled=1
+gpgkey=https://www.mongodb.org/static/pgp/server-5.0.asc
+
+[casjay-mariadb]
+name=MariaDB
+baseurl=http://yum.mariadb.org/10.6/rhel/$releasever/$basearch
+gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+gpgcheck=1
+
+[casjay-pgsql-common]
+name=PostgreSQL common RPMs for RHEL/CentOS $releasever - $basearch
+baseurl=https://download.postgresql.org/pub/repos/yum/common/redhat/rhel-$releasever-$basearch
+enabled=1
+gpgcheck=1
+gpgkey=https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG
+repo_gpgcheck = 1
+
+[pgdg13]
+name=PostgreSQL 13 for RHEL/CentOS $releasever - $basearch
+baseurl=https://download.postgresql.org/pub/repos/yum/13/redhat/rhel-$releasever-$basearch
+enabled=1
+gpgcheck=1
+gpgkey=https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG
+repo_gpgcheck = 1
+
+[pgdg12]
+name=PostgreSQL 12 for RHEL/CentOS $releasever - $basearch
+baseurl=https://download.postgresql.org/pub/repos/yum/12/redhat/rhel-$releasever-$basearch
+enabled=1
+gpgcheck=1
+gpgkey=https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG
+repo_gpgcheck = 1
