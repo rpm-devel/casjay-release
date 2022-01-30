@@ -47,6 +47,13 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-oracle
 gpgcheck=1
 enabled=0
 
+[oc8-epel]
+name=Oracle Linux $releasever EPEL Packages for Development ($basearch)
+baseurl=https://download-ib01.fedoraproject.org/pub/epel/8/Everything/$basearch/
+gpgkey=https://download-ib01.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-8
+gpgcheck=1
+enabled=1
+
 [ol8_developer]
 name=Oracle Linux 8 Development Packages ($basearch)
 baseurl=https://yum$ociregion.$ocidomain/repo/OracleLinux/OL8/developer/$basearch/
