@@ -1,0 +1,84 @@
+[casjay-os]
+name=OS $releasever ($basearch)
+baseurl=https://ord.mirror.rackspace.com/rocky/8/BaseOS/$basearch/os/
+gpgkey=https://ord.mirror.rackspace.com/rocky/RPM-GPG-KEY-rockyofficial
+gpgcheck=1
+enabled=1
+
+[casjay-appstream]
+name=OS AppStream $releasever ($basearch)
+baseurl=https://ord.mirror.rackspace.com/rocky/8/AppStream/$basearch/os
+gpgkey=https://ord.mirror.rackspace.com/rocky/RPM-GPG-KEY-rockyofficial
+gpgcheck=1
+enabled=1
+
+[casjay-devel]
+name=OS Devel $releasever ($basearch)
+baseurl=https://ord.mirror.rackspace.com/rocky/8/Devel/$basearch/os//
+gpgkey=https://ord.mirror.rackspace.com/rocky/RPM-GPG-KEY-rockyofficial
+gpgcheck=1
+enabled=1
+
+[casjay-highavailability]
+name=OS HA $releasever ($basearch)
+baseurl=https://ord.mirror.rackspace.com/rocky/8/HighAvailability/$basearch/os/
+gpgkey=https://ord.mirror.rackspace.com/rocky/RPM-GPG-KEY-rockyofficial
+gpgcheck=1
+enabled=1
+
+[casjay-powertools]
+name=OS powertools $releasever ($basearch)
+baseurl=https://ord.mirror.rackspace.com/rocky/8/PowerTools/$basearch/os/
+gpgkey=https://ord.mirror.rackspace.com/rocky/RPM-GPG-KEY-rockyofficial
+gpgcheck=1
+enabled=1
+
+[casjay-plus]
+name=OS plus $releasever ($basearch)
+baseurl=https://ord.mirror.rackspace.com/rocky/8/centosplus/$basearch/os/
+gpgkey=https://ord.mirror.rackspace.com/rocky/RPM-GPG-KEY-rockyofficial
+gpgcheck=1
+enabled=1
+
+[casjay-extras]
+name=OS extras $releasever ($basearch)
+baseurl=https://ord.mirror.rackspace.com/rocky/8/extras/$basearch/os/
+gpgkey=https://ord.mirror.rackspace.com/rocky/RPM-GPG-KEY-rockyofficial
+gpgcheck=1
+enabled=1
+
+[casjay-epel]
+name=OS apel $releasever ($basearch)
+baseurl=https://ord.mirror.rackspace.com/epel/8/Everything/$basearch/
+gpgkey=https://ord.mirror.rackspace.com/rocky/RPM-GPG-KEY-rockyofficial
+gpgcheck=1
+enabled=1
+
+[casjay-nginx]
+name=nginx $releasever ($basearch)
+baseurl=https://ord.mirror.rackspace.com/nginx-org/packages/rhel/8/$basearch/
+gpgkey=https://nginx.org/keys/nginx_signing.key
+gpgcheck=1
+enabled=1
+
+[casjay-postgres]
+name=postgres $releasever ($basearch)
+baseurl=https://ord.mirror.rackspace.com/postgres/repos/yum/13/redhat/rhel-8-$basearch/
+gpgkey=https://ord.mirror.rackspace.com/postgres/repos/yum/RPM-GPG-KEY-PGDG-AARCH64
+gpgcheck=1
+enabled=1
+
+[casjay-mariadb]
+name=mariadb $releasever ($basearch)
+baseurl=https://mirror.its.dal.ca/mariadb/yum/10.6/centos8-$basearch
+gpgkey=https://mirror.its.dal.ca/mariadb/yum/RPM-GPG-KEY-MariaDB
+enabled=1
+module_hotfixes=1
+gpgcheck=1
+
+[casjay-mongo]
+name=mongodb $releasever ($basearch)
+baseurl=https://repo.mongodb.org/yum/redhat/8/mongodb-org/5.0/$basearch/
+gpgkey=https://www.mongodb.org/static/pgp/server-5.0.asc
+gpgcheck=1
+enabled=1
