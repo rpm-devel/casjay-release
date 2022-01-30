@@ -1,5 +1,5 @@
 [casjay-epel]
-name=OS apel $releasever ($basearch)
+name=OS epel $releasever ($basearch)
 baseurl=https://ord.mirror.rackspace.com/epel/8/Everything/$basearch/
 gpgkey=https://ord.mirror.rackspace.com/rocky/RPM-GPG-KEY-rockyofficial
 gpgcheck=1
