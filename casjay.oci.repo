@@ -1,3 +1,10 @@
+[casjay-powertools]
+name=OS powertools $releasever ($basearch)
+baseurl=https://ord.mirror.rackspace.com/centos/8/PowerTools/$basearch/os/
+gpgkey=https://ord.mirror.rackspace.com/centos/RPM-GPG-KEY-CentOS-Official
+gpgcheck=1
+enabled=1
+
 [casjay-epel]
 name=OS epel $releasever ($basearch)
 baseurl=https://ord.mirror.rackspace.com/epel/8/Everything/$basearch/
