@@ -35,7 +35,7 @@ enabled=1
 
 [casjay-plus]
 name=OS plus $releasever ($basearch)
-baseurl=https://ord.mirror.rackspace.com/rocky/8/centosplus/$basearch/os/
+baseurl=https://ord.mirror.rackspace.com/rocky/8/plus/$basearch/os/
 gpgkey=https://ord.mirror.rackspace.com/rocky/RPM-GPG-KEY-rockyofficial
 gpgcheck=1
 enabled=1
