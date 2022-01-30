@@ -33,3 +33,28 @@ baseurl=https://repo.mongodb.org/yum/redhat/8/mongodb-org/5.0/$basearch/
 gpgkey=https://www.mongodb.org/static/pgp/server-5.0.asc
 gpgcheck=1
 enabled=1
+
+[casjay-nodejs]
+name=nodejs for Centos $releasever - Base
+baseurl=https://rpm.nodesource.com/pub_16.x/el/$releasever/$basearch
+enabled=1
+gpgcheck=1
+gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/NODESOURCE-GPG-SIGNING-KEY-EL
+module_hotfixes=true
+
+[casjay-mono]
+name=mono-centos$releasever-stable
+baseurl=https://download.mono-project.com/repo/centos$releasever-stable/
+enabled=1
+gpgcheck=1
+gpgkey=https://download.mono-project.com/repo/xamarin.gpg
+module_hotfixes=true
+
+[casjay-docker]
+name=Casjays docker for server use
+baseurl=https://download.docker.com/linux/centos/$releasever/$basearch/stable
+enabled=1
+gpgcheck=1
+gpgkey=https://download.docker.com/linux/centos/gpg
+module_hotfixes=true
+
