@@ -1,7 +1,7 @@
 [casjay-powertools]
 name=OS powertools $releasever ($basearch)
-baseurl=https://ord.mirror.rackspace.com/centos/8/PowerTools/$basearch/os/
-gpgkey=https://ord.mirror.rackspace.com/centos/RPM-GPG-KEY-CentOS-Official
+baseurl=https://ord.mirror.rackspace.com/rocky/8/PowerTools/$basearch/os/
+gpgkey=https://ord.mirror.rackspace.com/rocky/RPM-GPG-KEY-rockyofficial
 gpgcheck=1
 enabled=1
 
