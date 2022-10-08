@@ -1,7 +1,7 @@
-#CasjaysDev Repo Config
+# CasjaysDev Repo Config
 
 [casjay-os]
-name=Casjays Base OS for server use
+name=Casjays Base OS for server use $releasever - $basearch
 baseurl=http://mirror.centos.org/centos/$releasever/os/$basearch
 enabled=1
 gpgcheck=1
@@ -10,7 +10,7 @@ protect=0
 exclude=docker
 
 [casjay-os-extras]
-name=Casjays Base Extras for server use
+name=Casjays Base Extras for server use $releasever - $basearch
 baseurl=http://mirror.centos.org/centos/$releasever/extras/$basearch
 enabled=1
 gpgcheck=1
@@ -19,7 +19,7 @@ protect=0
 exclude=docker
 
 [casjay-os-kvm]
-name=Casjays kvm for server use
+name=Casjays kvm for server use $releasever - $basearch
 baseurl=http://mirror.centos.org/centos/$releasever/virt/$basearch/kvm-common
 enabled=1
 gpgcheck=0
@@ -27,7 +27,7 @@ gpgkey=http://mirror.centos.org/centos/RPM-GPG-KEY-CentOS-$releasever
 protect=0
 
 [casjay-os-libvirt]
-name=Casjays libvirt for server use
+name=Casjays libvirt for server use $releasever - $basearch
 baseurl=http://mirror.centos.org/centos/$releasever/virt/$basearch/libvirt-latest
 enabled=1
 gpgcheck=0
@@ -35,7 +35,7 @@ gpgkey=http://mirror.centos.org/centos/RPM-GPG-KEY-CentOS-$releasever
 protect=0
 
 [casjay-os-updates]
-name=Casjays Updates for server use
+name=Casjays Updates for server use $releasever - $basearch 
 baseurl=http://mirror.centos.org/centos/$releasever/updates/$basearch
 enabled=1
 gpgcheck=1
@@ -44,21 +44,21 @@ protect=0
 exclude=docker
 
 [casjay-sclo]
-name=CentOS $releasever Software Collections
+name=CentOS Software Collections $releasever - $basearch
 mirrorlist=http://mirrorlist.centos.org?arch=$basearch&release=$releasever&repo=sclo-sclo
 gpgcheck=1
 enabled=1
 gpgkey=https://www.centos.org/keys/RPM-GPG-KEY-CentOS-SIG-SCLo
 
 [casjay-sclo-rh]
-name=CentOS $releasever Software Collections rh
+name=CentOS Software Collections rh $releasever - $basearch
 mirrorlist=http://mirrorlist.centos.org?arch=$basearch&release=$releasever&repo=sclo-rh
 gpgcheck=1
 enabled=1
 gpgkey=https://www.centos.org/keys/RPM-GPG-KEY-CentOS-SIG-SCLo
 
 [casjay-extras]
-name=Casjays Extras for server use
+name=Casjays Extras for server use $releasever - $basearch
 mirrorlist=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/RHEL/rhel/mirrors/extras
 enabled=1
 gpgcheck=1
@@ -67,7 +67,7 @@ protect=0
 exclude=docker
 
 [casjay-rpms]
-name=Casjays RPMs for server use
+name=Casjays RPMs for server use $releasever - $basearch
 mirrorlist=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/RHEL/rhel/mirrors/rpms
 enabled=1
 gpgcheck=1
@@ -75,7 +75,7 @@ gpgkey=https://rpm-devel.sourceforge.io/ZREPO/RHEL/$releasever/keys/RPM-GPG-KEY-
 protect=0
 
 [casjay-addons]
-name=Casjays Extras for server use
+name=Casjays Extras for server use $releasever - $basearch
 mirrorlist=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/RHEL/rhel/mirrors/addons
 enabled=0
 gpgcheck=1
@@ -90,8 +90,8 @@ gpgcheck=1
 gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi
 
 [casjay-remi-php]
-name=Remi's PHP 7.4 RPM repository for Enterprise Linux $releasever - $basearch
-mirrorlist=http://cdn.remirepo.net/enterprise/$releasever/php74/mirror
+name=Remi's PHP 8 RPM repository for Enterprise Linux $releasever - $basearch
+mirrorlist=http://cdn.remirepo.net/enterprise/$releasever/php80/mirror
 enabled=1
 gpgcheck=1
 gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi
@@ -106,23 +106,23 @@ gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi
 protect=0
 
 [casjay-elrepo]
-name=ELRepo.org Community Enterprise Linux Repository - el$releasever
+name=ELRepo.org Community Enterprise Linux Repository $releasever - $basearch
 mirrorlist=http://mirrors.elrepo.org/mirrors-elrepo.el$releasever
-enabled=1
+enabled=0
 gpgcheck=1
 gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
 protect=0
 
 [casjay-elrepo-kernel]
-name=ELRepo.org Community Enterprise Linux Kernel Repository - el$releasever
+name=ELRepo.org Community Enterprise Linux Kernel Repository $releasever - $basearch
 mirrorlist=http://mirrors.elrepo.org/mirrors-elrepo-kernel.el$releasever
-enabled=1
+enabled=0
 gpgcheck=1
 gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
 protect=0
 
 [casjay-elrepo-extras]
-name=ELRepo.org Community Enterprise Linux Extras Repository - el$releasever
+name=ELRepo.org Community Enterprise Linux Extras Repository $releasever - $basearch
 mirrorlist=http://mirrors.elrepo.org/mirrors-elrepo-extras.el$releasever
 enabled=0
 gpgcheck=1
@@ -145,111 +145,103 @@ enabled=1
 gpgcheck=1
 
 [casjay-rpmfusion-free-updates]
-name=RPM Fusion for EL $releasever - Free - Updates
+name=RPM Fusion Free Updates $releasever - $basearch
 mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=free-el-updates-released-$releasever&arch=$basearch
 enabled=0
 gpgcheck=1
 gpgkey=https://rpm-devel.sourceforge.io/ZREPO/RHEL/$releasever/keys/RPM-GPG-KEY-rpmfusion-free-el-$releasever
 
 [casjay-rpmfusion-nonfree-updates]
-name=RPM Fusion for EL $releasever - Nonfree - Updates
+name=RPM Fusion Nonfree Updates $releasever - $basearch
 mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-el-updates-released-$releasever&arch=$basearch
 enabled=0
 gpgcheck=1
 gpgkey=https://rpm-devel.sourceforge.io/ZREPO/RHEL/$releasever/keys/RPM-GPG-KEY-rpmfusion-nonfree-el-$releasever
 
 [casjay-ntop]
-name=ntop packages
+name=ntop packages $releasever - $basearch
 baseurl=http://packages.ntop.org/centos/$releasever/$basearch/
 enabled=0
 gpgcheck=1
 gpgkey=http://packages.ntop.org/centos/RPM-GPG-KEY-deri
 
 [casjay-ntop-noarch]
-name=ntop packages
+name=ntop noarch packages $releasever - $basearch
 baseurl=http://packages.ntop.org/centos/$releasever/noarch/
 enabled=0
 gpgcheck=1
 gpgkey=http://packages.ntop.org/centos/RPM-GPG-KEY-deri
 
 [casjay-zabbix]
-name=Zabbix Official Repository - $basearch
+name=Zabbix Official Repository $releasever - $basearch
 baseurl=http://repo.zabbix.com/zabbix/3.5/rhel/$releasever/$basearch/
 enabled=0
 gpgcheck=1
 gpgkey=https://repo.zabbix.com/RPM-GPG-KEY-ZABBIX
 
 [casjay-zabbix-non-supported]
-name=Zabbix Official Repository non-supported - $basearch
+name=Zabbix Official Repository non-supported $releasever - $basearch
 baseurl=http://repo.zabbix.com/non-supported/rhel/$releasever/$basearch/
 enabled=0
 gpgkey=https://repo.zabbix.com/RPM-GPG-KEY-ZABBIX
 gpgcheck=1
 
 [casjay-nodejs]
-name=nodejs for Centos $releasever
+name=nodejs 16 for $releasever - $basearch
 baseurl=https://rpm.nodesource.com/pub_16.x/el/$releasever/$basearch
 enabled=1
 gpgcheck=0
 
 [casjay-yarn]
-name=Yarn for Centos $releasever
+name=Yarn for $releasever - $basearch
 baseurl=https://dl.yarnpkg.com/rpm/
 enabled=1
 gpgcheck=1
 gpgkey=https://dl.yarnpkg.com/rpm/pubkey.gpg
 
 [casjay-mono]
-name=mono-centos$releasever-stable
+name=mono for $releasever - $basearch
 baseurl=https://download.mono-project.com/repo/centos$releasever-stable/
 enabled=1
 gpgcheck=1
 gpgkey=https://download.mono-project.com/repo/xamarin.gpg
 
 [casjay-docker-stable]
-name=Docker CE Stable - $basearch
+name=Docker CE Stable for $releasever - $basearch
 baseurl=https://download.docker.com/linux/centos/$releasever/$basearch/stable
 enabled=1
 gpgcheck=1
 gpgkey=https://download.docker.com/linux/centos/gpg
 
 [casjay-docker-nightly]
-name=Docker CE Nightly - $basearch
+name=Docker CE Nightly for $releasever - $basearch
 baseurl=https://download.docker.com/linux/centos/$releasever/$basearch/nightly
 enabled=0
 gpgcheck=1
 gpgkey=https://download.docker.com/linux/centos/gpg
 
 [casjay-mongodb]
-name=MongoDB for RHEL/CentOS $releasever - $basearch
+name=MongoDB 5 for $releasever - $basearch
 baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/5.0/x86_64/
 gpgcheck=1
 enabled=1
 gpgkey=https://www.mongodb.org/static/pgp/server-5.0.asc
 
 [casjay-mariadb]
-name=MariaDB server for RHEL/CentOS $releasever - $basearch
+name=MariaDB 10.6 for $releasever - $basearch
 baseurl=http://yum.mariadb.org/10.6/rhel/$releasever/$basearch
 gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
 gpgcheck=1
 
 [casjay-mssql]
-name=Microsoft SQL server for RHEL/CentOS $releasever - $basearch
+name=Microsoft SQL server 2019 for $releasever - $basearch
 baseurl=https://packages.microsoft.com/rhel/7/mssql-server-2019/
 enabled=1
 gpgcheck=1
 gpgkey=https://packages.microsoft.com/keys/microsoft.asc
 
-[casjay-pgsql-common]
-name=PostgreSQL common RPMs for RHEL/CentOS $releasever - $basearch
-baseurl=https://download.postgresql.org/pub/repos/yum/common/redhat/rhel-$releasever-$basearch
-enabled=1
-gpgcheck=1
-gpgkey=https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG
-repo_gpgcheck = 1
-
 [pgdg13]
-name=PostgreSQL 13 for RHEL/CentOS $releasever - $basearch
+name=PostgreSQL 13 for $releasever - $basearch
 baseurl=https://download.postgresql.org/pub/repos/yum/13/redhat/rhel-$releasever-$basearch
 enabled=1
 gpgcheck=1
@@ -257,8 +249,16 @@ gpgkey=https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG
 repo_gpgcheck = 1
 
 [pgdg12]
-name=PostgreSQL 12 for RHEL/CentOS $releasever - $basearch
+name=PostgreSQL 12 for $releasever - $basearch
 baseurl=https://download.postgresql.org/pub/repos/yum/12/redhat/rhel-$releasever-$basearch
+enabled=1
+gpgcheck=1
+gpgkey=https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG
+repo_gpgcheck = 1
+
+[casjay-pgsql-common]
+name=PostgreSQL common $releasever - $basearch
+baseurl=https://download.postgresql.org/pub/repos/yum/common/redhat/rhel-$releasever-$basearch
 enabled=1
 gpgcheck=1
 gpgkey=https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG
