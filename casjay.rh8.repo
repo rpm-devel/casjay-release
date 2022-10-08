@@ -75,7 +75,7 @@ module_hotfixes=true
 [casjay-elrepo]
 name=ELRepo.org Community Enterprise Linux Repository - el$releasever
 mirrorlist=http://mirrors.elrepo.org/mirrors-elrepo.el$releasever
-enabled=1
+enabled=0
 gpgcheck=1
 gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
 module_hotfixes=true
@@ -83,7 +83,7 @@ module_hotfixes=true
 [casjay-elrepo-kernel]
 name=ELRepo.org Community Enterprise Linux Kernel Repository - el$releasever
 mirrorlist=http://mirrors.elrepo.org/mirrors-elrepo-kernel.el$releasever
-enabled=1
+enabled=0
 gpgcheck=1
 gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
 module_hotfixes=true
@@ -191,4 +191,3 @@ enabled=1
 gpgcheck=1
 gpgkey=https://download.docker.com/linux/centos/gpg
 module_hotfixes=true
-
