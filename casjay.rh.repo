@@ -90,8 +90,8 @@ gpgcheck=1
 gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi
 
 [casjay-remi-php]
-name=Remi's PHP 8 RPM repository for Enterprise Linux $releasever - $basearch
-mirrorlist=http://cdn.remirepo.net/enterprise/$releasever/php80/mirror
+name=Remi's PHP 7 RPM repository for Enterprise Linux $releasever - $basearch
+mirrorlist=http://cdn.remirepo.net/enterprise/$releasever/php74/mirror
 enabled=1
 gpgcheck=1
 gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi
