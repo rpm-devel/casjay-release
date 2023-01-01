@@ -1,3 +1,11 @@
+#### Changelog: 2023-01-01 at 13:40:17  
+
+casjay-release.spec : 🗃️ Committing everything that changed 🗃️ 🚀  
+  
+#### End of changes for  - 2023-01-01 at 13:40:17  
+  
+----  
+  
 #### Changelog: 2023-01-01 at 10:35:56  
 
 casjay.oci.repo : 🗃️ Committing everything that changed 🗃️ 🚀  
