@@ -42,7 +42,7 @@ gpgcheck=1
 enabled=1
 
 [casjay-nodejs]
-name=nodejs for Centos $releasever - Base
+name=nodejs for RHEL $releasever - Base
 baseurl=https://rpm.nodesource.com/pub_16.x/el/$releasever/$basearch
 enabled=1
 gpgcheck=1

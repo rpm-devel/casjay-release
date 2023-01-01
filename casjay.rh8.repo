@@ -2,26 +2,26 @@
 
 [casjay-os]
 name=Casjays Base OS for server use
-baseurl=https://download.rockylinux.org/pub/rocky/$releasever/BaseOS/$basearch/os
+baseurl=http://mirror.siena.edu/almalinux/$releasever/BaseOS/$basearch/os
 enabled=1
 gpgcheck=1
-gpgkey=https://download.rockylinux.org/pub/rocky/$releasever/BaseOS/$basearch/os/RPM-GPG-KEY-rockyofficial
+gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 module_hotfixes=true
 
 [casjay-updates]
 name=Casjays Updates for server use
-baseurl=https://download.rockylinux.org/pub/rocky/$releasever/AppStream/$basearch/os
+baseurl=http://mirror.siena.edu/almalinux/$releasever/AppStream/$basearch/os
 enabled=1
 gpgcheck=1
-gpgkey=https://download.rockylinux.org/pub/rocky/$releasever/AppStream/$basearch/os/RPM-GPG-KEY-rockyofficial
+gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 module_hotfixes=true
 
 [casjay-powertools]
 name=Casjays powertools for server use
-baseurl=https://download.rockylinux.org/pub/rocky/$releasever/PowerTools/$basearch/os
+baseurl=http://mirror.siena.edu/almalinux/$releasever/PowerTools/$basearch/os
 enabled=1
 gpgcheck=1
-gpgkey=https://download.rockylinux.org/pub/rocky/$releasever/AppStream/$basearch/os/RPM-GPG-KEY-rockyofficial
+gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 module_hotfixes=true
 
 [casjay-extras]
@@ -169,7 +169,7 @@ gpgcheck=1
 module_hotfixes=true
 
 [casjay-nodejs]
-name=nodejs for Centos $releasever - Base
+name=nodejs for RHEL $releasever - Base
 baseurl=https://rpm.nodesource.com/pub_16.x/el/$releasever/$basearch
 enabled=1
 gpgcheck=1
