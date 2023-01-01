@@ -10,13 +10,13 @@ URL: http://casjaysdev.com/
 %if 0%{?rhel} >= 9
 Source0: casjay.rh9.repo
 Source1: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-casjay
-%elseif 0%{?rhel} >= 8
+%elif 0%{?rhel} >= 8
 Source0: casjay.rh8.repo
 Source1: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-casjay
-%elseif 0%{?rhel} < 8
+%elif 0%{?rhel} < 8
 Source0: casjay.rh.repo
 Source1: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-casjay
-%elseif 0%{?fedora}
+%elif 0%{?fedora}
 Source0: casjay.fc.repo
 Source1: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-casjay
 %endif
@@ -41,7 +41,6 @@ This package contains yum configuration for the casjaysdev.com Linux Repository,
 %post
 %if 0%{?rhel} >= 8
 grep -q 'best=' /etc/yum.conf || sed -i '/^\[main\]/a best=False' /etc/yum.conf &>/dev/null
-
 %endif
 
 %files
