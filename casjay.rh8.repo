@@ -57,8 +57,8 @@ gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys
 module_hotfixes=true
 
 [casjay-remi-php]
-name=Remi's PHP 8.0 RPM repository for Enterprise Linux $releasever - $basearch
-mirrorlist=https://rpms.remirepo.net/enterprise/$releasever/php80/$basearch/mirror
+name=Remi's PHP 7.4 RPM repository for Enterprise Linux $releasever - $basearch
+mirrorlist=https://rpms.remirepo.net/enterprise/$releasever/php74/$basearch/mirror
 enabled=1
 gpgcheck=1
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-remi.el8
