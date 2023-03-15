@@ -136,52 +136,12 @@ gpgcheck=1
 gpgkey=https://rpm-devel.sourceforge.io/ZREPO/RHEL/$releasever/keys/RPM-GPG-KEY-rpmfusion-nonfree-el-$releasever
 module_hotfixes=true
 
-[casjay-ntop]
-name=ntop packages
-baseurl=http://packages.ntop.org/centos/$releasever/$basearch/
-enabled=0
-gpgcheck=1
-gpgkey=http://packages.ntop.org/centos/RPM-GPG-KEY-deri
-module_hotfixes=true
-
-[casjay-ntop-noarch]
-name=ntop packages
-baseurl=http://packages.ntop.org/centos/$releasever/noarch/
-enabled=0
-gpgcheck=1
-gpgkey=http://packages.ntop.org/centos/RPM-GPG-KEY-deri
-module_hotfixes=true
-
-[casjay-zabbix]
-name=Zabbix Official Repository - $basearch
-baseurl=http://repo.zabbix.com/zabbix/3.5/rhel/$releasever/$basearch/
-enabled=0
-gpgcheck=1
-gpgkey=https://repo.zabbix.com/RPM-GPG-KEY-ZABBIX
-module_hotfixes=true
-
-[casjay-zabbix-non-supported]
-name=Zabbix Official Repository non-supported - $basearch
-baseurl=http://repo.zabbix.com/non-supported/rhel/$releasever/$basearch/
-enabled=0
-gpgkey=https://repo.zabbix.com/RPM-GPG-KEY-ZABBIX
-gpgcheck=1
-module_hotfixes=true
-
 [casjay-nodejs]
 name=nodejs for RHEL $releasever - Base
-baseurl=https://rpm.nodesource.com/pub_16.x/el/$releasever/$basearch
+baseurl=https://rpm.nodesource.com/pub_18.x/el/$releasever/$basearch
 enabled=1
 gpgcheck=1
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/NODESOURCE-GPG-SIGNING-KEY-EL
-module_hotfixes=true
-
-[casjay-mono]
-name=mono-centos$releasever-stable
-baseurl=https://download.mono-project.com/repo/centos$releasever-stable/
-enabled=1
-gpgcheck=1
-gpgkey=https://download.mono-project.com/repo/xamarin.gpg
 module_hotfixes=true
 
 [casjay-docker]

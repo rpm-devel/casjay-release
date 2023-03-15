@@ -1,20 +1,62 @@
+[casjay-os]
+name=OS $releasever ($basearch)
+baseurl=https://ord.mirror.rackspace.com/almalinux/$releasever/BaseOS/$basearch/os/
+gpgkey=https://ord.mirror.rackspace.com/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
+gpgcheck=1
+enabled=1
+
+[casjay-appstream]
+name=OS AppStream $releasever ($basearch)
+baseurl=https://ord.mirror.rackspace.com/almalinux/$releasever/AppStream/$basearch/os
+gpgkey=https://ord.mirror.rackspace.com/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
+gpgcheck=1
+enabled=1
+
+[casjay-devel]
+name=OS Devel $releasever ($basearch)
+baseurl=https://ord.mirror.rackspace.com/almalinux/$releasever/Devel/$basearch/os//
+gpgkey=https://ord.mirror.rackspace.com/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
+gpgcheck=1
+enabled=1
+
+[casjay-highavailability]
+name=OS HA $releasever ($basearch)
+baseurl=https://ord.mirror.rackspace.com/almalinux/$releasever/HighAvailability/$basearch/os/
+gpgkey=https://ord.mirror.rackspace.com/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
+gpgcheck=1
+enabled=1
+
 [casjay-powertools]
 name=OS powertools $releasever ($basearch)
-baseurl=https://ord.mirror.rackspace.com/rocky/$releasever/PowerTools/$basearch/os/
-gpgkey=https://ord.mirror.rackspace.com/rocky/RPM-GPG-KEY-rockyofficial
+baseurl=https://ord.mirror.rackspace.com/almalinux/$releasever/PowerTools/$basearch/os/
+gpgkey=https://ord.mirror.rackspace.com/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
+gpgcheck=1
+enabled=1
+
+[casjay-plus]
+name=OS plus $releasever ($basearch)
+baseurl=https://ord.mirror.rackspace.com/almalinux/$releasever/plus/$basearch/os/
+gpgkey=https://ord.mirror.rackspace.com/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
+gpgcheck=1
+enabled=1
+
+[casjay-extras]
+name=OS extras $releasever ($basearch)
+baseurl=https://ord.mirror.rackspace.com/almalinux/$releasever/extras/$basearch/os/
+gpgkey=https://ord.mirror.rackspace.com/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 gpgcheck=1
 enabled=1
 
 [casjay-epel]
-name=OS epel $releasever ($basearch)
+name=OS apel $releasever ($basearch)
 baseurl=https://ord.mirror.rackspace.com/epel/$releasever/Everything/$basearch/
-gpgkey=https://ord.mirror.rackspace.com/epel/RPM-GPG-KEY-EPEL-$releasever
+gpgkey=https://ord.mirror.rackspace.com/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 gpgcheck=1
 enabled=1
 
 [casjay-nginx]
 name=nginx $releasever ($basearch)
-baseurl=https://ord.mirror.rackspace.com/nginx-org/packages/rhel/8/$basearch/
+baseurl=https://ord.mirror.rackspace.com/nginx-org/packages/rhel/$releasever/$basearch/
 gpgkey=https://nginx.org/keys/nginx_signing.key
 gpgcheck=1
 enabled=1
@@ -43,18 +85,10 @@ enabled=1
 
 [casjay-nodejs]
 name=nodejs for RHEL $releasever - Base
-baseurl=https://rpm.nodesource.com/pub_16.x/el/$releasever/$basearch
+baseurl=https://rpm.nodesource.com/pub_18.x/el/$releasever/$basearch
 enabled=1
 gpgcheck=1
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/NODESOURCE-GPG-SIGNING-KEY-EL
-module_hotfixes=true
-
-[casjay-mono]
-name=mono-centos$releasever-stable
-baseurl=https://download.mono-project.com/repo/centos$releasever-stable/
-enabled=1
-gpgcheck=1
-gpgkey=https://download.mono-project.com/repo/xamarin.gpg
 module_hotfixes=true
 
 [casjay-docker]
