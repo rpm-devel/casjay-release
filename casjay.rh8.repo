@@ -3,7 +3,7 @@
 [casjay-os]
 name=Casjays Base OS for server use
 baseurl=http://mirror.siena.edu/almalinux/$releasever/BaseOS/$basearch/os
-enabled=1
+enabled=0
 gpgcheck=1
 gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 module_hotfixes=true
@@ -11,7 +11,7 @@ module_hotfixes=true
 [casjay-updates]
 name=Casjays Updates for server use
 baseurl=http://mirror.siena.edu/almalinux/$releasever/AppStream/$basearch/os
-enabled=1
+enabled=0
 gpgcheck=1
 gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 module_hotfixes=true
@@ -19,7 +19,7 @@ module_hotfixes=true
 [casjay-powertools]
 name=Casjays powertools for server use
 baseurl=http://mirror.siena.edu/almalinux/$releasever/PowerTools/$basearch/os
-enabled=1
+enabled=0
 gpgcheck=1
 gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 module_hotfixes=true
