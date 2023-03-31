@@ -1,54 +1,51 @@
 # CasjaysDev AlmaLinux Repo Config 8
-
+# begin almalinux repos
 [casjay-os-base]
 name=Casjays Base OS for server use - $releasever $basearch
-baseurl=http://mirror.siena.edu/almalinux/$releasever/BaseOS/$basearch/os
+mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/baseos
 gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 enabled=1
 gpgcheck=1
 countme=1
 
-[casjay-os-updates]
+[casjay-os-appstream]
 name=Casjays OS Updates for server use - $releasever $basearch
-baseurl=http://mirror.siena.edu/almalinux/$releasever/AppStream/$basearch/os
+mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/appstream
 gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
-module_hotfixes=true
 enabled=1
 gpgcheck=1
 countme=1
 
 [casjay-os-powertools]
 name=Casjays OS powertools for server use - $releasever $basearch
-baseurl=http://mirror.siena.edu/almalinux/$releasever/PowerTools/$basearch/os
+mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/powertools
 gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
-module_hotfixes=true
 enabled=1
 gpgcheck=1
 countme=1
 
 [casjay-os-extras]
 name=Casjays OS extras for server use - $releasever $basearch
-baseurl=http://mirror.siena.edu/almalinux/$releasever/extras/$basearch/os
+mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/extras
 gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
-module_hotfixes=true
 enabled=1
 gpgcheck=1
 countme=1
 
 [casjay-os-devel]
 name=Casjays OS devel for server use - $releasever $basearch
-baseurl=http://mirror.siena.edu/almalinux/$releasever/devel/$basearch/os
+mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/devel
 gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
-module_hotfixes=true
 enabled=1
 gpgcheck=1
 countme=1
+# end almalinux repos
 
+# begin casjaysdev repos
 [casjay-extras]
 name=Casjays Extras for server use - $releasever $basearch
 mirrorlist=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/RHEL/rhel/mirrors/extras
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-casjay
-module_hotfixes=true
 enabled=1
 gpgcheck=1
 
@@ -56,7 +53,6 @@ gpgcheck=1
 name=Casjays RPMs for server use - $releasever $basearch
 mirrorlist=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/RHEL/rhel/mirrors/rpms
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-casjay
-module_hotfixes=true
 enabled=1
 gpgcheck=1
 
@@ -64,79 +60,24 @@ gpgcheck=1
 name=Casjays Extras for server use - $releasever $basearch
 mirrorlist=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/RHEL/rhel/mirrors/addons
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-casjay
-module_hotfixes=true
 enabled=1
 gpgcheck=1
+# end casjaysdev repos
 
+# begin epel repos
 [casjay-epel]
 name=Extra Packages for Enterprise Linux $releasever - $basearch
 baseurl=https://download.fedoraproject.org/pub/epel/$releasever/Everything/$basearch
 gpgkey=https://archive.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-$releasever
-module_hotfixes=true
 enabled=1
 gpgcheck=1
+# end epel repos
 
-[casjay-remi-safe]
-name=Safe Remi's RPM repository for Enterprise Linux $releasever - $basearch
-mirrorlist=http://cdn.remirepo.net/enterprise/$releasever/safe/$basearch/mirror
-gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-remi.el8
-module_hotfixes=true
-enabled=1
-gpgcheck=1
-
-[casjay-remi-php]
-name=Remi's PHP 7.4 RPM repository for Enterprise Linux $releasever - $basearch
-mirrorlist=https://rpms.remirepo.net/enterprise/$releasever/php74/$basearch/mirror
-gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-remi.el8
-module_hotfixes=true
-enabled=1
-gpgcheck=1
-
-[casjay-elrepo]
-name=ELRepo.org Community Enterprise Linux Repository - $releasever $basearch
-mirrorlist=http://mirrors.elrepo.org/mirrors-elrepo.el$releasever
-gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
-module_hotfixes=true
-enabled=0
-gpgcheck=1
-
-[casjay-elrepo-kernel]
-name=ELRepo.org Community Enterprise Linux Kernel Repository - $releasever $basearch
-mirrorlist=http://mirrors.elrepo.org/mirrors-elrepo-kernel.el$releasever
-gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
-module_hotfixes=true
-enabled=0
-gpgcheck=1
-
-[casjay-elrepo-extras]
-name=ELRepo.org Community Enterprise Linux Extras Repository - $releasever $basearch
-mirrorlist=http://mirrors.elrepo.org/mirrors-elrepo-extras.el$releasever
-gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
-module_hotfixes=true
-enabled=0
-gpgcheck=1
-
-[casjay-mariadb]
-name=MariaDB 10.6 for RHEL - $releasever $basearch
-baseurl=http://yum.mariadb.org/10.6/rhel/$releasever/$basearch
-gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
-module_hotfixes=true
-enabled=1
-gpgcheck=1
-
-[casjay-postfix]
-name=EL-Postfix repo - $releasever $basearch
-baseurl=https://repos.oostergo.net/$releasever/postfix-3.6
-gpgkey=https://repos.oostergo.net/RPM-GPG-KEY
-module_hotfixes=true
-enabled=1
-gpgcheck=1
-
+# begin rpmfusion repos
 [casjay-rpmfusion-free-updates]
 name=RPM Fusion for EL Free - $releasever $basearch
 mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=free-el-updates-released-$releasever&arch=$basearch
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-rpmfusion-free-el-$releasever
-module_hotfixes=true
 enabled=1
 gpgcheck=1
 
@@ -144,15 +85,72 @@ gpgcheck=1
 name=RPM Fusion for EL Non-Free - $releasever $basearch
 mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-el-updates-released-$releasever&arch=$basearch
 gpgkey=https://rpm-devel.sourceforge.io/ZREPO/RHEL/$releasever/keys/RPM-GPG-KEY-rpmfusion-nonfree-el-$releasever
-module_hotfixes=true
 enabled=1
 gpgcheck=1
+# end rpmfusion repos
+
+
+# begin remi repos
+[casjay-remi-safe]
+name=Safe Remi's RPM repository for Enterprise Linux $releasever - $basearch
+mirrorlist=http://cdn.remirepo.net/enterprise/$releasever/safe/$basearch/mirror
+gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-remi.el8
+enabled=1
+gpgcheck=1
+
+[casjay-remi-php]
+name=Remi's PHP 7.4 RPM repository for Enterprise Linux $releasever - $basearch
+mirrorlist=https://rpms.remirepo.net/enterprise/$releasever/php74/$basearch/mirror
+gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-remi.el8
+enabled=1
+gpgcheck=1
+# end remi repos
+
+# begin elrepo repos
+[casjay-elrepo]
+name=ELRepo.org Community Enterprise Linux Repository - $releasever $basearch
+mirrorlist=http://mirrors.elrepo.org/mirrors-elrepo.el$releasever
+gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
+enabled=0
+gpgcheck=1
+
+[casjay-elrepo-kernel]
+name=ELRepo.org Community Enterprise Linux Kernel Repository - $releasever $basearch
+mirrorlist=http://mirrors.elrepo.org/mirrors-elrepo-kernel.el$releasever
+gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
+enabled=0
+gpgcheck=1
+
+[casjay-elrepo-extras]
+name=ELRepo.org Community Enterprise Linux Extras Repository - $releasever $basearch
+mirrorlist=http://mirrors.elrepo.org/mirrors-elrepo-extras.el$releasever
+gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
+enabled=0
+gpgcheck=1
+# end elrepo repos
+
+# begin mariadb repos
+[casjay-mariadb]
+name=MariaDB 10.10 for RHEL - $releasever $basearch
+baseurl=http://yum.mariadb.org/10.10/rhel/$releasever/$basearch
+gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+enabled=1
+gpgcheck=1
+# end mariadb repos
+
+# begin postfix repos
+[casjay-postfix]
+name=EL-Postfix repo - $releasever $basearch
+baseurl=https://repos.oostergo.net/$releasever/postfix-3.6
+gpgkey=https://repos.oostergo.net/RPM-GPG-KEY
+enabled=1
+gpgcheck=1
+# end postfix repos
 
 [casjay-nodejs]
 name=nodejs for server use - $releasever $basearch
 baseurl=https://rpm.nodesource.com/pub_18.x/el/$releasever/$basearch
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/NODESOURCE-GPG-SIGNING-KEY-EL
-module_hotfixes=true
 enabled=1
 gpgcheck=1
 
@@ -160,6 +158,5 @@ gpgcheck=1
 name=Casjays docker for server use - $releasever $basearch
 baseurl=https://download.docker.com/linux/centos/$releasever/$basearch/stable
 gpgkey=https://download.docker.com/linux/centos/gpg
-module_hotfixes=true
 enabled=1
 gpgcheck=1
