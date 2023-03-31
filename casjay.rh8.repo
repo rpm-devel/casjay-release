@@ -1,4 +1,4 @@
-#CasjaysDev AlmaLinux Repo Config 8
+# CasjaysDev AlmaLinux Repo Config 8
 
 [casjay-os-base]
 name=Casjays Base OS for server use - $releasever
@@ -61,6 +61,13 @@ gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys
 enabled=1
 gpgcheck=1
 
+[casjay-epel]
+name=Extra Packages for Enterprise Linux $releasever - $basearch
+baseurl=https://download.fedoraproject.org/pub/epel/$releasever/Everything/$basearch
+gpgkey=https://archive.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-$releasever
+enabled=1
+gpgcheck=1
+
 [casjay-remi]
 name=Remi's RPM repository for Enterprise Linux $releasever - $basearch
 mirrorlist=http://cdn.remirepo.net/enterprise/$releasever/safe/$basearch/mirror
@@ -103,13 +110,6 @@ enabled=0
 gpgcheck=1
 gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
 module_hotfixes=true
-
-[casjay-epel]
-name=Extra Packages for Enterprise Linux $releasever - $basearch
-baseurl=https://download.fedoraproject.org/pub/epel/$releasever/Everything/$basearch
-gpgkey=https://archive.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-$releasever
-enabled=1
-gpgcheck=1
 
 [casjay-mariadb]
 name=MariaDB 10.6 for RHEL - $releasever
