@@ -1,25 +1,25 @@
 Summary: Casjays repos release file
 Name: casjay-release
-Version: 1.4
-Release: 3%{?dist}
+Version: 1.5
+Release: %{?dist}
 License: GPLv2
 Group: System Environment/Base
-URL: http://casjaysdev.com/
+URL: http://rpm.casjaysdev.com/
 
 %if 0%{?rhel} == 9
-Source0: casjay.rh9.repo
+Source0: https://github.com/rpm-devel/casjay-release/raw/main/casjay.rh9.repo
 Source1: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-casjay
 %endif
 %if 0%{?rhel} == 8
-Source0: casjay.rh8.repo
+Source0: https://github.com/rpm-devel/casjay-release/raw/main/casjay.rh8.repo
 Source1: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-casjay
 %endif
 %if 0%{?rhel} <= 7
-Source0: casjay.rh.repo
+Source0: https://github.com/rpm-devel/casjay-release/raw/main/casjay.rh.repo
 Source1: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-casjay
 %endif
 %if 0%{?fedora}
-Source0: casjay.fc.repo
+Source0: https://github.com/rpm-devel/casjay-release/raw/main/casjay.fc.repo
 Source1: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-casjay
 %endif
 
@@ -42,7 +42,8 @@ This package contains yum configuration for the casjaysdev.com Linux Repository,
 
 %post
 %if 0%{?rhel} >= 8
-grep -q 'best=' /etc/yum.conf || sed -i '/^\[main\]/a best=False' /etc/yum.conf &>/dev/null
+grep -qs 'best=' /etc/yum.conf && sed -i 's|best=.*|best=False|g' &>/dev/null || sed -i '/^\[main\]/a best=False' /etc/yum.conf &>/dev/null
+grep -qs 'skip_if_unavailable=' /etc/yum.conf && sed -i 's|skip_if_unavailable=.*|skip_if_unavailable=True|g' &>/dev/null || sed -i '/^\[main\]/a skip_if_unavailable=True' /etc/yum.conf &>/dev/null
 %endif
 
 %files
@@ -54,6 +55,9 @@ grep -q 'best=' /etc/yum.conf || sed -i '/^\[main\]/a best=False' /etc/yum.conf 
 %{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-casjay
 
 %changelog
+* Thu Apr 01 2023 CasjaysDev <rpm-devel@casjaysdev.com> - 1.5
+- Moved to almalinux repos
+
 * Thu Nov 04 2021 CasjaysDev <rpm-devel@casjaysdev.com> - 1.4
 - Added rockylinux repos
 
