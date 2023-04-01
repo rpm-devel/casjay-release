@@ -1,4 +1,4 @@
-https://rpm-devel.sourceforge.io/repo/Casjay/Fedora/$basearch/$releasever/srpms
-https://sourceforge.mirrorservice.org/r/rp/rpm-devel/Fedora/$basearch/$releasever/srpms
-https://sourceforge.net/projects/rpm-devel/files/Fedora/$basearch/$releasever/srpms
-https://ufpr.dl.sourceforge.net/project/rpm-devel/Fedora/$basearch/$releasever/srpms
+https://rpm-devel.sourceforge.io/repo/Casjay/Fedora/$releasever/$basearch/srpms
+https://sourceforge.mirrorservice.org/r/rp/rpm-devel/Fedora/$releasever/$basearch/srpms
+https://sourceforge.net/projects/rpm-devel/files/Fedora/$releasever/$basearch/srpms
+https://ufpr.dl.sourceforge.net/project/rpm-devel/Fedora/$releasever/$basearch/srpms
