@@ -5,7 +5,7 @@ mirrorlist=http://rpm.livna.org/mirrorlist
 failovermethod=roundrobin
 enabled=1
 gpgcheck=1
-gpgkey=https://rpm-devel.sourceforge.io/ZREPO/Fedora/fc$releasever/keys/RPM-GPG-KEY-livna
+gpgkey=https://rpm-devel.sourceforge.io/ZREPO/Fedora$releasever/keys/RPM-GPG-KEY-livna
 
 [livna-debuginfo]
 name=rpm.livna.org for $releasever - $basearch - Debug
@@ -13,7 +13,7 @@ name=rpm.livna.org for $releasever - $basearch - Debug
 mirrorlist=http://rpm.livna.org/mirrorlist-debug
 failovermethod=roundrobin
 enabled=0
-gpgkey=https://rpm-devel.sourceforge.io/ZREPO/Fedora/fc$releasever/keys/RPM-GPG-KEY-livna
+gpgkey=https://rpm-devel.sourceforge.io/ZREPO/Fedora$releasever/keys/RPM-GPG-KEY-livna
 gpgcheck=1
 
 [livna-source]
@@ -22,5 +22,5 @@ name=rpm.livna.org for $releasever - $basearch - Source
 mirrorlist=http://rpm.livna.org/mirrorlist-source
 failovermethod=roundrobin
 enabled=0
-gpgkey=https://rpm-devel.sourceforge.io/ZREPO/Fedora/fc$releasever/keys/RPM-GPG-KEY-livna
+gpgkey=https://rpm-devel.sourceforge.io/ZREPO/Fedora$releasever/keys/RPM-GPG-KEY-livna
 gpgcheck=1

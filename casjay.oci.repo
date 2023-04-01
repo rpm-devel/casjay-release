@@ -88,7 +88,7 @@ name=nodejs for RHEL $releasever - Base
 baseurl=https://rpm.nodesource.com/pub_18.x/el/$releasever/$basearch
 enabled=1
 gpgcheck=1
-gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/NODESOURCE-GPG-SIGNING-KEY-EL
+gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/NODESOURCE-GPG-SIGNING-KEY-EL
 module_hotfixes=true
 
 [casjay-docker]

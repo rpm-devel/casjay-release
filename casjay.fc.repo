@@ -2,42 +2,42 @@
 
 [casjay-extras]
 name=Casjays Extras for server use
-mirrorlist=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora/fc/mirrors/extras
+mirrorlist=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora/mirrors/extras
 enabled=1
 gpgcheck=1
-gpgkey=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora/fc$releasever/keys/RPM-GPG-KEY-casjay
+gpgkey=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora$releasever/keys/RPM-GPG-KEY-casjay
 protect=0
 
 [casjay-rpms]
 name=Casjays RPMs for server use
-mirrorlist=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora/fc/mirrors/rpms
+mirrorlist=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora/mirrors/rpms
 enabled=1
 gpgcheck=1
-gpgkey=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora/fc$releasever/keys/RPM-GPG-KEY-casjay
+gpgkey=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora$releasever/keys/RPM-GPG-KEY-casjay
 protect=0
 
 [casjay-addons]
 name=Casjays Addons for server use
-mirrorlist=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora/fc/mirrors/addons
+mirrorlist=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora/mirrors/addons
 enabled=1
 gpgcheck=1
-gpgkey=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora/fc$releasever/keys/RPM-GPG-KEY-casjay
+gpgkey=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora$releasever/keys/RPM-GPG-KEY-casjay
 protect=0
 
 [casjay-sources]
 name=Casjays source packages
-mirrorlist=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora/fc/mirrors/srpms
+mirrorlist=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora/mirrors/srpms
 enabled=0
 gpgcheck=1
-gpgkey=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora/fc$releasever/keys/RPM-GPG-KEY-casjay
+gpgkey=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora$releasever/keys/RPM-GPG-KEY-casjay
 protect=0
 
 [casjay-debug]
 name=Casjays debug packages
-mirrorlist=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora/fc/mirrors/debug
+mirrorlist=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora/mirrors/debug
 enabled=0
 gpgcheck=1
-gpgkey=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora/fc$releasever/keys/RPM-GPG-KEY-casjay
+gpgkey=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora$releasever/keys/RPM-GPG-KEY-casjay
 protect=0
 
 [livna]
@@ -46,7 +46,7 @@ mirrorlist=http://rpm.livna.org/mirrorlist
 failovermethod=roundrobin
 enabled=0
 gpgcheck=1
-gpgkey=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora/fc$releasever/keys/RPM-GPG-KEY-livna
+gpgkey=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora$releasever/keys/RPM-GPG-KEY-livna
 
 [packages-microsoft-com-prod]
 name=packages-microsoft-com-prod
@@ -71,7 +71,7 @@ enabled=0
 type=rpm-md
 gpgcheck=1
 repo_gpgcheck=0
-gpgkey=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora/fc$releasever/keys/RPM-GPG-KEY-rpmfusion-free-fedora-$releasever
+gpgkey=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora$releasever/keys/RPM-GPG-KEY-rpmfusion-free-fedora-$releasever
 
 [rpmfusion-free-updates]
 name=RPM Fusion for Fedora $releasever - Free - Updates
@@ -81,7 +81,7 @@ enabled=0
 type=rpm-md
 gpgcheck=1
 repo_gpgcheck=0
-gpgkey=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora/fc$releasever/keys/RPM-GPG-KEY-rpmfusion-free-fedora-$releasever
+gpgkey=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora$releasever/keys/RPM-GPG-KEY-rpmfusion-free-fedora-$releasever
 
 [rpmfusion-nonfree]
 name=RPM Fusion for Fedora $releasever - Nonfree
@@ -91,7 +91,7 @@ enabled=0
 type=rpm-md
 gpgcheck=1
 repo_gpgcheck=0
-gpgkey=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora/fc$releasever/keys/RPM-GPG-KEY-rpmfusion-nonfree-fedora-$releasever
+gpgkey=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora$releasever/keys/RPM-GPG-KEY-rpmfusion-nonfree-fedora-$releasever
 
 [rpmfusion-nonfree-updates]
 name=RPM Fusion for Fedora $releasever - Nonfree - Updates
@@ -101,7 +101,7 @@ enabled=0
 type=rpm-md
 gpgcheck=1
 repo_gpgcheck=0
-gpgkey=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora/fc$releasever/keys/RPM-GPG-KEY-rpmfusion-nonfree-fedora-$releasever
+gpgkey=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora$releasever/keys/RPM-GPG-KEY-rpmfusion-nonfree-fedora-$releasever
 
 [vivaldi]
 name=vivaldi
@@ -116,4 +116,3 @@ baseurl=https://packages.microsoft.com/yumrepos/vscode
 enabled=0
 gpgcheck=1
 gpgkey=https://packages.microsoft.com/keys/microsoft.asc
-
