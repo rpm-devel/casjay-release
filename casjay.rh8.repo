@@ -156,8 +156,8 @@ gpgcheck=1
 
 # begin postfix repos
 [casjay-postfix]
-name=EL-Postfix repo - $releasever $basearch
-baseurl=https://repos.oostergo.net/$releasever/postfix-3.6
+name=postfix for server use - $releasever $basearch
+baseurl=https://repos.oostergo.net/$releasever/postfix-3.7
 gpgkey=https://repos.oostergo.net/RPM-GPG-KEY
 module_hotfixes=1
 enabled=1
@@ -172,8 +172,15 @@ module_hotfixes=1
 enabled=1
 gpgcheck=1
 
+[casjay-yarn]
+name=Yarn for server use - $releasever $basearch
+baseurl=https://dl.yarnpkg.com/rpm/
+gpgkey=https://dl.yarnpkg.com/rpm/pubkey.gpg
+enabled=1
+gpgcheck=1
+
 [casjay-docker]
-name=Casjays docker for server use - $releasever $basearch
+name=docker for server use - $releasever $basearch
 baseurl=https://download.docker.com/linux/centos/$releasever/$basearch/stable
 gpgkey=https://download.docker.com/linux/centos/gpg
 module_hotfixes=1
