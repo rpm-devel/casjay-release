@@ -48,11 +48,8 @@ grep -qs 'skip_if_unavailable=' /etc/yum.conf && sed -i 's|skip_if_unavailable=.
 
 %files
 %defattr(-, root, root, 0755)
-%pubkey RPM-GPG-KEY-casjay
-%dir %{_sysconfdir}/yum.repos.d/
 %config %{_sysconfdir}/yum.repos.d/casjay.repo
-%dir %{_sysconfdir}/pki/rpm-gpg/
-%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-casjay
+%pubkey %{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-casjay
 
 %changelog
 * Thu Apr 01 2023 CasjaysDev <rpm-devel@casjaysdev.com> - 1.5
