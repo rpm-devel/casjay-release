@@ -24,17 +24,17 @@ protect=0
 enabled=1
 gpgcheck=1
 
-[casjay-sources]
-name=Casjays source packages
-mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/mirrors/srpms
+[casjay-debug]
+name=Casjays debug packages
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/mirrors/debug
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/keys/RPM-GPG-KEY-casjay
 protect=0
 enabled=0
 gpgcheck=1
 
-[casjay-debug]
-name=Casjays debug packages
-mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/mirrors/debug
+[casjay-sources]
+name=Casjays source packages
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/mirrors/srpms
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/keys/RPM-GPG-KEY-casjay
 protect=0
 enabled=0

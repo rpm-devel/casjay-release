@@ -20,6 +20,13 @@ module_hotfixes=1
 enabled=1
 gpgcheck=1
 
+[casjay-yarn]
+name=Yarn for $releasever - $basearch
+baseurl=https://dl.yarnpkg.com/rpm/
+gpgkey=https://dl.yarnpkg.com/rpm/pubkey.gpg
+enabled=1
+gpgcheck=1
+
 [casjay-docker]
 name=Casjays docker for server use
 baseurl=https://download.docker.com/linux/centos/$releasever/$basearch/stable

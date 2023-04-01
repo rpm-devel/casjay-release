@@ -60,27 +60,42 @@ enabled=1
 [casjay-extras]
 name=Casjays Extras for server use $releasever - $basearch
 mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/extras
-gpgkey=https://rpm-devel.sourceforge.io/ZREPO/RHEL/$releasever/keys/RPM-GPG-KEY-casjay
-exclude=docker
+gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
+protect=0
 enabled=1
 gpgcheck=1
-protect=0
 
 [casjay-rpms]
 name=Casjays RPMs for server use $releasever - $basearch
 mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/rpms
-gpgkey=https://rpm-devel.sourceforge.io/ZREPO/RHEL/$releasever/keys/RPM-GPG-KEY-casjay
+gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
+protect=0
 enabled=1
 gpgcheck=1
-protect=0
 
 [casjay-addons]
-name=Casjays Extras for server use $releasever - $basearch
+name=Casjays Addons for server use $releasever - $basearch
 mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/addons
-gpgkey=https://rpm-devel.sourceforge.io/ZREPO/RHEL/$releasever/keys/RPM-GPG-KEY-casjay
+gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
+protect=0
+enabled=1
+gpgcheck=1
+
+[casjay-debug]
+name=Casjays debug packages $releasever - $basearch
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/debug
+gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
+protect=0
 enabled=0
 gpgcheck=1
+
+[casjay-sources]
+name=Casjays source packages $releasever
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/srpms
+gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
 protect=0
+enabled=0
+gpgcheck=1
 
 [casjay-remi]
 name=Remi's RPM repository for Enterprise Linux $releasever - $basearch
