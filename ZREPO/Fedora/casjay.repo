@@ -2,7 +2,7 @@
 
 [casjay-extras]
 name=Casjays Extras for server use
-mirrorlist=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora/mirrors/extras
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/mirrors/extras
 enabled=1
 gpgcheck=1
 gpgkey=https://rpm-devel.sourceforge.io/ZREPO/RHEL/$releasever/keys/RPM-GPG-KEY-casjay
@@ -10,7 +10,7 @@ protect=0
 
 [casjay-rpms]
 name=Casjays RPMs for server use
-mirrorlist=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora/mirrors/rpms
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/mirrors/rpms
 enabled=1
 gpgcheck=1
 gpgkey=https://rpm-devel.sourceforge.io/ZREPO/RHEL/$releasever/keys/RPM-GPG-KEY-casjay
@@ -18,7 +18,7 @@ protect=0
 
 [casjay-addons]
 name=Casjays Extras for server use
-mirrorlist=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/Fedora/mirrors/addons
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/mirrors/addons
 enabled=0
 gpgcheck=1
 gpgkey=https://rpm-devel.sourceforge.io/ZREPO/RHEL/$releasever/keys/RPM-GPG-KEY-casjay
@@ -51,7 +51,7 @@ enabled=1
 [rpmfusion-free]
 name=RPM Fusion for Fedora $releasever - Free
 #baseurl=http://download1.rpmfusion.org/free/Fedora/releases/$releasever/Everything/$basearch/os/
-metalink=https://mirrors.rpmfusion.org/metalink?repo=free-fedora-$releasever&arch=$basearch
+metalink=https:/mirrors.rpmfusion.org/metalink?repo=free-fedora-$releasever&arch=$basearch
 enabled=1
 metadata_expire=14d
 type=rpm-md
@@ -62,7 +62,7 @@ gpgkey=https://rpm-devel.sourceforge.io/ZREPO/Fedora$releasever/keys/RPM-GPG-KEY
 [rpmfusion-free-updates]
 name=RPM Fusion for Fedora $releasever - Free - Updates
 #baseurl=http://download1.rpmfusion.org/free/Fedora/updates/$releasever/$basearch/
-metalink=https://mirrors.rpmfusion.org/metalink?repo=free-fedora-updates-released-$releasever&arch=$basearch
+metalink=https:/mirrors.rpmfusion.org/metalink?repo=free-fedora-updates-released-$releasever&arch=$basearch
 enabled=1
 type=rpm-md
 gpgcheck=1
@@ -72,7 +72,7 @@ gpgkey=https://rpm-devel.sourceforge.io/ZREPO/Fedora$releasever/keys/RPM-GPG-KEY
 [rpmfusion-nonfree]
 name=RPM Fusion for Fedora $releasever - Nonfree
 #baseurl=http://download1.rpmfusion.org/nonfree/Fedora/releases/$releasever/Everything/$basearch/os/
-metalink=https://mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-$releasever&arch=$basearch
+metalink=https:/mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-$releasever&arch=$basearch
 enabled=1
 metadata_expire=14d
 type=rpm-md
@@ -83,7 +83,7 @@ gpgkey=https://rpm-devel.sourceforge.io/ZREPO/Fedora$releasever/keys/RPM-GPG-KEY
 [rpmfusion-nonfree-updates]
 name=RPM Fusion for Fedora $releasever - Nonfree - Updates
 #baseurl=http://download1.rpmfusion.org/nonfree/Fedora/updates/$releasever/$basearch/
-metalink=https://mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-updates-released-$releasever&arch=$basearch
+metalink=https:/mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-updates-released-$releasever&arch=$basearch
 enabled=1
 type=rpm-md
 gpgcheck=1

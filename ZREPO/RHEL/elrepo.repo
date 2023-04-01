@@ -3,7 +3,7 @@
 
 [elrepo]
 name=ELRepo.org Community Enterprise Linux Repository - el$releasever
-mirrorlist=http://mirrors.elrepo.org/mirrors-elrepo.el$releasever
+mirrorlist=http:/mirrors.elrepo.org/mirrors-elrepo.el$releasever
 enabled=1
 gpgcheck=1
 gpgkey=https://rpm-devel.sourceforge.io/ZREPO/RHEL/$releasever/RPM-GPG-KEY-elrepo.org
@@ -11,7 +11,7 @@ protect=0
 
 [elrepo-testing]
 name=ELRepo.org Community Enterprise Linux Testing Repository - el$releasever
-mirrorlist=http://mirrors.elrepo.org/mirrors-elrepo-testing.el$releasever
+mirrorlist=http:/mirrors.elrepo.org/mirrors-elrepo-testing.el$releasever
 enabled=0
 gpgcheck=1
 gpgkey=https://rpm-devel.sourceforge.io/ZREPO/RHEL/$releasever/RPM-GPG-KEY-elrepo.org
@@ -19,7 +19,7 @@ protect=0
 
 [elrepo-kernel]
 name=ELRepo.org Community Enterprise Linux Kernel Repository - el$releasever
-mirrorlist=http://mirrors.elrepo.org/mirrors-elrepo-kernel.el$releasever
+mirrorlist=http:/mirrors.elrepo.org/mirrors-elrepo-kernel.el$releasever
 enabled=1
 gpgcheck=1
 gpgkey=https://rpm-devel.sourceforge.io/ZREPO/RHEL/$releasever/RPM-GPG-KEY-elrepo.org
@@ -27,7 +27,7 @@ protect=0
 
 [elrepo-extras]
 name=ELRepo.org Community Enterprise Linux Extras Repository - el$releasever
-mirrorlist=http://mirrors.elrepo.org/mirrors-elrepo-extras.el$releasever
+mirrorlist=http:/mirrors.elrepo.org/mirrors-elrepo-extras.el$releasever
 enabled=0
 gpgcheck=1
 gpgkey=https://rpm-devel.sourceforge.io/ZREPO/RHEL/$releasever/RPM-GPG-KEY-elrepo.org

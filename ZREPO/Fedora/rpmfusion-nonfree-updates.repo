@@ -1,7 +1,7 @@
 [rpmfusion-nonfree-updates]
 name=RPM Fusion for Fedora $releasever - Nonfree - Updates
 #baseurl=http://download1.rpmfusion.org/nonfree/Fedora/updates/$releasever/$basearch/
-metalink=https://mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-updates-released-$releasever&arch=$basearch
+metalink=https:/mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-updates-released-$releasever&arch=$basearch
 enabled=1
 type=rpm-md
 gpgcheck=1
@@ -11,7 +11,7 @@ gpgkey=https://rpm-devel.sourceforge.io/ZREPO/Fedora$releasever/keys/RPM-GPG-KEY
 [rpmfusion-nonfree-updates-debuginfo]
 name=RPM Fusion for Fedora $releasever - Nonfree - Updates Debug
 #baseurl=http://download1.rpmfusion.org/nonfree/Fedora/updates/$releasever/$basearch/debug/
-metalink=https://mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-updates-released-debug-$releasever&arch=$basearch
+metalink=https:/mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-updates-released-debug-$releasever&arch=$basearch
 enabled=0
 type=rpm-md
 gpgcheck=1
@@ -21,7 +21,7 @@ gpgkey=https://rpm-devel.sourceforge.io/ZREPO/Fedora$releasever/keys/RPM-GPG-KEY
 [rpmfusion-nonfree-updates-source]
 name=RPM Fusion for Fedora $releasever - Nonfree - Updates Source
 #baseurl=http://download1.rpmfusion.org/nonfree/Fedora/updates/$releasever/SRPMS/
-metalink=https://mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-updates-released-source-$releasever&arch=$basearch
+metalink=https:/mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-updates-released-source-$releasever&arch=$basearch
 enabled=0
 type=rpm-md
 gpgcheck=1
