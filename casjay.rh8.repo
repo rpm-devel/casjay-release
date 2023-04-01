@@ -63,7 +63,7 @@ enabled=1
 gpgcheck=1
 
 [casjay-addons]
-name=Casjays Extras for server use - $releasever $basearch
+name=Casjays Addons for server use - $releasever $basearch
 mirrorlist=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/RHEL/rhel/mirrors/addons
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-casjay
 module_hotfixes=1
@@ -99,10 +99,9 @@ enabled=1
 gpgcheck=1
 # end rpmfusion repos
 
-
 # begin remi repos
 [casjay-remi-safe]
-name=Safe Remi's RPM repository for Enterprise Linux $releasever - $basearch
+name=Remi's RPM repository for Enterprise Linux $releasever - $basearch
 mirrorlist=http://cdn.remirepo.net/enterprise/$releasever/safe/$basearch/mirror
 gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2018
 module_hotfixes=1
