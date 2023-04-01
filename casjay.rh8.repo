@@ -2,7 +2,7 @@
 # begin almalinux repos
 [casjay-os-base]
 name=Casjays Base OS for server use - $releasever $basearch
-mirrorlist=https:/mirrors.almalinux.org/mirrorlist/$releasever/baseos
+mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/baseos
 gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 enabled=1
 gpgcheck=1
@@ -10,7 +10,7 @@ countme=1
 
 [casjay-os-appstream]
 name=Casjays OS Updates for server use - $releasever $basearch
-mirrorlist=https:/mirrors.almalinux.org/mirrorlist/$releasever/appstream
+mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/appstream
 gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 module_hotfixes=1
 enabled=1
@@ -19,7 +19,7 @@ countme=1
 
 [casjay-os-powertools]
 name=Casjays OS powertools for server use - $releasever $basearch
-mirrorlist=https:/mirrors.almalinux.org/mirrorlist/$releasever/powertools
+mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/powertools
 gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 module_hotfixes=1
 enabled=1
@@ -28,7 +28,7 @@ countme=1
 
 [casjay-os-extras]
 name=Casjays OS extras for server use - $releasever $basearch
-mirrorlist=https:/mirrors.almalinux.org/mirrorlist/$releasever/extras
+mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/extras
 gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 module_hotfixes=1
 enabled=1
@@ -37,7 +37,7 @@ countme=1
 
 [casjay-os-devel]
 name=Casjays OS devel for server use - $releasever $basearch
-mirrorlist=https:/mirrors.almalinux.org/mirrorlist/$releasever/devel
+mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/devel
 gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 module_hotfixes=1
 enabled=1
@@ -47,38 +47,27 @@ countme=1
 
 # begin casjaysdev repos
 [casjay-extras]
-name=Casjays Extras for server use $releasever - $basearch
-mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/extras
-gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
+name=Casjays Extras for server use - $releasever $basearch
+mirrorlist=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/RHEL/rhel/mirrors/extras
+gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-casjay
+module_hotfixes=1
 enabled=1
 gpgcheck=1
 
 [casjay-rpms]
-name=Casjays RPMs for server use $releasever - $basearch
-mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/rpms
-gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
+name=Casjays RPMs for server use - $releasever $basearch
+mirrorlist=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/RHEL/rhel/mirrors/rpms
+gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-casjay
+module_hotfixes=1
 enabled=1
 gpgcheck=1
 
 [casjay-addons]
-name=Casjays Addons for server use $releasever - $basearch
-mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/addons
-gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
+name=Casjays Extras for server use - $releasever $basearch
+mirrorlist=https://github.com/CasjaysDev/rpm-devel/raw/main/docs/ZREPO/RHEL/rhel/mirrors/addons
+gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-casjay
+module_hotfixes=1
 enabled=1
-gpgcheck=1
-
-[casjay-debug]
-name=Casjays debug packages $releasever - $basearch
-mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/debug
-gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
-enabled=0
-gpgcheck=1
-
-[casjay-sources]
-name=Casjays source packages $releasever
-mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/srpms
-gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
-enabled=0
 gpgcheck=1
 # end casjaysdev repos
 
@@ -95,7 +84,7 @@ gpgcheck=1
 # begin rpmfusion repos
 [casjay-rpmfusion-free-updates]
 name=RPM Fusion for EL Free - $releasever $basearch
-mirrorlist=http:/mirrors.rpmfusion.org/mirrorlist?repo=free-el-updates-released-$releasever&arch=$basearch
+mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=free-el-updates-released-$releasever&arch=$basearch
 gpgkey=https://download1.rpmfusion.org/free/el/RPM-GPG-KEY-rpmfusion-free-el-$releasever
 module_hotfixes=1
 enabled=1
@@ -103,17 +92,18 @@ gpgcheck=1
 
 [casjay-rpmfusion-nonfree-updates]
 name=RPM Fusion for EL Non-Free - $releasever $basearch
-mirrorlist=http:/mirrors.rpmfusion.org/mirrorlist?repo=nonfree-el-updates-released-$releasever&arch=$basearch
+mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-el-updates-released-$releasever&arch=$basearch
 gpgkey=https://download1.rpmfusion.org/nonfree/el/RPM-GPG-KEY-rpmfusion-nonfree-el-$releasever
 module_hotfixes=1
 enabled=1
 gpgcheck=1
 # end rpmfusion repos
 
+
 # begin remi repos
 [casjay-remi-safe]
-name=Remi's RPM repository for Enterprise Linux $releasever - $basearch
-mirrorlist=http://cdn.remirepo.net/enterprise/$releasever/safe/$basearch/mirror
+name=Safe Remi's RPM repository for Enterprise Linux $releasever - $basearch
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/remi
 gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2018
 module_hotfixes=1
 enabled=1
@@ -121,7 +111,7 @@ gpgcheck=1
 
 [casjay-remi-php]
 name=Remi's PHP 7.4 RPM repository for Enterprise Linux $releasever - $basearch
-mirrorlist=https://rpms.remirepo.net/enterprise/$releasever/php74/$basearch/mirror
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/remi
 gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2018
 module_hotfixes=1
 enabled=1
@@ -131,7 +121,7 @@ gpgcheck=1
 # begin elrepo repos
 [casjay-elrepo]
 name=ELRepo.org Community Enterprise Linux Repository - $releasever $basearch
-mirrorlist=http:/mirrors.elrepo.org/mirrors-elrepo.el$releasever
+mirrorlist=http://mirrors.elrepo.org/mirrors-elrepo.el$releasever
 gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
 module_hotfixes=1
 enabled=0
@@ -139,7 +129,7 @@ gpgcheck=1
 
 [casjay-elrepo-kernel]
 name=ELRepo.org Community Enterprise Linux Kernel Repository - $releasever $basearch
-mirrorlist=http:/mirrors.elrepo.org/mirrors-elrepo-kernel.el$releasever
+mirrorlist=http://mirrors.elrepo.org/mirrors-elrepo-kernel.el$releasever
 gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
 module_hotfixes=1
 enabled=0
@@ -147,7 +137,7 @@ gpgcheck=1
 
 [casjay-elrepo-extras]
 name=ELRepo.org Community Enterprise Linux Extras Repository - $releasever $basearch
-mirrorlist=http:/mirrors.elrepo.org/mirrors-elrepo-extras.el$releasever
+mirrorlist=http://mirrors.elrepo.org/mirrors-elrepo-extras.el$releasever
 gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
 module_hotfixes=1
 enabled=0
@@ -167,7 +157,7 @@ gpgcheck=1
 # begin postfix repos
 [casjay-postfix]
 name=EL-Postfix repo - $releasever $basearch
-baseurl=https://repos.oostergo.net/$releasever/postfix-3.7
+baseurl=https://repos.oostergo.net/$releasever/postfix-3.6
 gpgkey=https://repos.oostergo.net/RPM-GPG-KEY
 module_hotfixes=1
 enabled=1
@@ -179,13 +169,6 @@ name=nodejs for server use - $releasever $basearch
 baseurl=https://rpm.nodesource.com/pub_18.x/el/$releasever/$basearch
 gpgkey=https://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL
 module_hotfixes=1
-enabled=1
-gpgcheck=1
-
-[casjay-yarn]
-name=Yarn for $releasever - $basearch
-baseurl=https://dl.yarnpkg.com/rpm/
-gpgkey=https://dl.yarnpkg.com/rpm/pubkey.gpg
 enabled=1
 gpgcheck=1
 
