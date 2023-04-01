@@ -78,7 +78,7 @@ gpgcheck=1
 [casjay-rpmfusion-free-updates]
 name=RPM Fusion for EL Free - $releasever $basearch
 mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=free-el-updates-released-$releasever&arch=$basearch
-gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-rpmfusion-free-el-$releasever
+gpgkey=https://download1.rpmfusion.org/free/el/RPM-GPG-KEY-rpmfusion-free-el-$releasever
 module_hotfixes=1
 enabled=1
 gpgcheck=1
@@ -86,7 +86,7 @@ gpgcheck=1
 [casjay-rpmfusion-nonfree-updates]
 name=RPM Fusion for EL Non-Free - $releasever $basearch
 mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-el-updates-released-$releasever&arch=$basearch
-gpgkey=https://rpm-devel.sourceforge.io/ZREPO/RHEL/$releasever/keys/RPM-GPG-KEY-rpmfusion-nonfree-el-$releasever
+gpgkey=https://download1.rpmfusion.org/nonfree/el/RPM-GPG-KEY-rpmfusion-nonfree-el-$releasever
 module_hotfixes=1
 enabled=1
 gpgcheck=1
@@ -97,7 +97,7 @@ gpgcheck=1
 [casjay-remi-safe]
 name=Safe Remi's RPM repository for Enterprise Linux $releasever - $basearch
 mirrorlist=http://cdn.remirepo.net/enterprise/$releasever/safe/$basearch/mirror
-gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-remi.el8
+gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2018
 module_hotfixes=1
 enabled=1
 gpgcheck=1
@@ -105,7 +105,7 @@ gpgcheck=1
 [casjay-remi-php]
 name=Remi's PHP 7.4 RPM repository for Enterprise Linux $releasever - $basearch
 mirrorlist=https://rpms.remirepo.net/enterprise/$releasever/php74/$basearch/mirror
-gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/RPM-GPG-KEY-remi.el8
+gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2018
 module_hotfixes=1
 enabled=1
 gpgcheck=1
@@ -160,7 +160,7 @@ gpgcheck=1
 [casjay-nodejs]
 name=nodejs for server use - $releasever $basearch
 baseurl=https://rpm.nodesource.com/pub_18.x/el/$releasever/$basearch
-gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/rhel/keys/NODESOURCE-GPG-SIGNING-KEY-EL
+gpgkey=https://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL
 module_hotfixes=1
 enabled=1
 gpgcheck=1
