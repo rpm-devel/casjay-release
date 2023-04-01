@@ -3,7 +3,6 @@
 name=Casjays Extras for server use $releasever - $basearch
 mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/extras
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
-protect=0
 enabled=1
 gpgcheck=1
 
@@ -11,7 +10,6 @@ gpgcheck=1
 name=Casjays RPMs for server use $releasever - $basearch
 mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/rpms
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
-protect=0
 enabled=1
 gpgcheck=1
 
@@ -19,7 +17,6 @@ gpgcheck=1
 name=Casjays Addons for server use $releasever - $basearch
 mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/addons
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
-protect=0
 enabled=1
 gpgcheck=1
 
@@ -27,7 +24,6 @@ gpgcheck=1
 name=Casjays debug packages $releasever - $basearch
 mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/debug
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
-protect=0
 enabled=0
 gpgcheck=1
 
@@ -35,7 +31,6 @@ gpgcheck=1
 name=Casjays source packages $releasever
 mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/srpms
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
-protect=0
 enabled=0
 gpgcheck=1
 # end casjaysdev repos
