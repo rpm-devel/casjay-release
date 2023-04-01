@@ -6,7 +6,7 @@ enabled=1
 type=rpm-md
 gpgcheck=1
 repo_gpgcheck=0
-gpgkey=https://rpm-devel.sourceforge.io/ZREPO/Fedora$releasever/keys/RPM-GPG-KEY-rpmfusion-nonfree-fedora-$releasever
+gpgkey=https://rpm-devel.sourceforge.io/ZREPO/Fedora/$releasever/keys/RPM-GPG-KEY-rpmfusion-nonfree-fedora-$releasever
 
 [rpmfusion-nonfree-updates-debuginfo]
 name=RPM Fusion for Fedora $releasever - Nonfree - Updates Debug
@@ -16,7 +16,7 @@ enabled=0
 type=rpm-md
 gpgcheck=1
 repo_gpgcheck=0
-gpgkey=https://rpm-devel.sourceforge.io/ZREPO/Fedora$releasever/keys/RPM-GPG-KEY-rpmfusion-nonfree-fedora-$releasever
+gpgkey=https://rpm-devel.sourceforge.io/ZREPO/Fedora/$releasever/keys/RPM-GPG-KEY-rpmfusion-nonfree-fedora-$releasever
 
 [rpmfusion-nonfree-updates-source]
 name=RPM Fusion for Fedora $releasever - Nonfree - Updates Source
@@ -26,4 +26,4 @@ enabled=0
 type=rpm-md
 gpgcheck=1
 repo_gpgcheck=0
-gpgkey=https://rpm-devel.sourceforge.io/ZREPO/Fedora$releasever/keys/RPM-GPG-KEY-rpmfusion-nonfree-fedora-$releasever
+gpgkey=https://rpm-devel.sourceforge.io/ZREPO/Fedora/$releasever/keys/RPM-GPG-KEY-rpmfusion-nonfree-fedora-$releasever

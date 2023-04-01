@@ -20,7 +20,7 @@ Source1: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RP
 %endif
 %if 0%{?fedora}
 Source0: https://github.com/rpm-devel/casjay-release/raw/main/casjay.fc.repo
-Source1: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
+Source1: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/keys/RPM-GPG-KEY-casjay
 %endif
 
 %description
