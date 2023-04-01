@@ -42,15 +42,15 @@ This package contains yum configuration for the casjaysdev.com Linux Repository,
 
 %post
 %if 0%{?rhel} >= 8
-if grep -qs 'best=' "/etc/yum.conf"; then 
-  sed -i 's|best=.*|best=False|g' "/etc/yum.conf" &>/dev/null 
-else
-  sed -i '/^\[main\]/a best=False' "/etc/yum.conf" &>/dev/null
-fi
 if grep -qs 'skip_if_unavailable=' "/etc/yum.conf"; then 
   sed -i 's|skip_if_unavailable=.*|skip_if_unavailable=True|g' "/etc/yum.conf" &>/dev/null 
 else
   sed -i '/^\[main\]/a skip_if_unavailable=True' "/etc/yum.conf" &>/dev/null
+fi
+if grep -qs 'best=' "/etc/yum.conf"; then 
+  sed -i 's|best=.*|best=True|g' "/etc/yum.conf" &>/dev/null 
+else
+  sed -i '/^\[main\]/a best=True' "/etc/yum.conf" &>/dev/null
 fi
 %endif
 
