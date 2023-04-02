@@ -36,12 +36,7 @@ contains custom mock files.
 %prep
 %setup -c -T
 %{__cp} -a %{SOURCE1} .
-
-%prep devel
-%setup -c -T
 %{__cp} -a %{SOURCE2} .
-
-# %build
 
 %install
 %{__rm} -rf %{buildroot}
