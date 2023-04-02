@@ -22,13 +22,24 @@ Source1: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RP
 Source0: https://github.com/rpm-devel/casjay-release/raw/main/casjay.fc.repo
 Source1: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/keys/RPM-GPG-KEY-casjay
 %endif
+SOURCE2: mock
 
 %description
 This package contains yum configuration for the casjaysdev.com Linux Repository, as well as the public GPG keys used to sign packages.
 
+%package devel
+Requires: mock
+Summary: development packages
+%description devel
+contains custom mock files.
+
 %prep
 %setup -c -T
 %{__cp} -a %{SOURCE1} .
+
+%prep devel
+%setup -c -T
+%{__cp} -a %{SOURCE2} .
 
 # %build
 
@@ -36,6 +47,10 @@ This package contains yum configuration for the casjaysdev.com Linux Repository,
 %{__rm} -rf %{buildroot}
 %{__install} -Dpm 0644 %{SOURCE0} %{buildroot}%{_sysconfdir}/yum.repos.d/casjay.repo
 %{__install} -Dpm 0644 %{SOURCE1} %{buildroot}%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-casjay
+
+%install devel
+%{__rm} -rf %{buildroot}
+%{__install} -Dpm 0644 %{SOURCE2} %{buildroot}%{_sysconfdir}
 
 %clean
 %{__rm} -rf %{buildroot}
@@ -58,6 +73,12 @@ fi
 %defattr(-, root, root, 0755)
 %config %{_sysconfdir}/yum.repos.d/casjay.repo
 %pubkey %{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-casjay
+
+%files devel
+%{_sysconfdir}/mock/casjay-8-x86_64.cfg
+%{_sysconfdir}/mock/casjay-8-aarch64.cfg
+%{_sysconfdir}/mock/templates/casjay-8.tpl
+
 
 %changelog
 * Thu Apr 01 2023 CasjaysDev <rpm-devel@casjaysdev.com> - 1.5
