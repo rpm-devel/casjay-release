@@ -42,9 +42,6 @@ contains custom mock files.
 %{__rm} -rf %{buildroot}
 %{__install} -Dpm 0644 %{SOURCE0} %{buildroot}%{_sysconfdir}/yum.repos.d/casjay.repo
 %{__install} -Dpm 0644 %{SOURCE1} %{buildroot}%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-casjay
-
-%install devel
-%{__rm} -rf %{buildroot}
 %{__install} -Dpm 0644 %{SOURCE2} %{buildroot}%{_sysconfdir}
 
 %clean
