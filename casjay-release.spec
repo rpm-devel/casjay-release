@@ -35,7 +35,7 @@ contains custom mock files.
 
 %prep
 %setup -c -T
-%{__tar} xfvz %{SOURCE0}
+%{__tar} xfvz %{SOURCE0} -C .
 %{__cp} -a %{SOURCE1} .
 %{__cp} -a %{SOURCE2} .
 
