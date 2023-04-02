@@ -38,15 +38,12 @@ contains custom mock files.
 %{__cp} -a %{SOURCE1} .
 %{__cp} -a %{SOURCE2} .
 
-%build
-
 %install
 %{__rm} -rf %{buildroot}
 %{__mkdir} -p %{buildroot}%{_sysconfdir}
 %{__tar} xfvz %{SOURCE0} -C %{buildroot}%{_sysconfdir}
 %{__install} -Dpm 0644 %{SOURCE1} %{buildroot}%{_sysconfdir}/yum.repos.d/casjay.repo
 %{__install} -Dpm 0644 %{SOURCE2} %{buildroot}%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-casjay
-%{__rm} -Rf %{_builddir}/%{name}-%{version}/debugsourcefiles.list
 
 %clean
 %{__rm} -rf %{buildroot}
