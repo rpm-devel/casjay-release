@@ -12,10 +12,11 @@ countme=1
 name=Casjays OS Updates for server use - $releasever $basearch
 mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/appstream
 gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
-module_hotfixes=1
+module_hotfixes=0
 enabled=1
 gpgcheck=1
 countme=1
+exclude=runc
 
 [casjay-os-powertools]
 name=Casjays OS powertools for server use - $releasever $basearch
@@ -98,7 +99,6 @@ module_hotfixes=1
 enabled=1
 gpgcheck=1
 # end rpmfusion repos
-
 
 # begin remi repos
 [casjay-remi-safe]
