@@ -71,7 +71,6 @@ fi
 %{_sysconfdir}/mock/casjay-8-aarch64.cfg
 %{_sysconfdir}/mock/templates/casjay-8.tpl
 
-
 %changelog
 * Thu Apr 01 2023 CasjaysDev <rpm-devel@casjaysdev.com> - 1.5
 - Moved to almalinux repos
