@@ -5,26 +5,24 @@ Release: %{?dist}
 License: GPLv2
 Group: System Environment/Base
 URL: http://rpm.casjaysdev.com/
+SOURCE0: mock-files.tar.gz
 
 %if 0%{?rhel} == 9
-Source0: https://github.com/rpm-devel/casjay-release/raw/main/casjay.rh9.repo
-Source1: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
+Source1: https://github.com/rpm-devel/casjay-release/raw/main/casjay.rh9.repo
+Source2: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
 %endif
 %if 0%{?rhel} == 8
-Source0: https://github.com/rpm-devel/casjay-release/raw/main/casjay.rh8.repo
-Source1: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
+Source1: https://github.com/rpm-devel/casjay-release/raw/main/casjay.rh8.repo
+Source2: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
 %endif
 %if 0%{?rhel} <= 7
-Source0: https://github.com/rpm-devel/casjay-release/raw/main/casjay.rh.repo
-Source1: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
+Source1: https://github.com/rpm-devel/casjay-release/raw/main/casjay.rh.repo
+Source2: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
 %endif
 %if 0%{?fedora}
-Source0: https://github.com/rpm-devel/casjay-release/raw/main/casjay.fc.repo
-Source1: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/keys/RPM-GPG-KEY-casjay
+Source1: https://github.com/rpm-devel/casjay-release/raw/main/casjay.fc.repo
+Source2: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/keys/RPM-GPG-KEY-casjay
 %endif
-SOURCE2: mock/casjay-8-x86_64.cfg
-SOURCE3: mock/casjay-8-aarch64.cfg
-SOURCE4: mock/templates/casjay-8.tpl
 
 %description
 This package contains yum configuration for the casjaysdev.com Linux Repository, as well as the public GPG keys used to sign packages.
@@ -37,18 +35,15 @@ contains custom mock files.
 
 %prep
 %setup -c -T
-%{__cp} -a %{SOURCE1} .
-%{__cp} -a mock/%{SOURCE2} ./%{SOURCE2}
-%{__cp} -a mock/%{SOURCE3} ./%{SOURCE3}
-%{__cp} -a mock/%{SOURCE4} ./%{SOURCE4}
+%{__cp} -a %{SOURCE3} .
+%{__tar} xfvz %{SOURCE0}
+
+%build
 
 %install
 %{__rm} -rf %{buildroot}
-%{__install} -Dpm 0644 %{SOURCE0} %{buildroot}%{_sysconfdir}/yum.repos.d/casjay.repo
-%{__install} -Dpm 0644 %{SOURCE1} %{buildroot}%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-casjay
-%{__install} -Dpm 0644 %{SOURCE2} %{buildroot}%{_sysconfdir}/mock/casjay-8-x86_64.cfg
-%{__install} -Dpm 0644 %{SOURCE3} %{buildroot}%{_sysconfdir}/mock/casjay-8-aarch64.cfg
-%{__install} -Dpm 0644 %{SOURCE4} %{buildroot}%{_sysconfdir}/mock/templates/casjay-8.tpl
+%{__install} -Dpm 0644 %{SOURCE1} %{buildroot}%{_sysconfdir}/yum.repos.d/casjay.repo
+%{__install} -Dpm 0644 %{SOURCE2} %{buildroot}%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-casjay
 
 %clean
 %{__rm} -rf %{buildroot}
