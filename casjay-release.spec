@@ -35,7 +35,6 @@ contains custom mock files.
 
 %prep
 %setup -c -T
-%{__tar} xfvz %{SOURCE0} -C .
 %{__cp} -a %{SOURCE1} .
 %{__cp} -a %{SOURCE2} .
 
@@ -43,6 +42,7 @@ contains custom mock files.
 
 %install
 %{__rm} -rf %{buildroot}
+%{__tar} xfvz %{SOURCE0} -C %{buildroot}%{_sysconfdir}
 %{__install} -Dpm 0644 %{SOURCE1} %{buildroot}%{_sysconfdir}/yum.repos.d/casjay.repo
 %{__install} -Dpm 0644 %{SOURCE2} %{buildroot}%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-casjay
 
