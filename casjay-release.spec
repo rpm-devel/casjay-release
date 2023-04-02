@@ -38,9 +38,9 @@ contains custom mock files.
 %prep
 %setup -c -T
 %{__cp} -a %{SOURCE1} .
-%{__cp} -a %{SOURCE2} .
-%{__cp} -a %{SOURCE3} .
-%{__cp} -a %{SOURCE4} .
+%{__cp} -a mock/%{SOURCE2} ./%{SOURCE2}
+%{__cp} -a mock/%{SOURCE3} ./%{SOURCE3}
+%{__cp} -a mock/%{SOURCE4} ./%{SOURCE4}
 
 %install
 %{__rm} -rf %{buildroot}
