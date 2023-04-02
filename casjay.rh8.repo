@@ -150,7 +150,7 @@ name=MariaDB 10.10 for RHEL - $releasever $basearch
 baseurl=http://yum.mariadb.org/10.10/rhel/$releasever/$basearch
 gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
 module_hotfixes=1
-enabled=1
+enabled=0
 gpgcheck=1
 # end mariadb repos
 
@@ -170,7 +170,7 @@ baseurl=https://rpm.nodesource.com/pub_18.x/el/$releasever/$basearch
 gpgkey=https://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL
 module_hotfixes=1
 enabled=1
-gpgcheck=1
+gpgcheck=0
 
 [casjay-yarn]
 name=Yarn for server use - $releasever $basearch

@@ -239,20 +239,21 @@ gpgcheck=1
 name=MongoDB 5 for $releasever - $basearch
 baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/5.0/x86_64/
 gpgkey=https://www.mongodb.org/static/pgp/server-5.0.asc
-gpgcheck=1
 enabled=1
+gpgcheck=1
 
 [casjay-mariadb]
 name=MariaDB 10.10 for $releasever - $basearch
 baseurl=http://yum.mariadb.org/10.10/rhel/$releasever/$basearch
 gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+enabled=0
 gpgcheck=1
 
 [casjay-mssql]
 name=Microsoft SQL server 2019 for $releasever - $basearch
 baseurl=https://packages.microsoft.com/rhel/7/mssql-server-2019/
 gpgkey=https://packages.microsoft.com/keys/microsoft.asc
-enabled=1
+enabled=0
 gpgcheck=1
 
 [casjay-pgsql-common]
@@ -261,7 +262,6 @@ baseurl=https://download.postgresql.org/pub/repos/yum/common/redhat/rhel-$releas
 gpgkey=https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG
 enabled=1
 gpgcheck=1
-repo_gpgcheck = 1
 
 [casjay-pgsql-13]
 name=PostgreSQL 13 for $releasever - $basearch
@@ -269,7 +269,6 @@ baseurl=https://download.postgresql.org/pub/repos/yum/13/redhat/rhel-$releasever
 gpgkey=https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG
 enabled=1
 gpgcheck=1
-repo_gpgcheck = 1
 
 [casjay-pgsql-12]
 name=PostgreSQL 12 for $releasever - $basearch
@@ -277,4 +276,3 @@ baseurl=https://download.postgresql.org/pub/repos/yum/12/redhat/rhel-$releasever
 gpgkey=https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG
 enabled=0
 gpgcheck=1
-repo_gpgcheck = 1
