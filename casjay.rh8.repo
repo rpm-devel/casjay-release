@@ -49,7 +49,7 @@ countme=1
 # begin casjaysdev repos
 [casjay-extras]
 name=Casjays Extras for server use - $releasever $basearch
-mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/docs/ZREPO/RHEL/mirrors/extras
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/extras
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
 module_hotfixes=1
 enabled=1
@@ -57,7 +57,7 @@ gpgcheck=1
 
 [casjay-rpms]
 name=Casjays RPMs for server use - $releasever $basearch
-mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/docs/ZREPO/RHEL/mirrors/rpms
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/rpms
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
 module_hotfixes=1
 enabled=1
@@ -65,7 +65,7 @@ gpgcheck=1
 
 [casjay-addons]
 name=Casjays Extras for server use - $releasever $basearch
-mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/docs/ZREPO/RHEL/mirrors/addons
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/addons
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
 module_hotfixes=1
 enabled=1
