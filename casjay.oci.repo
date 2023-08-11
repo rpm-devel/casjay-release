@@ -11,6 +11,7 @@ baseurl=https://ord.mirror.rackspace.com/almalinux/$releasever/AppStream/$basear
 gpgkey=https://ord.mirror.rackspace.com/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 gpgcheck=1
 enabled=1
+exclude=runc,podman*,mysql-*
 
 [casjay-devel]
 name=OS Devel $releasever ($basearch)
