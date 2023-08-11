@@ -124,7 +124,7 @@ name=ELRepo.org Community Enterprise Linux Repository - $releasever $basearch
 mirrorlist=http://mirrors.elrepo.org/mirrors-elrepo.el$releasever
 gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
 module_hotfixes=1
-enabled=0
+enabled=1
 gpgcheck=1
 
 [casjay-elrepo-kernel]
@@ -132,7 +132,7 @@ name=ELRepo.org Community Enterprise Linux Kernel Repository - $releasever $base
 mirrorlist=http://mirrors.elrepo.org/mirrors-elrepo-kernel.el$releasever
 gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
 module_hotfixes=1
-enabled=0
+enabled=1
 gpgcheck=1
 
 [casjay-elrepo-extras]
@@ -154,9 +154,18 @@ enabled=0
 gpgcheck=1
 # end mariadb repos
 
+# begin postgres
+[casjay-postgresql]
+name=PostgreSQL 15 for RHEL $releasever - $basearch
+baseurl=https://download.postgresql.org/pub/repos/yum/15/redhat/rhel-$releasever-$basearch
+enabled=1
+gpgcheck=1
+gpgkey=https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG
+# end postgres
+
 # begin postfix repos
 [casjay-postfix]
-name=postfix for server use - $releasever $basearch
+name=postfix 3.7 for server use - $releasever $basearch
 baseurl=https://repos.oostergo.net/$releasever/postfix-3.7
 gpgkey=https://repos.oostergo.net/RPM-GPG-KEY
 module_hotfixes=1
