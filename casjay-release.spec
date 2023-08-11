@@ -4,7 +4,7 @@ Version: 1.5
 Release: %{?dist}
 License: GPLv2
 Group: System Environment/Base
-URL: http://rpm.casjaysdev.com/
+URL: http://rpm.casjaysdev.pro/
 SOURCE0: mock-files.tar.gz
 
 %if 0%{?rhel} == 9
@@ -25,7 +25,7 @@ Source2: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/keys/
 %endif
 
 %description
-This package contains yum configuration for the casjaysdev.com Linux Repository, as well as the public GPG keys used to sign packages.
+This package contains yum configuration for the casjaysdev.pro Linux Repository, as well as the public GPG keys used to sign packages.
 
 %package devel
 Requires: mock
@@ -73,17 +73,17 @@ fi
 %{_sysconfdir}/mock/templates/casjay-8.tpl
 
 %changelog
-* Thu Apr 01 2023 CasjaysDev <rpm-devel@casjaysdev.com> - 1.5
+* Thu Apr 01 2023 CasjaysDev <rpm-devel@casjaysdev.pro> - 1.5
 - Moved to almalinux repos
 
-* Thu Nov 04 2021 CasjaysDev <rpm-devel@casjaysdev.com> - 1.4
+* Thu Nov 04 2021 CasjaysDev <rpm-devel@casjaysdev.pro> - 1.4
 - Added rockylinux repos
 
-* Sat Jun 01 2019 CasjaysDev <rpm-devel@casjaysdev.com> - 0.3
+* Sat Jun 01 2019 CasjaysDev <rpm-devel@casjaysdev.pro> - 0.3
 - Fixes for fedora
 
-* Thu Feb 22 2018 CasjaysDev <rpm-devel@casjaysdev.com> - 0.2
+* Thu Feb 22 2018 CasjaysDev <rpm-devel@casjaysdev.pro> - 0.2
 - Fixes for OS Specific rpm repos
 
-* Thu Feb 22 2018 CasjaysDev <rpm-devel@casjaysdev.com> - 0.1
+* Thu Feb 22 2018 CasjaysDev <rpm-devel@casjaysdev.pro> - 0.1
 - initial release

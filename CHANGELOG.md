@@ -1,3 +1,16 @@
+## 🗃️ Changelog: 2023-08-10 at 20:28:03 🗃️  
+
+🗃️ Updated domain names 🗃️  
+  
+  
+casjay-release.spec  
+.gitattributes  
+LICENSE.md  
+
+
+### 🗃️ End of changes for 202308102028-git 🗃️  
+
+----  
 #### Changelog: 2023-04-05 at 11:52:39  
 
 casjay.rh8.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
