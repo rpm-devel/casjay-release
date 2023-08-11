@@ -7,6 +7,7 @@ gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 enabled=1
 gpgcheck=1
 countme=1
+exclude=runc,podman*,mysql-*
 
 [casjay-os-appstream]
 name=Casjays OS Updates for server use - $releasever $basearch
@@ -26,6 +27,7 @@ module_hotfixes=1
 enabled=1
 gpgcheck=1
 countme=1
+exclude=runc,podman*,mysql-*
 
 [casjay-os-extras]
 name=Casjays OS extras for server use - $releasever $basearch
@@ -35,6 +37,7 @@ module_hotfixes=1
 enabled=1
 gpgcheck=1
 countme=1
+exclude=runc,podman*,mysql-*
 
 [casjay-os-devel]
 name=Casjays OS devel for server use - $releasever $basearch
@@ -44,6 +47,7 @@ module_hotfixes=1
 enabled=1
 gpgcheck=1
 countme=1
+exclude=runc,podman*,mysql-*
 # end almalinux repos
 
 # begin casjaysdev repos
@@ -140,7 +144,7 @@ name=ELRepo.org Community Enterprise Linux Extras Repository - $releasever $base
 mirrorlist=http://mirrors.elrepo.org/mirrors-elrepo-extras.el$releasever
 gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
 module_hotfixes=1
-enabled=0
+enabled=1
 gpgcheck=1
 # end elrepo repos
 
