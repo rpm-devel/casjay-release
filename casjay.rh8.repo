@@ -132,7 +132,7 @@ name=ELRepo.org Community Enterprise Linux Kernel Repository - $releasever $base
 mirrorlist=http://mirrors.elrepo.org/mirrors-elrepo-kernel.el$releasever
 gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
 module_hotfixes=1
-enabled=1
+enabled=0
 gpgcheck=1
 
 [casjay-elrepo-extras]
