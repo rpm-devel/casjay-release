@@ -47,7 +47,7 @@ module_hotfixes=1
 enabled=1
 gpgcheck=1
 countme=1
-exclude=runc,podman*
+exclude=runc,podman*,mysql-*
 # end almalinux repos
 
 # begin casjaysdev repos
