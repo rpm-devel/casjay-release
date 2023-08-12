@@ -7,7 +7,7 @@ gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 enabled=1
 gpgcheck=1
 countme=1
-exclude=runc,podman*,mysql-*
+exclude=runc,podman
 
 [casjay-os-appstream]
 name=Casjays OS Updates for server use - $releasever $basearch
@@ -17,7 +17,7 @@ module_hotfixes=0
 enabled=1
 gpgcheck=1
 countme=1
-exclude=runc,podman*,mysql-*
+exclude=runc,podman
 
 [casjay-os-powertools]
 name=Casjays OS powertools for server use - $releasever $basearch
@@ -27,7 +27,7 @@ module_hotfixes=1
 enabled=1
 gpgcheck=1
 countme=1
-exclude=runc,podman*,mysql-*
+exclude=runc,podman
 
 [casjay-os-extras]
 name=Casjays OS extras for server use - $releasever $basearch
@@ -37,7 +37,7 @@ module_hotfixes=1
 enabled=1
 gpgcheck=1
 countme=1
-exclude=runc,podman*,mysql-*
+exclude=runc,podman
 
 [casjay-os-devel]
 name=Casjays OS devel for server use - $releasever $basearch
@@ -47,7 +47,7 @@ module_hotfixes=1
 enabled=1
 gpgcheck=1
 countme=1
-exclude=runc,podman*,mysql-*
+exclude=runc,podman
 # end almalinux repos
 
 # begin casjaysdev repos
@@ -154,7 +154,7 @@ name=MariaDB 10.10 for RHEL - $releasever $basearch
 baseurl=http://yum.mariadb.org/10.10/rhel/$releasever/$basearch
 gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
 module_hotfixes=1
-enabled=1
+enabled=0
 gpgcheck=1
 # end mariadb repos
 
@@ -162,7 +162,7 @@ gpgcheck=1
 [casjay-postgresql]
 name=PostgreSQL 15 for RHEL $releasever - $basearch
 baseurl=https://download.postgresql.org/pub/repos/yum/15/redhat/rhel-$releasever-$basearch
-enabled=1
+enabled=0
 gpgcheck=1
 gpgkey=https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG
 # end postgres
