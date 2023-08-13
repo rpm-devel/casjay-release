@@ -1,53 +1,115 @@
-# CasjaysDev AlmaLinux Repo Config 8
+# CasjaysDev AlmaLinux Repo Config 9
 # begin almalinux repos
 [casjay-os-base]
-name=Casjays Base OS for server use - $releasever $basearch
+name=AlmaLinux BaseOS - $releasever $basearch
 mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/baseos
-gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 enabled=1
 gpgcheck=1
 countme=1
-exclude=runc,podman
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-9
+metadata_expire=86400
+enabled_metadata=1
 
 [casjay-os-appstream]
-name=Casjays OS Updates for server use - $releasever $basearch
+name=AlmaLinux AppStream - $releasever $basearch
 mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/appstream
-gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
-module_hotfixes=0
+# baseurl=https://repo.almalinux.org/almalinux/$releasever/AppStream/$basearch/os/
 enabled=1
 gpgcheck=1
 countme=1
-exclude=runc,podman
-
-[casjay-os-powertools]
-name=Casjays OS powertools for server use - $releasever $basearch
-mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/powertools
-gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
-module_hotfixes=1
-enabled=1
-gpgcheck=1
-countme=1
-exclude=runc,podman
+gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-9
+metadata_expire=86400
+enabled_metadata=1
 
 [casjay-os-extras]
-name=Casjays OS extras for server use - $releasever $basearch
+name=AlmaLinux Extras - $releasever $basearch
 mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/extras
-gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
-module_hotfixes=1
 enabled=1
 gpgcheck=1
 countme=1
-exclude=runc,podman
+gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-9
+metadata_expire=86400
+enabled_metadata=0
 
-[casjay-os-devel]
-name=Casjays OS devel for server use - $releasever $basearch
-mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/devel
-gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
-module_hotfixes=1
-enabled=1
+[casjay-os-crb]
+name=AlmaLinux CRB - $releasever $basearch
+mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/crb
+enabled=0
 gpgcheck=1
 countme=1
-exclude=runc,podman
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-9
+metadata_expire=86400
+enabled_metadata=0
+
+[casjay-os-plus]
+name=AlmaLinux Plus  - $releasever $basearch
+mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/plus
+enabled=0
+gpgcheck=1
+countme=1
+gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-9
+metadata_expire=86400
+enabled_metadata=0
+
+[casjay-os-highavailability]
+name=AlmaLinux $releasever HighAvailability  - $releasever $basearch
+mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/highavailability
+enabled=0
+gpgcheck=1
+countme=1
+gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-9
+metadata_expire=86400
+enabled_metadata=0
+
+[casjay-os-nfv]
+name=AlmaLinux NFV  - $releasever $basearch
+mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/nfv
+enabled=0
+gpgcheck=1
+countme=1
+gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-9
+metadata_expire=86400
+enabled_metadata=0
+
+[casjay-os-resilientstorage]
+name=AlmaLinux ResilientStorage  - $releasever $basearch
+mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/resilientstorage
+enabled=0
+gpgcheck=1
+countme=1
+gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-9
+metadata_expire=86400
+enabled_metadata=0
+
+[casjay-os-rt]
+name=AlmaLinux RT  - $releasever $basearch
+mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/rt
+enabled=0
+gpgcheck=1
+countme=1
+gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-9
+metadata_expire=86400
+enabled_metadata=0
+
+[casjay-os-saphana]
+name=AlmaLinux SAPHANA - $releasever $basearch
+mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/saphana
+enabled=0
+gpgcheck=1
+countme=1
+gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-9
+metadata_expire=86400
+enabled_metadata=0
+
+[casjay-os-sap]
+name=AlmaLinux SAP - $releasever $basearch
+mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/sap
+enabled=0
+gpgcheck=1
+countme=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-9
+metadata_expire=86400
+enabled_metadata=0
 # end almalinux repos
 
 # begin casjaysdev repos
