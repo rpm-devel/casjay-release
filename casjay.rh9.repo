@@ -9,7 +9,7 @@ countme=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-9
 metadata_expire=86400
 enabled_metadata=1
-exclude=runc,podman
+exclude=runc,podman*,docker*
 
 [casjay-os-appstream]
 name=AlmaLinux AppStream - $releasever $basearch
@@ -21,7 +21,7 @@ countme=1
 gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-9
 metadata_expire=86400
 enabled_metadata=1
-exclude=runc,podman
+exclude=runc,podman*,docker*
 
 [casjay-os-extras]
 name=AlmaLinux Extras - $releasever $basearch
@@ -32,7 +32,7 @@ countme=1
 gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-9
 metadata_expire=86400
 enabled_metadata=0
-exclude=runc,podman
+exclude=runc,podman*,docker*
 
 [casjay-os-crb]
 name=AlmaLinux CRB - $releasever $basearch
@@ -43,7 +43,7 @@ countme=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-9
 metadata_expire=86400
 enabled_metadata=0
-exclude=runc,podman
+exclude=runc,podman*,docker*
 
 [casjay-os-plus]
 name=AlmaLinux Plus  - $releasever $basearch
@@ -54,7 +54,7 @@ countme=1
 gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-9
 metadata_expire=86400
 enabled_metadata=0
-exclude=runc,podman
+exclude=runc,podman*,docker*
 
 [casjay-os-highavailability]
 name=AlmaLinux $releasever HighAvailability  - $releasever $basearch
@@ -65,7 +65,7 @@ countme=1
 gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-9
 metadata_expire=86400
 enabled_metadata=0
-exclude=runc,podman
+exclude=runc,podman*,docker*
 
 [casjay-os-nfv]
 name=AlmaLinux NFV  - $releasever $basearch
@@ -76,7 +76,7 @@ countme=1
 gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-9
 metadata_expire=86400
 enabled_metadata=0
-exclude=runc,podman
+exclude=runc,podman*,docker*
 
 [casjay-os-resilientstorage]
 name=AlmaLinux ResilientStorage  - $releasever $basearch
@@ -87,7 +87,7 @@ countme=1
 gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-9
 metadata_expire=86400
 enabled_metadata=0
-exclude=runc,podman
+exclude=runc,podman*,docker*
 
 [casjay-os-rt]
 name=AlmaLinux RT  - $releasever $basearch
@@ -98,7 +98,7 @@ countme=1
 gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-9
 metadata_expire=86400
 enabled_metadata=0
-exclude=runc,podman
+exclude=runc,podman*,docker*
 
 [casjay-os-saphana]
 name=AlmaLinux SAPHANA - $releasever $basearch
@@ -109,7 +109,7 @@ countme=1
 gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-9
 metadata_expire=86400
 enabled_metadata=0
-exclude=runc,podman
+exclude=runc,podman*,docker*
 
 [casjay-os-sap]
 name=AlmaLinux SAP - $releasever $basearch
@@ -120,7 +120,7 @@ countme=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-9
 metadata_expire=86400
 enabled_metadata=0
-exclude=runc,podman
+exclude=runc,podman*,docker*
 # end almalinux repos
 
 # begin casjaysdev repos
