@@ -7,7 +7,7 @@ gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 enabled=1
 gpgcheck=1
 countme=1
-exclude=runc,podman
+exclude=runc,podman*,docker
 
 [casjay-os-appstream]
 name=Casjays OS Updates for server use - $releasever $basearch
@@ -17,7 +17,7 @@ module_hotfixes=0
 enabled=1
 gpgcheck=1
 countme=1
-exclude=runc,podman
+exclude=runc,podman*,docker
 
 [casjay-os-powertools]
 name=Casjays OS powertools for server use - $releasever $basearch
@@ -27,7 +27,7 @@ module_hotfixes=1
 enabled=1
 gpgcheck=1
 countme=1
-exclude=runc,podman
+exclude=runc,podman*,docker
 
 [casjay-os-extras]
 name=Casjays OS extras for server use - $releasever $basearch
@@ -37,7 +37,7 @@ module_hotfixes=1
 enabled=1
 gpgcheck=1
 countme=1
-exclude=runc,podman
+exclude=runc,podman*,docker
 
 [casjay-os-devel]
 name=Casjays OS devel for server use - $releasever $basearch
@@ -47,7 +47,7 @@ module_hotfixes=1
 enabled=1
 gpgcheck=1
 countme=1
-exclude=runc,podman
+exclude=runc,podman*,docker
 # end almalinux repos
 
 # begin casjaysdev repos
