@@ -37,7 +37,7 @@ exclude=runc,podman*
 [casjay-os-crb]
 name=AlmaLinux CRB - $releasever $basearch
 mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/crb
-enabled=0
+enabled=1
 gpgcheck=1
 countme=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-9
@@ -48,7 +48,7 @@ exclude=runc,podman*
 [casjay-os-plus]
 name=AlmaLinux Plus  - $releasever $basearch
 mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/plus
-enabled=0
+enabled=1
 gpgcheck=1
 countme=1
 gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-9
@@ -78,9 +78,9 @@ metadata_expire=86400
 enabled_metadata=0
 exclude=runc,podman*
 
-[casjay-os-resilientstorage]
-name=AlmaLinux ResilientStorage  - $releasever $basearch
-mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/resilientstorage
+[casjay-os-rt]
+name=AlmaLinux RT  - $releasever $basearch
+mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/rt
 enabled=0
 gpgcheck=1
 countme=1
@@ -89,9 +89,9 @@ metadata_expire=86400
 enabled_metadata=0
 exclude=runc,podman*
 
-[casjay-os-rt]
-name=AlmaLinux RT  - $releasever $basearch
-mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/rt
+[casjay-os-resilientstorage]
+name=AlmaLinux ResilientStorage  - $releasever $basearch
+mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/resilientstorage
 enabled=0
 gpgcheck=1
 countme=1
