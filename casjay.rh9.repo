@@ -180,7 +180,7 @@ gpgcheck=1
 # begin remi repos
 [casjay-remi-safe]
 name=Safe Remi's RPM repository for Enterprise Linux $releasever - $basearch
-mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/remi
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/empty
 gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2018
 module_hotfixes=1
 enabled=1
@@ -188,7 +188,7 @@ gpgcheck=1
 
 [casjay-remi-php]
 name=Remi's PHP 7.4 RPM repository for Enterprise Linux $releasever - $basearch
-mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/remi
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/empty
 gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2018
 module_hotfixes=1
 enabled=1
