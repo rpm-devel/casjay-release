@@ -5,17 +5,34 @@ Release: %{?dist}
 License: GPLv2
 Group: System Environment/Base
 URL: http://rpm.casjaysdev.pro/
+
 SOURCE0: mock-files.tar.gz
 
 %if 0%{?rhel} == 9
+%ifnarch %{x86_64}
+%define  repo_replace false
+%endif
 Source1: https://github.com/rpm-devel/casjay-release/raw/main/casjay.rh9.repo
 Source2: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
 %endif
 %if 0%{?rhel} == 8
+%ifnarch %{x86_64}
+%define  repo_replace true
+%endif
 Source1: https://github.com/rpm-devel/casjay-release/raw/main/casjay.rh8.repo
 Source2: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
 %endif
-%if 0%{?rhel} <= 7
+%if 0%{?rhel} == 7
+%ifnarch %{x86_64}
+%define  repo_replace true
+%endif
+Source1: https://github.com/rpm-devel/casjay-release/raw/main/casjay.rh.repo
+Source2: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
+%endif
+%if 0%{?rhel} < 7
+%ifnarch %{x86_64}
+%define  repo_replace true
+%endif
 Source1: https://github.com/rpm-devel/casjay-release/raw/main/casjay.rh.repo
 Source2: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
 %endif
@@ -44,6 +61,13 @@ contains custom mock files.
 %{__tar} xfvz %{SOURCE0} -C %{buildroot}%{_sysconfdir}
 %{__install} -Dpm 0644 %{SOURCE1} %{buildroot}%{_sysconfdir}/yum.repos.d/casjay.repo
 %{__install} -Dpm 0644 %{SOURCE2} %{buildroot}%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-casjay
+%if "%{repo_replace}" = "true"
+sed -i 's|http://mirrors.elrepo.org/mirrors-elrepo.el$releasever|https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/empty|g' /etc/yum.repos.d/casjay.repo
+sed -i 's|http://mirrors.elrepo.org/mirrors-elrepo-kernel.el$releasever|https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/empty|g' /etc/yum.repos.d/casjay.repo
+sed -i 's|http://mirrors.elrepo.org/mirrors-elrepo-extras.el$releasever|https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/empty|g' /etc/yum.repos.d/casjay.repo
+sed -i 's|http://cdn.emptyrepo.net/enterprise/$releasever/safe/$basearch/mirror|https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/empty|g' /etc/yum.repos.d/casjay.repo
+sed -i 's|https://rpms.emptyrepo.net/enterprise/$releasever/php74/$basearch/mirror|https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/empty|g' /etc/yum.repos.d/casjay.repo
+%endif
 
 %clean
 %{__rm} -rf %{buildroot}
@@ -61,6 +85,7 @@ else
   sed -i '/^\[main\]/a best=True' "/etc/yum.conf" &>/dev/null
 fi
 %endif
+yum makecache -q >/dev/null
 
 %files
 %defattr(-, root, root, 0755)
