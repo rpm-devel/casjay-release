@@ -114,7 +114,7 @@ protect=0
 
 [casjay-remi-php]
 name=Remi's PHP 7 RPM repository for Enterprise Linux $releasever - $basearch
-baseurl=https://mirror.usi.edu/pub/remi/enterprise/$releasever/74/$basearch
+baseurl=https://mirror.usi.edu/pub/remi/enterprise/$releasever/php74/$basearch
 gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi
 enabled=1
 gpgcheck=1
