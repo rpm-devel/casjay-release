@@ -65,8 +65,9 @@ contains custom mock files.
 sed -i 's|http://mirrors.elrepo.org/mirrors-elrepo.el$releasever|https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/empty|g' /etc/yum.repos.d/casjay.repo
 sed -i 's|http://mirrors.elrepo.org/mirrors-elrepo-kernel.el$releasever|https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/empty|g' /etc/yum.repos.d/casjay.repo
 sed -i 's|http://mirrors.elrepo.org/mirrors-elrepo-extras.el$releasever|https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/empty|g' /etc/yum.repos.d/casjay.repo
-sed -i 's|http://cdn.emptyrepo.net/enterprise/$releasever/safe/$basearch/mirror|https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/empty|g' /etc/yum.repos.d/casjay.repo
-sed -i 's|https://rpms.emptyrepo.net/enterprise/$releasever/php74/$basearch/mirror|https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/empty|g' /etc/yum.repos.d/casjay.repo
+sed -i 's|http://cdn.remirepo.net/enterprise/$releasever/remi/mirror|https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/empty|g' /etc/yum.repos.d/casjay.repo
+sed -i 's|http://cdn.remirepo.net/enterprise/$releasever/safe/$basearch/mirror|https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/empty|g' /etc/yum.repos.d/casjay.repo
+sed -i 's|http://cdn.remirepo.net/enterprise/$releasever/php74/$basearch/mirror|https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/empty|g' /etc/yum.repos.d/casjay.repo
 %endif
 
 %clean

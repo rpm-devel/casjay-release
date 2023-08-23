@@ -105,21 +105,28 @@ gpgcheck=1
 # end rpmfusion repos
 
 # begin remi repos
-[casjay-remi-safe]
-name=Safe Remi's RPM repository for Enterprise Linux $releasever - $basearch
-mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/empty
-gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2018
-module_hotfixes=1
+[casjay-remi-base]
+name=Remi's RPM repository for Enterprise Linux $releasever - $basearch
+mirrorlist=http://cdn.remirepo.net/enterprise/$releasever/remi/mirror
+gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi
 enabled=1
 gpgcheck=1
 
 [casjay-remi-php]
-name=Remi's PHP 7.4 RPM repository for Enterprise Linux $releasever - $basearch
-mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/empty
-gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2018
-module_hotfixes=1
+name=Remi's PHP 7 RPM repository for Enterprise Linux $releasever - $basearch
+mirrorlist=http://cdn.remirepo.net/enterprise/$releasever/php74/mirror
+gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi
 enabled=1
 gpgcheck=1
+protect=0
+
+[casjay-remi-safe]
+name=Safe Remi's RPM repository for Enterprise Linux $releasever - $basearch
+mirrorlist=http://cdn.remirepo.net/enterprise/$releasever/safe/mirror
+gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi
+enabled=1
+gpgcheck=1
+protect=0
 # end remi repos
 
 # begin elrepo repos
