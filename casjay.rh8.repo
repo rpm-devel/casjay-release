@@ -108,14 +108,14 @@ gpgcheck=1
 [casjay-remi-base]
 name=Remi's RPM repository for Enterprise Linux $releasever - $basearch
 baseurl=https://mirror.usi.edu/pub/remi/enterprise/$releasever/remi/$basearch
-gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi
+gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2018
 enabled=1
 gpgcheck=1
 
 [casjay-remi-safe]
 name=Safe Remi's RPM repository for Enterprise Linux $releasever - $basearch
 baseurl=https://mirror.usi.edu/pub/remi/enterprise/$releasever/safe/$basearch
-gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi
+gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2018
 enabled=1
 gpgcheck=1
 protect=0
@@ -123,7 +123,7 @@ protect=0
 [casjay-remi-php]
 name=Remi's PHP 7 RPM repository for Enterprise Linux $releasever - $basearch
 baseurl=https://mirror.usi.edu/pub/remi/enterprise/$releasever/php74/$basearch
-gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi
+gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2018
 enabled=1
 gpgcheck=1
 protect=0
