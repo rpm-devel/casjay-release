@@ -200,6 +200,16 @@ gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2021
 enabled=1
 gpgcheck=1
 protect=0
+
+[remi-modular]
+name=Remi's Modular repository for Enterprise Linux 9 - $basearch
+#baseurl=http://rpms.remirepo.net/enterprise/9/modular/$basearch/
+#mirrorlist=https://rpms.remirepo.net/enterprise/9/modular/$basearch/httpsmirror
+mirrorlist=http://cdn.remirepo.net/enterprise/9/modular/$basearch/mirror
+gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2021
+enabled=1
+gpgcheck=1
+repo_gpgcheck=1
 # end remi repos
 
 # begin elrepo repos
