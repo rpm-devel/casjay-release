@@ -82,7 +82,7 @@ else
   sed -i '/^\[main\]/a best=True' "/etc/yum.conf" &>/dev/null
 fi
 %endif
-yum makecache -q >/dev/null
+yum makecache -qy >/dev/null
 
 %files
 %defattr(-, root, root, 0755)
