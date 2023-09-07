@@ -57,7 +57,7 @@ mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirro
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
 module_hotfixes=1
 enabled=1
-gpgcheck=1
+gpgcheck=0
 
 [casjay-rpms]
 name=Casjays RPMs for server use - $releasever $basearch
@@ -65,7 +65,7 @@ mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirro
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
 module_hotfixes=1
 enabled=1
-gpgcheck=1
+gpgcheck=0
 
 [casjay-addons]
 name=Casjays Extras for server use - $releasever $basearch
@@ -73,7 +73,7 @@ mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirro
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
 module_hotfixes=1
 enabled=1
-gpgcheck=1
+gpgcheck=0
 # end casjaysdev repos
 
 # begin epel repos
