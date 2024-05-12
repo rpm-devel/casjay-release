@@ -105,7 +105,7 @@ enabled=1
 gpgcheck=1
 
 [casjay-remi-safe]
-name=Safe Remi's RPM repository for Enterprise Linux $releasever - $basearch
+name=Remi's Safe RPM repository for Enterprise Linux $releasever - $basearch
 baseurl=https://mirror.usi.edu/pub/remi/enterprise/$releasever/safe/$basearch
 gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi
 enabled=1
@@ -121,24 +121,24 @@ gpgcheck=1
 protect=0
 
 [casjay-elrepo]
-name=ELRepo.org Community Enterprise Linux Repository $releasever - $basearch
-mirrorlist=http:/mirrors.elrepo.org/mirrors-elrepo.el$releasever
+name=ELRepo.org Repository $releasever - $basearch
+mirrorlist=http:/elrepo.org/mirrors-elrepo.el$releasever
 gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
 enabled=0
 gpgcheck=1
 protect=0
 
 [casjay-elrepo-kernel]
-name=ELRepo.org Community Enterprise Linux Kernel Repository $releasever - $basearch
-mirrorlist=http:/mirrors.elrepo.org/mirrors-elrepo-kernel.el$releasever
+name=ELRepo.org Kernel Repository $releasever - $basearch
+mirrorlist=http:/elrepo.org/mirrors-elrepo-kernel.el$releasever
 gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
 enabled=0
 gpgcheck=1
 protect=0
 
 [casjay-elrepo-extras]
-name=ELRepo.org Community Enterprise Linux Extras Repository $releasever - $basearch
-mirrorlist=http:/mirrors.elrepo.org/mirrors-elrepo-extras.el$releasever
+name=ELRepo.org Extras Repository $releasever - $basearch
+mirrorlist=http:/elrepo.org/mirrors-elrepo-extras.el$releasever
 gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
 enabled=0
 gpgcheck=1
