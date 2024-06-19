@@ -21,7 +21,7 @@ countme=1
 gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-9
 metadata_expire=86400
 enabled_metadata=1
-exclude=runc,podman*
+exclude=runc,podman*,php*
 
 [casjay-os-extras]
 name=AlmaLinux Extras - $releasever $basearch

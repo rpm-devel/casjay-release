@@ -17,7 +17,7 @@ module_hotfixes=0
 enabled=1
 gpgcheck=1
 countme=1
-exclude=runc,podman*,docker
+exclude=runc,podman*,docker,php*
 
 [casjay-os-powertools]
 name=Casjays OS powertools for server use - $releasever $basearch
