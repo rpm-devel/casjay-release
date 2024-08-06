@@ -107,7 +107,7 @@ gpgcheck=1
 # begin remi repos
 [casjay-remi-base]
 name=Remi's RPM repository for Enterprise Linux $releasever - $basearch
-baseurl=https://mirror.team-cymru.com/remi/enterprise/$releasever/remi/$basearchxt
+baseurl=https://mirror.team-cymru.com/remi/enterprise/$releasever/remi/$basearch
 gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2018
 enabled=1
 gpgcheck=1
