@@ -89,7 +89,8 @@ gpgcheck=1
 # begin rpmfusion repos
 [casjay-rpmfusion-free-updates]
 name=RPM Fusion for EL Free - $releasever $basearch
-mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=free-el-updates-released-$releasever&arch=$basearch
+mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=free-el-updates-released-$releasever &
+arch=$basearch
 gpgkey=https://download1.rpmfusion.org/free/el/RPM-GPG-KEY-rpmfusion-free-el-$releasever
 module_hotfixes=1
 enabled=1
@@ -97,7 +98,8 @@ gpgcheck=1
 
 [casjay-rpmfusion-nonfree-updates]
 name=RPM Fusion for EL Non-Free - $releasever $basearch
-mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-el-updates-released-$releasever&arch=$basearch
+mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-el-updates-released-$releasever &
+arch=$basearch
 gpgkey=https://download1.rpmfusion.org/nonfree/el/RPM-GPG-KEY-rpmfusion-nonfree-el-$releasever
 module_hotfixes=1
 enabled=1
@@ -106,14 +108,14 @@ gpgcheck=1
 
 # begin remi repos
 [casjay-remi-base]
-name=Remi's RPM repository for Enterprise Linux $releasever - $basearch
+name=Remis RPM repository for Enterprise Linux $releasever - $basearch
 baseurl=https://mirror.team-cymru.com/remi/enterprise/$releasever/remi/$basearch
 gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2018
 enabled=1
 gpgcheck=1
 
 [casjay-remi-safe]
-name=Remi's Safe RPM repository for Enterprise Linux $releasever - $basearch
+name=Remis Safe RPM repository for Enterprise Linux $releasever - $basearch
 baseurl=https://mirror.team-cymru.com/remi/enterprise/$releasever/safe/$basearch
 gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2018
 enabled=1
@@ -121,7 +123,7 @@ gpgcheck=1
 protect=0
 
 [casjay-remi-php]
-name=Remi's PHP 7 RPM repository for Enterprise Linux $releasever - $basearch
+name=Remis PHP 7 RPM repository for Enterprise Linux $releasever - $basearch
 baseurl=https://mirror.team-cymru.com/remi/enterprise/$releasever/php74/$basearch
 gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2018
 enabled=1
@@ -205,4 +207,33 @@ baseurl=https://download.docker.com/linux/centos/$releasever/$basearch/stable
 gpgkey=https://download.docker.com/linux/centos/gpg
 module_hotfixes=1
 enabled=1
+gpgcheck=1
+
+# begin modular repositories
+[remi-modular]
+name=Remis Modular repository for Enterprise Linux $releasever - $basearch
+#baseurl=http://rpms.remirepo.net/enterprise/$releasever/modular/$basearch/
+#mirrorlist=https://rpms.remirepo.net/enterprise/$releasever/modular/$basearch/httpsmirror
+mirrorlist=http://cdn.remirepo.net/enterprise/$releasever/modular/$basearch/mirror
+enabled=1
+gpgcheck=1
+repo_gpgcheck=0
+gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2018
+
+# Sources
+[casjay-remi-srpm]
+name=Remis RPM repository for Enterprise Linux $releasever - $basearch
+baseurl=https://rpms.remirepo.net/SRPMS/
+gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2018
+enabled=1
+gpgcheck=0
+
+[casjay-epel-srpm]
+name=Extra Packages for Enterprise Linux $releasever - $basearch - Source
+# It is much more secure to use the metalink, but if you wish to use a local mirror
+# place its address here.
+#baseurl=https://download.example/pub/epel/$releasever/Everything/source/tree/
+metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-source-$releasever&arch=$basearch&infra=$infra&content=$contentdir
+enabled=0
+gpgkey=https://archive.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-$releasever
 gpgcheck=1
