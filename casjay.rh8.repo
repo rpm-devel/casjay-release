@@ -84,6 +84,7 @@ gpgkey=https://archive.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-$releasever
 module_hotfixes=1
 enabled=1
 gpgcheck=1
+exclude=runc,podman*,docker,php*
 # end epel repos
 
 # begin rpmfusion repos
