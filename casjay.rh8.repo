@@ -219,6 +219,16 @@ gpgcheck=1
 repo_gpgcheck=0
 gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2018
 
+[casjay-copr-incus]
+name=incus baseurl=https://download.copr.fedorainfracloud.org/results/neil/incus/epel-$releasever-$basearch/
+type=rpm-md
+skip_if_unavailable=True
+gpgcheck=1
+gpgkey=https://download.copr.fedorainfracloud.org/results/neil/incus/pubkey.gpg
+repo_gpgcheck=0
+enabled=1
+enabled_metadata=1
+
 # Sources
 [casjay-remi-srpm]
 name=Remis RPM repository for Enterprise Linux $releasever - $basearch
