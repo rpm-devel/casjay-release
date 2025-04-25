@@ -134,7 +134,7 @@ protect=0
 [casjay-elrepo]
 name=ELRepo.org Repository - $releasever $basearch
 mirrorlist=http://elrepo.org/mirrors-elrepo.el$releasever
-gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
+gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org https://www.elrepo.org/RPM-GPG-KEY-v2-elrepo.org
 module_hotfixes=1
 enabled=1
 gpgcheck=1
@@ -142,7 +142,7 @@ gpgcheck=1
 [casjay-elrepo-kernel]
 name=ELRepo.org Kernel Repository - $releasever $basearch
 mirrorlist=http://elrepo.org/mirrors-elrepo-kernel.el$releasever
-gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
+gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org https://www.elrepo.org/RPM-GPG-KEY-v2-elrepo.org
 module_hotfixes=1
 enabled=1
 gpgcheck=1
@@ -150,7 +150,7 @@ gpgcheck=1
 [casjay-elrepo-extras]
 name=ELRepo.org Extras Repository - $releasever $basearch
 mirrorlist=http://elrepo.org/mirrors-elrepo-extras.el$releasever
-gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
+gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org https://www.elrepo.org/RPM-GPG-KEY-v2-elrepo.org
 module_hotfixes=1
 enabled=1
 gpgcheck=1
