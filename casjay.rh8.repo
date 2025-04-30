@@ -7,7 +7,7 @@ gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 enabled=1
 gpgcheck=1
 countme=1
-exclude=runc,podman*,docker
+exclude=runc,podman*,docker,php*
 
 [casjay-os-appstream]
 name=Casjays OS Updates for server use - $releasever $basearch
@@ -27,7 +27,7 @@ module_hotfixes=1
 enabled=1
 gpgcheck=1
 countme=1
-exclude=runc,podman*,docker
+exclude=runc,podman*,docker,php*
 
 [casjay-os-extras]
 name=Casjays OS extras for server use - $releasever $basearch
@@ -37,7 +37,7 @@ module_hotfixes=1
 enabled=1
 gpgcheck=1
 countme=1
-exclude=runc,podman*,docker
+exclude=runc,podman*,docker,php*
 
 [casjay-os-devel]
 name=Casjays OS devel for server use - $releasever $basearch
@@ -47,7 +47,7 @@ module_hotfixes=1
 enabled=1
 gpgcheck=1
 countme=1
-exclude=runc,podman*,docker
+exclude=runc,podman*,docker,php*
 # end almalinux repos
 
 # begin casjaysdev repos
@@ -90,7 +90,8 @@ exclude=runc,podman*,docker,php*
 # begin rpmfusion repos
 [casjay-rpmfusion-free-updates]
 name=RPM Fusion for EL Free - $releasever $basearch
-mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=free-el-updates-released-$releasever&arch=$basearch
+mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=free-el-updates-released-$releasever &
+arch=$basearch
 gpgkey=https://download1.rpmfusion.org/free/el/RPM-GPG-KEY-rpmfusion-free-el-$releasever
 module_hotfixes=1
 enabled=1
@@ -98,7 +99,8 @@ gpgcheck=1
 
 [casjay-rpmfusion-nonfree-updates]
 name=RPM Fusion for EL Non-Free - $releasever $basearch
-mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-el-updates-released-$releasever&arch=$basearch
+mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-el-updates-released-$releasever &
+arch=$basearch
 gpgkey=https://download1.rpmfusion.org/nonfree/el/RPM-GPG-KEY-rpmfusion-nonfree-el-$releasever
 module_hotfixes=1
 enabled=1
@@ -220,7 +222,8 @@ repo_gpgcheck=0
 gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2018
 
 [casjay-copr-incus]
-name=incus baseurl=https://download.copr.fedorainfracloud.org/results/neil/incus/epel-$releasever-$basearch/
+name=incus
+baseurl=https://download.copr.fedorainfracloud.org/results/neil/incus/epel-$releasever-$basearch/
 type=rpm-md
 skip_if_unavailable=True
 gpgcheck=1
@@ -242,7 +245,10 @@ name=Extra Packages for Enterprise Linux $releasever - $basearch - Source
 # It is much more secure to use the metalink, but if you wish to use a local mirror
 # place its address here.
 #baseurl=https://download.example/pub/epel/$releasever/Everything/source/tree/
-metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-source-$releasever&arch=$basearch&infra=$infra&content=$contentdir
+metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-source-$releasever &
+arch=$basearch &
+infra=$infra &
+content=$contentdir
 enabled=0
 gpgkey=https://archive.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-$releasever
 gpgcheck=1
