@@ -293,7 +293,7 @@ repo_gpgcheck=0
 gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2018
 
 [casjay-copr-incus]
-name=incus
+name=incus repository for Enterprise Linux $releasever - $basearch
 baseurl=https://download.copr.fedorainfracloud.org/results/neil/incus/epel-$releasever-$basearch/
 type=rpm-md
 skip_if_unavailable=True
