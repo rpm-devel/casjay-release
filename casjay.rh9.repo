@@ -303,6 +303,13 @@ repo_gpgcheck=0
 enabled=1
 enabled_metadata=1
 
+[casjay-jenkins]
+name=Jenkins
+baseurl=http://pkg.jenkins.io/redhat
+gpgkey=https://pkg.jenkins.io/redhat/jenkins.io-2023.key
+enabled=1
+gpgcheck=1
+
 # Sources
 [casjay-remi-srpm]
 name=Remis RPM repository for Enterprise Linux $releasever - $basearch
