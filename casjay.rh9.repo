@@ -239,6 +239,15 @@ enabled=1
 gpgcheck=1
 # end elrepo repos
 
+# begin ghettoforge
+[casjay-gf]
+name=Ghettoforge packages - $releasever $basearch
+mirrorlist=http://mirrorlist.ghettoforge.org/el/9/gf/$basearch/mirrorlist
+enabled=1
+gpgcheck=1
+gpgkey=https://mirror.ghettoforge.org/distributions/gf/RPM-GPG-KEY-gf.el9
+# end ghettoforge
+
 # begin mariadb repos
 [casjay-mariadb]
 name=MariaDB 10.10 for RHEL - $releasever $basearch
