@@ -267,6 +267,13 @@ gpgcheck=1
 gpgkey=https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG
 # end postgres
 
+[mongodb-8]
+name=MongoDB Repository for Enterprise Linux $releasever - $basearch
+baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/8.0/$basearch/
+gpgcheck=1
+enabled=1
+gpgkey=https://pgp.mongodb.com/server-8.0.asc
+
 [casjay-nodejs]
 name=nodejs for server use - $releasever $basearch
 baseurl=https://rpm.nodesource.com/pub_18.x/el/$releasever/$basearch
@@ -318,6 +325,13 @@ baseurl=http://pkg.jenkins.io/redhat
 gpgkey=https://pkg.jenkins.io/redhat/jenkins.io-2023.key
 enabled=1
 gpgcheck=1
+
+[pritunl]
+name=Pritunl Repository for Enterprise Linux $releasever - $basearch
+baseurl=https://repo.pritunl.com/stable/yum/oraclelinux/$releasever/
+gpgcheck=1
+enabled=1
+gpgkey=https://raw.githubusercontent.com/pritunl/pgp/master/pritunl_repo_pub.asc
 
 # Sources
 [casjay-remi-srpm]
