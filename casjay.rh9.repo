@@ -248,6 +248,19 @@ gpgcheck=1
 gpgkey=https://mirror.ghettoforge.org/distributions/gf/RPM-GPG-KEY-gf.el9
 # end ghettoforge
 
+# begin i2pd repo
+[casjay-i2pd]
+name=i2pd for server use - $releasever $basearch
+baseurl=https://download.copr.fedorainfracloud.org/results/supervillain/i2pd/epel-9-$basearch/
+type=rpm-md
+gpgkey=https://download.copr.fedorainfracloud.org/results/supervillain/i2pd/pubkey.gpg
+enabled=1
+enabled_metadata=1
+gpgcheck=1
+repo_gpgcheck=0
+skip_if_unavailable=True
+# end i2pd repos
+
 # begin mariadb repos
 [casjay-mariadb]
 name=MariaDB 10.10 for RHEL - $releasever $basearch
