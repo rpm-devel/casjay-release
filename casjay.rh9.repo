@@ -363,7 +363,7 @@ gpgcheck=0
 
 [casjay-epel-srpm]
 name=Extra Packages for Enterprise Linux $releasever - $basearch - Source
-#baseurl=https://download.example/pub/epel/$releasever/Everything/source/tree/metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-source-$releasever&arch=$basearch&infra=$infra&content=$contentdir
+metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-source-$releasever&arch=$basearch&infra=$infra&content=$contentdir
 gpgkey=https://archive.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-$releasever
 enabled=1
 gpgcheck=1
