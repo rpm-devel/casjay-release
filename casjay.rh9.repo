@@ -163,8 +163,7 @@ exclude=runc,podman*,docker,php*
 # begin rpmfusion repos
 [casjay-rpmfusion-free-updates]
 name=RPM Fusion for EL Free - $releasever $basearch
-mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=free-el-updates-released-$releasever &
-arch=$basearch
+mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=free-el-updates-released-$releasever&arch=$basearch
 gpgkey=https://download1.rpmfusion.org/free/el/RPM-GPG-KEY-rpmfusion-free-el-$releasever
 module_hotfixes=1
 enabled=1
@@ -172,8 +171,7 @@ gpgcheck=1
 
 [casjay-rpmfusion-nonfree-updates]
 name=RPM Fusion for EL Non-Free - $releasever $basearch
-mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-el-updates-released-$releasever &
-arch=$basearch
+mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-el-updates-released-$releasever&arch=$basearch
 gpgkey=https://download1.rpmfusion.org/nonfree/el/RPM-GPG-KEY-rpmfusion-nonfree-el-$releasever
 module_hotfixes=1
 enabled=1
@@ -365,11 +363,7 @@ gpgcheck=0
 
 [casjay-epel-srpm]
 name=Extra Packages for Enterprise Linux $releasever - $basearch - Source
-#baseurl=https://download.example/pub/epel/$releasever/Everything/source/tree/
-metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-source-$releasever &
-arch=$basearch &
-infra=$infra &
-content=$contentdir
+#baseurl=https://download.example/pub/epel/$releasever/Everything/source/tree/metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-source-$releasever&arch=$basearch&infra=$infra&content=$contentdir
 gpgkey=https://archive.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-$releasever
 enabled=1
 gpgcheck=1
