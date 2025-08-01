@@ -242,10 +242,10 @@ gpgcheck=1
 # begin ghettoforge
 [casjay-gf]
 name=Ghettoforge packages - $releasever $basearch
-mirrorlist=http://mirrorlist.ghettoforge.org/el/9/gf/$basearch/mirrorlist
+mirrorlist=http://mirrorlist.ghettoforge.net/el/9/gf/$basearch/mirrorlist
 enabled=1
 gpgcheck=1
-gpgkey=https://mirror.ghettoforge.org/distributions/gf/RPM-GPG-KEY-gf.el9
+gpgkey=https://mirror.ghettoforge.net/distributions/gf/RPM-GPG-KEY-gf.el9
 # end ghettoforge
 
 # begin i2pd repo
