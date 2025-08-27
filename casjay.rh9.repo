@@ -1,12 +1,16 @@
-# CasjaysDev AlmaLinux Repo Config 9
-# begin almalinux repos
+# CasjaysDev AlmaLinux Repo Config 8/9/10 (x86_64, aarch64)
+# Version-agnostic: relies on $releasever (major) and $basearch.
+
+# ---------------------------
+# AlmaLinux official repos
+# ---------------------------
 [casjay-os-base]
 name=AlmaLinux BaseOS - $releasever $basearch
 mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/baseos
 enabled=1
 gpgcheck=1
 countme=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-9
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
 metadata_expire=86400
 enabled_metadata=1
 exclude=runc
@@ -14,11 +18,10 @@ exclude=runc
 [casjay-os-appstream]
 name=AlmaLinux AppStream - $releasever $basearch
 mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/appstream
-# baseurl=https://repo.almalinux.org/almalinux/$releasever/AppStream/$basearch/os/
 enabled=1
 gpgcheck=1
 countme=1
-gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-9
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
 metadata_expire=86400
 enabled_metadata=1
 exclude=runc,php*,qemu-*-9.*
@@ -29,7 +32,7 @@ mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/extras
 enabled=1
 gpgcheck=1
 countme=1
-gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-9
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
 metadata_expire=86400
 enabled_metadata=0
 exclude=runc
@@ -40,7 +43,7 @@ mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/crb
 enabled=1
 gpgcheck=1
 countme=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-9
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
 metadata_expire=86400
 enabled_metadata=0
 exclude=runc
@@ -51,18 +54,18 @@ mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/plus
 enabled=1
 gpgcheck=1
 countme=1
-gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-9
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
 metadata_expire=86400
 enabled_metadata=0
 exclude=runc
 
 [casjay-os-highavailability]
-name=AlmaLinux $releasever HighAvailability - $releasever $basearch
+name=AlmaLinux HighAvailability - $releasever $basearch
 mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/highavailability
 enabled=0
 gpgcheck=1
 countme=1
-gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-9
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
 metadata_expire=86400
 enabled_metadata=0
 exclude=runc,podman*
@@ -73,7 +76,7 @@ mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/nfv
 enabled=0
 gpgcheck=1
 countme=1
-gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-9
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
 metadata_expire=86400
 enabled_metadata=0
 exclude=runc
@@ -84,7 +87,7 @@ mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/rt
 enabled=0
 gpgcheck=1
 countme=1
-gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-9
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
 metadata_expire=86400
 enabled_metadata=0
 exclude=runc
@@ -95,7 +98,7 @@ mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/resilientstorage
 enabled=0
 gpgcheck=1
 countme=1
-gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-9
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
 metadata_expire=86400
 enabled_metadata=0
 exclude=runc
@@ -106,7 +109,7 @@ mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/saphana
 enabled=0
 gpgcheck=1
 countme=1
-gpgkey=http://mirror.siena.edu/almalinux/RPM-GPG-KEY-AlmaLinux-9
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
 metadata_expire=86400
 enabled_metadata=0
 exclude=runc
@@ -117,151 +120,190 @@ mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/sap
 enabled=0
 gpgcheck=1
 countme=1
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-9
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
 metadata_expire=86400
 enabled_metadata=0
 exclude=runc
-# end almalinux repos
 
-# begin casjaysdev repos
+
+# ---------------------------
+# CasjaysDev repos (mirrorlists) - third party
+# ---------------------------
 [casjay-extras]
-name=Casjays Extras for server use - $releasever $basearch
+name=Casjays Extras - $releasever $basearch
 mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/extras
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
 module_hotfixes=1
 enabled=1
 gpgcheck=1
+skip_if_unavailable=1
 
 [casjay-rpms]
-name=Casjays RPMs for server use - $releasever $basearch
+name=Casjays RPMs - $releasever $basearch
 mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/rpms
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
 module_hotfixes=1
 enabled=1
 gpgcheck=1
+skip_if_unavailable=1
 
 [casjay-addons]
-name=Casjays Extras for server use - $releasever $basearch
+name=Casjays Addons - $releasever $basearch
 mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/addons
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
 module_hotfixes=1
 enabled=1
 gpgcheck=1
-# end casjaysdev repos
+skip_if_unavailable=1
 
-# begin epel repos
+
+# ---------------------------
+# EPEL (kept strict)
+# ---------------------------
 [casjay-epel]
-name=Extra Packages for Enterprise Linux $releasever - $basearch
+name=EPEL $releasever - $basearch
 baseurl=https://download.fedoraproject.org/pub/epel/$releasever/Everything/$basearch
 gpgkey=https://archive.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-$releasever
 module_hotfixes=1
 enabled=1
 gpgcheck=1
 exclude=runc,podman*,docker,php*
-# end epel repos
 
-# begin rpmfusion repos
+
+# ---------------------------
+# RPM Fusion - third party
+# ---------------------------
 [casjay-rpmfusion-free-updates]
-name=RPM Fusion for EL Free - $releasever $basearch
-mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=free-el-updates-released-$releasever&arch=$basearch
+name=RPM Fusion Free for EL - $releasever $basearch
+mirrorlist=https://mirrors.rpmfusion.org/mirrorlist?repo=free-el-updates-released-$releasever&arch=$basearch
 gpgkey=https://download1.rpmfusion.org/free/el/RPM-GPG-KEY-rpmfusion-free-el-$releasever
 module_hotfixes=1
 enabled=1
 gpgcheck=1
+skip_if_unavailable=1
 
 [casjay-rpmfusion-nonfree-updates]
-name=RPM Fusion for EL Non-Free - $releasever $basearch
-mirrorlist=http://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-el-updates-released-$releasever&arch=$basearch
+name=RPM Fusion Nonfree for EL - $releasever $basearch
+mirrorlist=https://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-el-updates-released-$releasever&arch=$basearch
 gpgkey=https://download1.rpmfusion.org/nonfree/el/RPM-GPG-KEY-rpmfusion-nonfree-el-$releasever
 module_hotfixes=1
 enabled=1
 gpgcheck=1
-# end rpmfusion repos
+skip_if_unavailable=1
 
-# begin remi repos
+
+# ---------------------------
+# Remi - third party
+# ---------------------------
 [casjay-remi-base]
-name=Remis RPM repository for Enterprise Linux $releasever - $basearch
+name=Remi - $releasever $basearch
 baseurl=https://mirror.team-cymru.com/remi/enterprise/$releasever/remi/$basearch
 gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2021
 enabled=1
 gpgcheck=1
+skip_if_unavailable=1
 
 [casjay-remi-safe]
-name=Remis Safe RPM repository for Enterprise Linux $releasever - $basearch
+name=Remi Safe - $releasever $basearch
 baseurl=https://mirror.team-cymru.com/remi/enterprise/$releasever/safe/$basearch
 gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2021
 enabled=1
 gpgcheck=1
 protect=0
+skip_if_unavailable=1
 
 [casjay-remi-php]
-name=Remis PHP 7 RPM repository for Enterprise Linux $releasever - $basearch
+name=Remi PHP 7.4 - $releasever $basearch
 baseurl=https://mirror.team-cymru.com/remi/enterprise/$releasever/php74/$basearch
 gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2021
 enabled=1
 gpgcheck=1
 protect=0
+skip_if_unavailable=1
 
 [remi-modular]
-name=Remis Modular repository for Enterprise Linux 9 - $basearch
-#baseurl=http://rpms.remirepo.net/enterprise/9/modular/$basearch/
-#mirrorlist=https://rpms.remirepo.net/enterprise/9/modular/$basearch/httpsmirror
-mirrorlist=http://cdn.remirepo.net/enterprise/9/modular/$basearch/mirror
+name=Remi Modular - $releasever - $basearch
+mirrorlist=https://cdn.remirepo.net/enterprise/$releasever/modular/$basearch/mirror
 gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2021
 enabled=1
 gpgcheck=1
 repo_gpgcheck=1
-# end remi repos
+skip_if_unavailable=1
 
-# begin elrepo repos
+
+# ---------------------------
+# ELRepo - third party
+# ---------------------------
 [casjay-elrepo]
-name=ELRepo.org Community Enterprise Linux Repository - $releasever $basearch
-mirrorlist=http://elrepo.org/mirrors-elrepo.el$releasever
+name=ELRepo - el$releasever - $basearch
+mirrorlist=https://elrepo.org/mirrors-elrepo.el$releasever
 gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org https://www.elrepo.org/RPM-GPG-KEY-v2-elrepo.org
 module_hotfixes=1
 enabled=1
 gpgcheck=1
+skip_if_unavailable=1
 
 [casjay-elrepo-kernel]
-name=ELRepo.org Community Enterprise Linux Kernel Repository - $releasever $basearch
-mirrorlist=http://elrepo.org/mirrors-elrepo-kernel.el$releasever
+name=ELRepo Kernel - el$releasever - $basearch
+mirrorlist=https://elrepo.org/mirrors-elrepo-kernel.el$releasever
 gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org https://www.elrepo.org/RPM-GPG-KEY-v2-elrepo.org
 module_hotfixes=1
 enabled=1
 gpgcheck=1
+skip_if_unavailable=1
 
 [casjay-elrepo-extras]
-name=ELRepo.org Community Enterprise Linux Extras Repository - $releasever $basearch
-mirrorlist=http://elrepo.org/mirrors-elrepo-extras.el$releasever
+name=ELRepo Extras - el$releasever - $basearch
+mirrorlist=https://elrepo.org/mirrors-elrepo-extras.el$releasever
 gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org https://www.elrepo.org/RPM-GPG-KEY-v2-elrepo.org
 module_hotfixes=1
 enabled=1
 gpgcheck=1
-# end elrepo repos
+skip_if_unavailable=1
 
-# begin ghettoforge
+
+# ---------------------------
+# Ghettoforge - third party
+# ---------------------------
 [casjay-gf]
-name=Ghettoforge packages - $releasever $basearch
-mirrorlist=http://mirrorlist.ghettoforge.net/el/9/gf/$basearch/mirrorlist
+name=Ghettoforge - $releasever $basearch
+mirrorlist=http://mirrorlist.ghettoforge.net/el/$releasever/gf/$basearch/mirrorlist
 enabled=1
 gpgcheck=1
-gpgkey=https://mirror.ghettoforge.net/distributions/gf/RPM-GPG-KEY-gf.el9
-# end ghettoforge
+gpgkey=https://mirror.ghettoforge.net/distributions/gf/RPM-GPG-KEY-gf.el$releasever
+skip_if_unavailable=1
 
-# begin i2pd repo
+
+# ---------------------------
+# COPR (i2pd, incus) - third party
+# ---------------------------
 [casjay-i2pd]
-name=i2pd for server use - $releasever $basearch
-baseurl=https://download.copr.fedorainfracloud.org/results/supervillain/i2pd/epel-9-$basearch/
+name=i2pd (COPR) - $releasever $basearch
+baseurl=https://download.copr.fedorainfracloud.org/results/supervillain/i2pd/epel-$releasever-$basearch/
 type=rpm-md
 gpgkey=https://download.copr.fedorainfracloud.org/results/supervillain/i2pd/pubkey.gpg
 enabled=1
 enabled_metadata=1
 gpgcheck=1
 repo_gpgcheck=0
-skip_if_unavailable=True
-# end i2pd repos
+skip_if_unavailable=1
 
-# begin mariadb repos
+[casjay-copr-incus]
+name=incus (COPR) - $releasever $basearch
+baseurl=https://download.copr.fedorainfracloud.org/results/neil/incus/epel-$releasever-$basearch/
+type=rpm-md
+skip_if_unavailable=1
+gpgcheck=1
+gpgkey=https://download.copr.fedorainfracloud.org/results/neil/incus/pubkey.gpg
+repo_gpgcheck=0
+enabled=1
+enabled_metadata=1
+
+
+# ---------------------------
+# MariaDB / PostgreSQL / MongoDB / Node.js / Yarn / Docker /
+# Webmin / Jenkins / Pritunl - third party
+# ---------------------------
 [casjay-mariadb]
 name=MariaDB 10.10 for RHEL - $releasever $basearch
 baseurl=http://yum.mariadb.org/10.10/rhel/$releasever/$basearch
@@ -269,101 +311,329 @@ gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
 module_hotfixes=1
 enabled=0
 gpgcheck=1
-# end mariadb repos
+skip_if_unavailable=1
 
-# begin postgres
 [casjay-postgresql]
 name=PostgreSQL 15 for RHEL $releasever - $basearch
 baseurl=https://download.postgresql.org/pub/repos/yum/15/redhat/rhel-$releasever-$basearch
 enabled=0
 gpgcheck=1
 gpgkey=https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG
-# end postgres
+skip_if_unavailable=1
 
 [mongodb-8]
-name=MongoDB Repository for Enterprise Linux $releasever - $basearch
+name=MongoDB 8.0 - $releasever - $basearch
 baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/8.0/$basearch/
 gpgcheck=1
 enabled=1
 gpgkey=https://pgp.mongodb.com/server-8.0.asc
+skip_if_unavailable=1
 
 [casjay-nodejs]
-name=nodejs for server use - $releasever $basearch
+name=NodeSource 18.x - $releasever $basearch
 baseurl=https://rpm.nodesource.com/pub_18.x/el/$releasever/$basearch
 gpgkey=https://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL
 module_hotfixes=1
 enabled=1
 gpgcheck=1
+skip_if_unavailable=1
 
 [casjay-yarn]
-name=Yarn for server use - $releasever $basearch
+name=Yarn - $releasever $basearch
 baseurl=https://dl.yarnpkg.com/rpm/
 gpgkey=https://dl.yarnpkg.com/rpm/pubkey.gpg
 enabled=1
 gpgcheck=1
+skip_if_unavailable=1
 
 [casjay-docker]
-name=docker for server use - $releasever $basearch
+name=Docker CE - $releasever $basearch
 baseurl=https://download.docker.com/linux/centos/$releasever/$basearch/stable
 gpgkey=https://download.docker.com/linux/centos/gpg
 module_hotfixes=1
 enabled=1
 gpgcheck=1
+skip_if_unavailable=1
 
 [webmin-stable-noarch]
-name=Webmin Releases - $releasever $basearch
+name=Webmin Releases
 baseurl=https://download.webmin.com/download/newkey/yum
 gpgkey=https://download.webmin.com/developers-key.asc
 enabled=1
 gpgcheck=1
-
-# begin modular repositories
-[remi-modular]
-name=Remis Modular repository for Enterprise Linux $releasever - $basearch
-#baseurl=http://rpms.remirepo.net/enterprise/$releasever/modular/$basearch/
-#mirrorlist=https://rpms.remirepo.net/enterprise/$releasever/modular/$basearch/httpsmirror
-mirrorlist=http://cdn.remirepo.net/enterprise/$releasever/modular/$basearch/mirror
-enabled=1
-gpgcheck=1
-repo_gpgcheck=0
-gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2018
-
-[casjay-copr-incus]
-name=incus repository for Enterprise Linux $releasever - $basearch
-baseurl=https://download.copr.fedorainfracloud.org/results/neil/incus/epel-$releasever-$basearch/
-type=rpm-md
-skip_if_unavailable=True
-gpgcheck=1
-gpgkey=https://download.copr.fedorainfracloud.org/results/neil/incus/pubkey.gpg
-repo_gpgcheck=0
-enabled=1
-enabled_metadata=1
+skip_if_unavailable=1
 
 [casjay-jenkins]
 name=Jenkins
-baseurl=http://pkg.jenkins.io/redhat
+baseurl=https://pkg.jenkins.io/redhat
 gpgkey=https://pkg.jenkins.io/redhat/jenkins.io-2023.key
 enabled=1
 gpgcheck=1
+skip_if_unavailable=1
 
 [pritunl]
-name=Pritunl Repository for Enterprise Linux $releasever - $basearch
+name=Pritunl - OracleLinux $releasever
 baseurl=https://repo.pritunl.com/stable/yum/oraclelinux/$releasever/
 gpgcheck=1
 enabled=1
 gpgkey=https://raw.githubusercontent.com/pritunl/pgp/master/pritunl_repo_pub.asc
+skip_if_unavailable=1
 
-# Sources
-[casjay-remi-srpm]
-name=Remis RPM repository for Enterprise Linux $releasever - $basearch
-baseurl=https://rpms.remirepo.net/SRPMS/
-gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2018
+
+# ============================
+# Source Repositories (SRPMS)
+# Pattern: <name>-srpm
+# ============================
+
+# ---- AlmaLinux SRPMs (kept strict) ----
+[casjay-os-base-srpm]
+name=AlmaLinux BaseOS Source - $releasever
+baseurl=https://repo.almalinux.org/almalinux/$releasever/BaseOS/Source/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
 enabled=1
-gpgcheck=0
+gpgcheck=1
 
+[casjay-os-appstream-srpm]
+name=AlmaLinux AppStream Source - $releasever
+baseurl=https://repo.almalinux.org/almalinux/$releasever/AppStream/Source/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
+enabled=1
+gpgcheck=1
+
+[casjay-os-extras-srpm]
+name=AlmaLinux Extras Source - $releasever
+baseurl=https://repo.almalinux.org/almalinux/$releasever/extras/Source/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
+enabled=1
+gpgcheck=1
+
+[casjay-os-crb-srpm]
+name=AlmaLinux CRB Source - $releasever
+baseurl=https://repo.almalinux.org/almalinux/$releasever/CRB/Source/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
+enabled=1
+gpgcheck=1
+
+[casjay-os-plus-srpm]
+name=AlmaLinux Plus Source - $releasever
+baseurl=https://repo.almalinux.org/almalinux/$releasever/plus/Source/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
+enabled=1
+gpgcheck=1
+
+[casjay-os-highavailability-srpm]
+name=AlmaLinux HighAvailability Source - $releasever
+baseurl=https://repo.almalinux.org/almalinux/$releasever/HighAvailability/Source/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
+enabled=0
+gpgcheck=1
+
+[casjay-os-nfv-srpm]
+name=AlmaLinux NFV Source - $releasever
+baseurl=https://repo.almalinux.org/almalinux/$releasever/NFV/Source/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
+enabled=0
+gpgcheck=1
+
+[casjay-os-rt-srpm]
+name=AlmaLinux RT Source - $releasever
+baseurl=https://repo.almalinux.org/almalinux/$releasever/RT/Source/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
+enabled=0
+gpgcheck=1
+
+[casjay-os-resilientstorage-srpm]
+name=AlmaLinux ResilientStorage Source - $releasever
+baseurl=https://repo.almalinux.org/almalinux/$releasever/ResilientStorage/Source/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
+enabled=0
+gpgcheck=1
+
+[casjay-os-saphana-srpm]
+name=AlmaLinux SAPHANA Source - $releasever
+baseurl=https://repo.almalinux.org/almalinux/$releasever/SAPHANA/Source/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
+enabled=0
+gpgcheck=1
+
+[casjay-os-sap-srpm]
+name=AlmaLinux SAP Source - $releasever
+baseurl=https://repo.almalinux.org/almalinux/$releasever/SAP/Source/
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
+enabled=0
+gpgcheck=1
+
+
+# ---- EPEL SRPMs (kept strict) ----
 [casjay-epel-srpm]
-name=Extra Packages for Enterprise Linux $releasever - $basearch - Source
+name=Extra Packages for Enterprise Linux $releasever - Source
 metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-source-$releasever&arch=$basearch&infra=$infra&content=$contentdir
 gpgkey=https://archive.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-$releasever
 enabled=1
 gpgcheck=1
+
+
+# ---- RPM Fusion SRPMs - third party ----
+[casjay-rpmfusion-free-updates-srpm]
+name=RPM Fusion Free for EL - Source - $releasever
+baseurl=https://download1.rpmfusion.org/free/el/updates/$releasever/SRPMS/
+gpgkey=https://download1.rpmfusion.org/free/el/RPM-GPG-KEY-rpmfusion-free-el-$releasever
+enabled=1
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-rpmfusion-nonfree-updates-srpm]
+name=RPM Fusion Nonfree for EL - Source - $releasever
+baseurl=https://download1.rpmfusion.org/nonfree/el/updates/$releasever/SRPMS/
+gpgkey=https://download1.rpmfusion.org/nonfree/el/RPM-GPG-KEY-rpmfusion-nonfree-el-$releasever
+enabled=1
+gpgcheck=1
+skip_if_unavailable=1
+
+
+# ---- Remi SRPMs - third party ----
+[casjay-remi-srpm]
+name=Remi SRPMS
+baseurl=https://rpms.remirepo.net/SRPMS/
+gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2021
+enabled=1
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-remi-modular-srpm]
+name=Remi Modular - SRPMS - $releasever
+baseurl=https://rpms.remirepo.net/enterprise/$releasever/modular/SRPMS/
+gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2021
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+
+# ---- ELRepo SRPMs - third party ----
+[casjay-elrepo-srpm]
+name=ELRepo Source - el$releasever
+baseurl=https://mirrors.elrepo.org/linux/elrepo/el$releasever/SRPMS/
+gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org https://www.elrepo.org/RPM-GPG-KEY-v2-elrepo.org
+enabled=1
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-elrepo-kernel-srpm]
+name=ELRepo Kernel Source - el$releasever
+baseurl=https://mirrors.elrepo.org/linux/kernel/el$releasever/SRPMS/
+gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org https://www.elrepo.org/RPM-GPG-KEY-v2-elrepo.org
+enabled=1
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-elrepo-extras-srpm]
+name=ELRepo Extras Source - el$releasever
+baseurl=https://mirrors.elrepo.org/linux/extras/el$releasever/SRPMS/
+gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org https://www.elrepo.org/RPM-GPG-KEY-v2-elrepo.org
+enabled=1
+gpgcheck=1
+skip_if_unavailable=1
+
+
+# ---- Ghettoforge SRPMs - third party ----
+[casjay-gf-srpm]
+name=Ghettoforge Source - $releasever
+baseurl=https://mirror.ghettoforge.net/distributions/gf/el/$releasever/SRPMS/
+gpgkey=https://mirror.ghettoforge.net/distributions/gf/RPM-GPG-KEY-gf.el$releasever
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+
+# ---- COPR SRPMs - third party (verify layout; disabled by default) ----
+[casjay-i2pd-srpm]
+name=i2pd (COPR) - SRPMS - $releasever
+baseurl=https://download.copr.fedorainfracloud.org/results/supervillain/i2pd/epel-$releasever-SRPMS/
+gpgkey=https://download.copr.fedorainfracloud.org/results/supervillain/i2pd/pubkey.gpg
+enabled=0
+gpgcheck=1
+repo_gpgcheck=0
+skip_if_unavailable=1
+
+[casjay-copr-incus-srpm]
+name=incus (COPR) - SRPMS - $releasever
+baseurl=https://download.copr.fedorainfracloud.org/results/neil/incus/epel-$releasever-SRPMS/
+gpgkey=https://download.copr.fedorainfracloud.org/results/neil/incus/pubkey.gpg
+enabled=0
+gpgcheck=1
+repo_gpgcheck=0
+skip_if_unavailable=1
+
+
+# ---- Vendor SRPMs - third party (often missing/inconsistent; disabled) ----
+[casjay-mariadb-srpm]
+name=MariaDB 10.10 SRPMS - $releasever
+baseurl=https://archive.mariadb.org/mariadb-10.10/yum/rhel/$releasever/SRPMS/
+gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-postgresql-srpm]
+name=PostgreSQL 15 SRPMS - $releasever
+baseurl=https://download.postgresql.org/pub/repos/yum/srpms/15/redhat/rhel-$releasever-$basearch
+gpgkey=https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+[mongodb-8-srpm]
+name=MongoDB 8.0 SRPMS - $releasever
+baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/8.0/SRPMS/
+gpgkey=https://pgp.mongodb.com/server-8.0.asc
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-nodejs-srpm]
+name=NodeSource 18.x SRPMS - $releasever
+baseurl=https://rpm.nodesource.com/pub_18.x/el/$releasever/SRPMS
+gpgkey=https://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-yarn-srpm]
+name=Yarn SRPMS
+baseurl=https://dl.yarnpkg.com/rpm/SRPMS/
+gpgkey=https://dl.yarnpkg.com/rpm/pubkey.gpg
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-docker-srpm]
+name=Docker CE SRPMS - $releasever
+baseurl=https://download.docker.com/linux/centos/$releasever/SRPMS
+gpgkey=https://download.docker.com/linux/centos/gpg
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+[webmin-stable-noarch-srpm]
+name=Webmin SRPMS
+baseurl=https://download.webmin.com/download/SRPMS/
+gpgkey=https://download.webmin.com/developers-key.asc
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-jenkins-srpm]
+name=Jenkins SRPMS
+baseurl=https://pkg.jenkins.io/redhat-stable/srpms/
+gpgkey=https://pkg.jenkins.io/redhat/jenkins.io-2023.key
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+[pritunl-srpm]
+name=Pritunl SRPMS - $releasever
+baseurl=https://repo.pritunl.com/stable/yum/oraclelinux/$releasever/SRPMS/
+gpgkey=https://raw.githubusercontent.com/pritunl/pgp/master/pritunl_repo_pub.asc
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
