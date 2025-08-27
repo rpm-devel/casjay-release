@@ -223,7 +223,7 @@ skip_if_unavailable=1
 
 [remi-modular]
 name=Remi Modular - $releasever - $basearch
-mirrorlist=https://cdn.remirepo.net/enterprise/$releasever/modular/$basearch/mirror
+mirrorlist=https://mirror.team-cymru.com/remi/enterprise/$releasever/modular/$basearch/mirror
 gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2021
 enabled=1
 gpgcheck=1
