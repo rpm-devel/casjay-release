@@ -388,77 +388,77 @@ skip_if_unavailable=1
 # ---- AlmaLinux SRPMs (kept strict) ----
 [casjay-os-base-srpm]
 name=AlmaLinux BaseOS Source - $releasever
-baseurl=https://repo.almalinux.org/almalinux/$releasever/BaseOS/Source/
+baseurl=https://vault.almalinux.org/$releasever/BaseOS/Source/
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
-enabled=1
+enabled=0
 gpgcheck=1
 
 [casjay-os-appstream-srpm]
 name=AlmaLinux AppStream Source - $releasever
-baseurl=https://repo.almalinux.org/almalinux/$releasever/AppStream/Source/
+baseurl=https://vault.almalinux.org/$releasever/AppStream/Source/
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
-enabled=1
+enabled=0
 gpgcheck=1
 
 [casjay-os-extras-srpm]
 name=AlmaLinux Extras Source - $releasever
-baseurl=https://repo.almalinux.org/almalinux/$releasever/extras/Source/
+baseurl=https://vault.almalinux.org/$releasever/extras/Source/
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
-enabled=1
+enabled=0
 gpgcheck=1
 
 [casjay-os-crb-srpm]
 name=AlmaLinux CRB Source - $releasever
-baseurl=https://repo.almalinux.org/almalinux/$releasever/CRB/Source/
+baseurl=https://vault.almalinux.org/$releasever/CRB/Source/
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
-enabled=1
+enabled=0
 gpgcheck=1
 
 [casjay-os-plus-srpm]
 name=AlmaLinux Plus Source - $releasever
-baseurl=https://repo.almalinux.org/almalinux/$releasever/plus/Source/
+baseurl=https://vault.almalinux.org/$releasever/plus/Source/
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
-enabled=1
+enabled=0
 gpgcheck=1
 
 [casjay-os-highavailability-srpm]
 name=AlmaLinux HighAvailability Source - $releasever
-baseurl=https://repo.almalinux.org/almalinux/$releasever/HighAvailability/Source/
+baseurl=https://vault.almalinux.org/$releasever/HighAvailability/Source/
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
 enabled=0
 gpgcheck=1
 
 [casjay-os-nfv-srpm]
 name=AlmaLinux NFV Source - $releasever
-baseurl=https://repo.almalinux.org/almalinux/$releasever/NFV/Source/
+baseurl=https://vault.almalinux.org/$releasever/NFV/Source/
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
 enabled=0
 gpgcheck=1
 
 [casjay-os-rt-srpm]
 name=AlmaLinux RT Source - $releasever
-baseurl=https://repo.almalinux.org/almalinux/$releasever/RT/Source/
+baseurl=https://vault.almalinux.org/$releasever/RT/Source/
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
 enabled=0
 gpgcheck=1
 
 [casjay-os-resilientstorage-srpm]
 name=AlmaLinux ResilientStorage Source - $releasever
-baseurl=https://repo.almalinux.org/almalinux/$releasever/ResilientStorage/Source/
+baseurl=https://vault.almalinux.org/$releasever/ResilientStorage/Source/
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
 enabled=0
 gpgcheck=1
 
 [casjay-os-saphana-srpm]
 name=AlmaLinux SAPHANA Source - $releasever
-baseurl=https://repo.almalinux.org/almalinux/$releasever/SAPHANA/Source/
+baseurl=https://vault.almalinux.org/$releasever/SAPHANA/Source/
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
 enabled=0
 gpgcheck=1
 
 [casjay-os-sap-srpm]
 name=AlmaLinux SAP Source - $releasever
-baseurl=https://repo.almalinux.org/almalinux/$releasever/SAP/Source/
+baseurl=https://vault.almalinux.org/$releasever/SAP/Source/
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
 enabled=0
 gpgcheck=1
@@ -469,7 +469,7 @@ gpgcheck=1
 name=Extra Packages for Enterprise Linux $releasever - Source
 metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-source-$releasever&arch=$basearch&infra=$infra&content=$contentdir
 gpgkey=https://archive.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-$releasever
-enabled=1
+enabled=0
 gpgcheck=1
 
 
@@ -478,7 +478,7 @@ gpgcheck=1
 name=RPM Fusion Free for EL - Source - $releasever
 baseurl=https://download1.rpmfusion.org/free/el/updates/$releasever/SRPMS/
 gpgkey=https://download1.rpmfusion.org/free/el/RPM-GPG-KEY-rpmfusion-free-el-$releasever
-enabled=1
+enabled=0
 gpgcheck=1
 skip_if_unavailable=1
 
@@ -486,7 +486,7 @@ skip_if_unavailable=1
 name=RPM Fusion Nonfree for EL - Source - $releasever
 baseurl=https://download1.rpmfusion.org/nonfree/el/updates/$releasever/SRPMS/
 gpgkey=https://download1.rpmfusion.org/nonfree/el/RPM-GPG-KEY-rpmfusion-nonfree-el-$releasever
-enabled=1
+enabled=0
 gpgcheck=1
 skip_if_unavailable=1
 
@@ -496,7 +496,7 @@ skip_if_unavailable=1
 name=Remi SRPMS
 baseurl=https://rpms.remirepo.net/SRPMS/
 gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2021
-enabled=1
+enabled=0
 gpgcheck=1
 skip_if_unavailable=1
 
@@ -514,7 +514,7 @@ skip_if_unavailable=1
 name=ELRepo Source - el$releasever
 baseurl=https://mirrors.elrepo.org/linux/elrepo/el$releasever/SRPMS/
 gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org https://www.elrepo.org/RPM-GPG-KEY-v2-elrepo.org
-enabled=1
+enabled=0
 gpgcheck=1
 skip_if_unavailable=1
 
@@ -522,7 +522,7 @@ skip_if_unavailable=1
 name=ELRepo Kernel Source - el$releasever
 baseurl=https://mirrors.elrepo.org/linux/kernel/el$releasever/SRPMS/
 gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org https://www.elrepo.org/RPM-GPG-KEY-v2-elrepo.org
-enabled=1
+enabled=0
 gpgcheck=1
 skip_if_unavailable=1
 
@@ -530,7 +530,7 @@ skip_if_unavailable=1
 name=ELRepo Extras Source - el$releasever
 baseurl=https://mirrors.elrepo.org/linux/extras/el$releasever/SRPMS/
 gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org https://www.elrepo.org/RPM-GPG-KEY-v2-elrepo.org
-enabled=1
+enabled=0
 gpgcheck=1
 skip_if_unavailable=1
 
