@@ -24,7 +24,7 @@ countme=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
 metadata_expire=86400
 enabled_metadata=1
-exclude=runc,php*,qemu-*-9.*
+exclude=runc,php*,qemu-*-9.*,npm,nodejs
 
 [casjay-os-extras]
 name=AlmaLinux Extras - $releasever $basearch
