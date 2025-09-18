@@ -331,7 +331,7 @@ skip_if_unavailable=1
 
 [casjay-nodejs]
 name=NodeSource 22.x - $releasever $basearch
-baseurl=https://rpm.nodesource.com/pub_18.x/el/$releasever/$basearch
+baseurl=https://rpm.nodesource.com/pub_22.x/el/$releasever/$basearch
 gpgkey=https://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL
 module_hotfixes=1
 enabled=1
