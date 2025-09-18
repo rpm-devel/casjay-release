@@ -330,7 +330,7 @@ gpgkey=https://pgp.mongodb.com/server-8.0.asc
 skip_if_unavailable=1
 
 [casjay-nodejs]
-name=NodeSource 18.x - $releasever $basearch
+name=NodeSource 22.x - $releasever $basearch
 baseurl=https://rpm.nodesource.com/pub_18.x/el/$releasever/$basearch
 gpgkey=https://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL
 module_hotfixes=1
