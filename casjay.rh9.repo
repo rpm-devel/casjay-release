@@ -329,14 +329,14 @@ enabled=1
 gpgkey=https://pgp.mongodb.com/server-8.0.asc
 skip_if_unavailable=1
 
-[casjay-nodejs]
-name=NodeSource 20.x - $releasever $basearch
-baseurl=https://rpm.nodesource.com/pub_20.x/el/$releasever/$basearch
-gpgkey=https://rpm.nodesource.com/pub/el/NODESOURCE-GPG-SIGNING-KEY-EL
-module_hotfixes=1
-enabled=1
-gpgcheck=1
-skip_if_unavailable=1
+[casjay-nodejs]                                                                                                                                                                                                                                               
+name=NodeSource 22.x - $releasever $basearch                                                                                                                                                                                                                  
+baseurl=https://rpm.nodesource.com/pub_22.x/nodistro/nodejs/$basearch                                                                                                                                                                                         
+gpgkey=https://rpm.nodesource.com/gpgkey/ns-operations-public.key                                                                                                                                                                                             
+module_hotfixes=1                                                                                                                                                                                                                                             
+enabled=1                                                                                                                                                                                                                                                     
+gpgcheck=1                                                                                                                                                                                                                                                    
+skip_if_unavailable=1                                                                                                                                                                                                                                         
 
 [casjay-yarn]
 name=Yarn - $releasever $basearch
@@ -371,7 +371,7 @@ enabled=1
 gpgcheck=1
 skip_if_unavailable=1
 
-[pritunl]
+[casjay-pritunl]
 name=Pritunl - OracleLinux $releasever
 baseurl=https://repo.pritunl.com/stable/yum/oraclelinux/$releasever/
 gpgcheck=1
@@ -630,7 +630,7 @@ enabled=0
 gpgcheck=1
 skip_if_unavailable=1
 
-[pritunl-srpm]
+[casjay-pritunl-srpm]
 name=Pritunl SRPMS - $releasever
 baseurl=https://repo.pritunl.com/stable/yum/oraclelinux/$releasever/SRPMS/
 gpgkey=https://raw.githubusercontent.com/pritunl/pgp/master/pritunl_repo_pub.asc
