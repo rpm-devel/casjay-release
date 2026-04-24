@@ -1,15 +1,21 @@
 Summary: Casjays repos release file
 Name: casjay-release
-Version: 1.5
-Release: %{?dist}
+Version: 1.6
+Release: 1%{?dist}
 License: GPLv2
-Group: System Environment/Base
 URL: http://rpm.casjaysdev.pro/
 
 SOURCE0: mock-files.tar.gz
 
+%if 0%{?rhel} >= 10
+%ifnarch x86_64 aarch64
+%define  repo_replace false
+%endif
+Source1: https://github.com/rpm-devel/casjay-release/raw/main/casjay.rh10.repo
+Source2: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
+%endif
 %if 0%{?rhel} == 9
-%ifnarch %{x86_64}
+%ifnarch x86_64 aarch64
 %define  repo_replace false
 %endif
 Source1: https://github.com/rpm-devel/casjay-release/raw/main/casjay.rh9.repo
@@ -61,13 +67,10 @@ contains custom mock files.
 %{__tar} xfvz %{SOURCE0} -C %{buildroot}%{_sysconfdir}
 %{__install} -Dpm 0644 %{SOURCE1} %{buildroot}%{_sysconfdir}/yum.repos.d/casjay.repo
 %{__install} -Dpm 0644 %{SOURCE2} %{buildroot}%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-casjay
-%if "%{repo_replace}" = "true"
+%if "%{repo_replace}" == "true"
 sed -i 's|.*http://mirrors.elrepo.org/mirrors-elrepo.*|baseurl=https://rpm-devel.sourceforge.io/repo/RHEL/$releasever/$basearch/empty|g' %{buildroot}%{_sysconfdir}/yum.repos.d/casjay.repo
 sed -i 's|.*https://mirror.usi.edu/pub/remi/enterprise/.*|baseurl=https://rpm-devel.sourceforge.io/repo/RHEL/$releasever/$basearch/empty|g' %{buildroot}%{_sysconfdir}/etc/yum.repos.d/casjay.repo
 %endif
-
-%clean
-%{__rm} -rf %{buildroot}
 
 %post
 %if 0%{?rhel} >= 8
@@ -85,16 +88,27 @@ fi
 yum makecache -qy >/dev/null
 
 %files
-%defattr(-, root, root, 0755)
 %config %{_sysconfdir}/yum.repos.d/casjay.repo
 %pubkey %{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-casjay
 
 %files devel
+%{_sysconfdir}/mock/casjay-10-x86_64.cfg
+%{_sysconfdir}/mock/casjay-10-aarch64.cfg
+%{_sysconfdir}/mock/casjay-9-x86_64.cfg
+%{_sysconfdir}/mock/casjay-9-aarch64.cfg
 %{_sysconfdir}/mock/casjay-8-x86_64.cfg
 %{_sysconfdir}/mock/casjay-8-aarch64.cfg
+%{_sysconfdir}/mock/templates/casjay-10.tpl
+%{_sysconfdir}/mock/templates/casjay-9.tpl
 %{_sysconfdir}/mock/templates/casjay-8.tpl
 
 %changelog
+* Fri Apr 24 2026 CasjaysDev <rpm-devel@casjaysdev.pro> - 1.6-1
+- Add RHEL 10 / AlmaLinux 10 support
+- Add EL10 repo file and mock configs
+- Fix %if condition syntax
+- Remove deprecated Group, %clean, %defattr
+
 * Thu Apr 01 2023 CasjaysDev <rpm-devel@casjaysdev.pro> - 1.5
 - Moved to almalinux repos
 
