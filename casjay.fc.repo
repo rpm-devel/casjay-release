@@ -1,4 +1,4 @@
-#CasjaysDev Repo ConfigFedora/keys
+# CasjaysDev Repo Config - Fedora
 
 [casjay-extras]
 name=Casjays Extras for server use
@@ -6,6 +6,7 @@ mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/mir
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/keys/RPM-GPG-KEY-casjay
 enabled=1
 gpgcheck=1
+skip_if_unavailable=1
 
 [casjay-rpms]
 name=Casjays RPMs for server use
@@ -13,6 +14,7 @@ mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/mir
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/keys/RPM-GPG-KEY-casjay
 enabled=1
 gpgcheck=1
+skip_if_unavailable=1
 
 [casjay-addons]
 name=Casjays Addons for server use
@@ -20,6 +22,7 @@ mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/mir
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/keys/RPM-GPG-KEY-casjay
 enabled=1
 gpgcheck=1
+skip_if_unavailable=1
 
 [casjay-debug]
 name=Casjays debug packages
@@ -27,6 +30,7 @@ mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/mir
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/keys/RPM-GPG-KEY-casjay
 enabled=0
 gpgcheck=1
+skip_if_unavailable=1
 
 [casjay-sources]
 name=Casjays source packages
@@ -34,72 +38,81 @@ mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/mir
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/keys/RPM-GPG-KEY-casjay
 enabled=0
 gpgcheck=1
+skip_if_unavailable=1
 
 [rpmfusion-free]
 name=RPM Fusion for Fedora $releasever - Free
 #baseurl=http://download1.rpmfusion.org/free/Fedora/releases/$releasever/Everything/$basearch/os/
-metalink=https:/mirrors.rpmfusion.org/metalink?repo=free-fedora-$releasever&arch=$basearch
+metalink=https://mirrors.rpmfusion.org/metalink?repo=free-fedora-$releasever&arch=$basearch
 gpgkey=https://download1.rpmfusion.org/free/fedora/RPM-GPG-KEY-rpmfusion-free-fedora-2020
 enabled=0
 gpgcheck=1
 type=rpm-md
 repo_gpgcheck=0
+skip_if_unavailable=1
 
 [rpmfusion-free-updates]
 name=RPM Fusion for Fedora $releasever - Free - Updates
 #baseurl=http://download1.rpmfusion.org/free/Fedora/updates/$releasever/$basearch/
-metalink=https:/mirrors.rpmfusion.org/metalink?repo=free-fedora-updates-released-$releasever&arch=$basearch
+metalink=https://mirrors.rpmfusion.org/metalink?repo=free-fedora-updates-released-$releasever&arch=$basearch
 gpgkey=https://download1.rpmfusion.org/free/fedora/RPM-GPG-KEY-rpmfusion-free-fedora-2020
 enabled=0
 gpgcheck=1
 type=rpm-md
 repo_gpgcheck=0
+skip_if_unavailable=1
 
 [rpmfusion-nonfree]
 name=RPM Fusion for Fedora $releasever - Nonfree
 #baseurl=http://download1.rpmfusion.org/nonfree/Fedora/releases/$releasever/Everything/$basearch/os/
-metalink=https:/mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-$releasever&arch=$basearch
+metalink=https://mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-$releasever&arch=$basearch
 gpgkey=https://download1.rpmfusion.org/nonfree/fedora/RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020
 enabled=0
 gpgcheck=1
 type=rpm-md
 repo_gpgcheck=0
+skip_if_unavailable=1
 
 [rpmfusion-nonfree-updates]
 name=RPM Fusion for Fedora $releasever - Nonfree - Updates
 #baseurl=http://download1.rpmfusion.org/nonfree/Fedora/updates/$releasever/$basearch/
-metalink=https:/mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-updates-released-$releasever&arch=$basearch
+metalink=https://mirrors.rpmfusion.org/metalink?repo=nonfree-fedora-updates-released-$releasever&arch=$basearch
 gpgkey=https://download1.rpmfusion.org/nonfree/fedora/RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020
 enabled=0
 gpgcheck=1
 type=rpm-md
 repo_gpgcheck=0
+skip_if_unavailable=1
 
 [packages-microsoft-com-prod]
 name=packages-microsoft-com-prod
-baseurl=https://packages.microsoft.com/fedora/$releasever/prod
+baseurl=https://packages.microsoft.com/fedora/$releasever/prod/
 gpgkey=https://packages.microsoft.com/keys/microsoft.asc
 enabled=0
 gpgcheck=1
+skip_if_unavailable=1
 
 [opera]
 name=Opera packages
 type=rpm-md
-baseurl=https://rpm.opera.com/rpm
+baseurl=https://rpm.opera.com/rpm/
 gpgkey=https://rpm.opera.com/rpmrepo.key
-gpgcheck=0
+gpgcheck=1
 enabled=1
+skip_if_unavailable=1
 
 [vivaldi]
-name=vivaldi
+name=Vivaldi
 enabled=0
-baseurl=https://repo.vivaldi.com/archive/rpm/$basearch
+baseurl=https://repo.vivaldi.com/archive/rpm/$basearch/
 gpgkey=https://repo.vivaldi.com/archive/linux_signing_key.pub
 gpgcheck=1
+skip_if_unavailable=1
 
 [code]
 name=Visual Studio Code
-baseurl=https://packages.microsoft.com/yumrepos/vscode
+baseurl=https://packages.microsoft.com/yumrepos/vscode/
 gpgkey=https://packages.microsoft.com/keys/microsoft.asc
 enabled=0
 gpgcheck=1
+skip_if_unavailable=1
