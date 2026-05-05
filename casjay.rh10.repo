@@ -210,7 +210,7 @@ skip_if_unavailable=1
 [casjay-remi-base]
 name=Casjay Remi - $releasever $basearch
 baseurl=https://mirror.team-cymru.com/remi/enterprise/$releasever/remi/$basearch
-gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2021
+gpgkey=https://rpms.remirepo.net/enterprise/10/RPM-GPG-KEY-remi
 enabled=1
 gpgcheck=1
 skip_if_unavailable=1
@@ -218,7 +218,7 @@ skip_if_unavailable=1
 [casjay-remi-safe]
 name=Casjay Remi Safe - $releasever $basearch
 baseurl=https://mirror.team-cymru.com/remi/enterprise/$releasever/safe/$basearch
-gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2021
+gpgkey=https://rpms.remirepo.net/enterprise/10/RPM-GPG-KEY-remi
 enabled=1
 gpgcheck=1
 skip_if_unavailable=1
@@ -226,7 +226,7 @@ skip_if_unavailable=1
 [casjay-remi-php]
 name=Casjay Remi PHP 7.4 - $releasever $basearch
 baseurl=https://mirror.team-cymru.com/remi/enterprise/$releasever/php74/$basearch
-gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2021
+gpgkey=https://rpms.remirepo.net/enterprise/10/RPM-GPG-KEY-remi
 enabled=1
 gpgcheck=1
 skip_if_unavailable=1
@@ -234,7 +234,7 @@ skip_if_unavailable=1
 [casjay-remi-modular]
 name=Casjay Remi Modular - $releasever - $basearch
 mirrorlist=https://mirror.team-cymru.com/remi/enterprise/$releasever/modular/$basearch/mirror
-gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2021
+gpgkey=https://rpms.remirepo.net/enterprise/10/RPM-GPG-KEY-remi https://rpms.remirepo.net/RPM-GPG-KEY-remi2026
 enabled=1
 gpgcheck=1
 repo_gpgcheck=1
