@@ -91,7 +91,7 @@ gpgcheck=1
 
 [casjay-sources]
 name=Casjays source packages $releasever
-mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/$releasever/$basearch/mirrors/srpms
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/$releasever/mirrors/srpms
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
 protect=0
 enabled=0
