@@ -1,0 +1,135 @@
+# CasjaysDev CentOS 6 Repo Config (x86_64 only)
+# CentOS 6 reached EOL November 30, 2020 — all packages served from vault.centos.org
+# Final release: 6.10
+
+# ---------------------------
+# CentOS 6 vault repos
+# ---------------------------
+[casjay-os-base]
+name=CentOS 6 Base - $basearch
+baseurl=https://vault.centos.org/centos/6.10/os/$basearch/
+gpgkey=https://vault.centos.org/centos/6.10/os/$basearch/RPM-GPG-KEY-CentOS-6
+enabled=1
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-os-updates]
+name=CentOS 6 Updates - $basearch
+baseurl=https://vault.centos.org/centos/6.10/updates/$basearch/
+gpgkey=https://vault.centos.org/centos/6.10/os/$basearch/RPM-GPG-KEY-CentOS-6
+enabled=1
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-os-extras]
+name=CentOS 6 Extras - $basearch
+baseurl=https://vault.centos.org/centos/6.10/extras/$basearch/
+gpgkey=https://vault.centos.org/centos/6.10/os/$basearch/RPM-GPG-KEY-CentOS-6
+enabled=1
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-os-centosplus]
+name=CentOS 6 Plus - $basearch
+baseurl=https://vault.centos.org/centos/6.10/centosplus/$basearch/
+gpgkey=https://vault.centos.org/centos/6.10/os/$basearch/RPM-GPG-KEY-CentOS-6
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-sclo-sclo]
+name=CentOS 6 SCLo - $basearch
+baseurl=https://vault.centos.org/centos/6.10/sclo/$basearch/sclo/
+gpgkey=https://www.centos.org/keys/RPM-GPG-KEY-CentOS-SIG-SCLo
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-sclo-rh]
+name=CentOS 6 SCLo RH - $basearch
+baseurl=https://vault.centos.org/centos/6.10/sclo/$basearch/rh/
+gpgkey=https://www.centos.org/keys/RPM-GPG-KEY-CentOS-SIG-SCLo
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+# ---------------------------
+# EPEL 6 (archived)
+# ---------------------------
+[casjay-epel]
+name=EPEL 6 Archive - $basearch
+baseurl=https://archives.fedoraproject.org/pub/archive/epel/6/$basearch/
+gpgkey=https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-6
+enabled=1
+gpgcheck=1
+skip_if_unavailable=1
+
+# ---------------------------
+# Source RPMs
+# ---------------------------
+[casjay-os-base-srpm]
+name=CentOS 6 Base Sources
+baseurl=https://vault.centos.org/centos/6.10/os/Source/SPackages/
+gpgkey=https://vault.centos.org/centos/6.10/os/x86_64/RPM-GPG-KEY-CentOS-6
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-os-updates-srpm]
+name=CentOS 6 Updates Sources
+baseurl=https://vault.centos.org/centos/6.10/updates/Source/SPackages/
+gpgkey=https://vault.centos.org/centos/6.10/os/x86_64/RPM-GPG-KEY-CentOS-6
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-epel-srpm]
+name=EPEL 6 Archive Sources
+baseurl=https://archives.fedoraproject.org/pub/archive/epel/6/SRPMS/
+gpgkey=https://dl.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-6
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+# ---------------------------
+# CasjaysDev custom packages
+# ---------------------------
+[casjay-extras]
+name=Casjays Extras - 6 $basearch
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/6/$basearch/mirrors/extras
+gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
+enabled=1
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-rpms]
+name=Casjays RPMs - 6 $basearch
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/6/$basearch/mirrors/rpms
+gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
+enabled=1
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-addons]
+name=Casjays Addons - 6 $basearch
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/6/$basearch/mirrors/addons
+gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
+enabled=1
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-debug]
+name=Casjays Debug - 6 $basearch
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/6/$basearch/mirrors/debug
+gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-sources]
+name=Casjays Sources - 6
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/6/mirrors/srpms
+gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
