@@ -59,7 +59,7 @@ enabled=1
 
 [casjay-extras]
 name=Casjays Extras for server use $releasever - $basearch
-mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/extras
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/$releasever/$basearch/mirrors/extras
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
 protect=0
 enabled=1
@@ -67,7 +67,7 @@ gpgcheck=1
 
 [casjay-rpms]
 name=Casjays RPMs for server use $releasever - $basearch
-mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/rpms
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/$releasever/$basearch/mirrors/rpms
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
 protect=0
 enabled=1
@@ -75,7 +75,7 @@ gpgcheck=1
 
 [casjay-addons]
 name=Casjays Addons for server use $releasever - $basearch
-mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/addons
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/$releasever/$basearch/mirrors/addons
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
 protect=0
 enabled=1
@@ -83,7 +83,7 @@ gpgcheck=1
 
 [casjay-debug]
 name=Casjays debug packages $releasever - $basearch
-mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/debug
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/$releasever/$basearch/mirrors/debug
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
 protect=0
 enabled=0
@@ -91,7 +91,7 @@ gpgcheck=1
 
 [casjay-sources]
 name=Casjays source packages $releasever
-mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/srpms
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/$releasever/$basearch/mirrors/srpms
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
 protect=0
 enabled=0

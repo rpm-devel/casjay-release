@@ -142,7 +142,7 @@ exclude=runc
 skip_if_unavailable=1
 [casjay-extras]
 name=Casjay Extras - $releasever $basearch
-mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/extras
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/$releasever/$basearch/mirrors/extras
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
 module_hotfixes=1
 enabled=1
@@ -151,7 +151,7 @@ skip_if_unavailable=1
 
 [casjay-rpms]
 name=Casjay RPMs - $releasever $basearch
-mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/rpms
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/$releasever/$basearch/mirrors/rpms
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
 module_hotfixes=1
 enabled=1
@@ -160,13 +160,30 @@ skip_if_unavailable=1
 
 [casjay-addons]
 name=Casjay Addons - $releasever $basearch
-mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/mirrors/addons
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/$releasever/$basearch/mirrors/addons
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
 module_hotfixes=1
 enabled=1
 gpgcheck=1
 skip_if_unavailable=1
 
+[casjay-debug]
+name=Casjay Debug - $releasever $basearch
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/$releasever/$basearch/mirrors/debug
+gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
+module_hotfixes=1
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-sources]
+name=Casjay Sources - $releasever
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/$releasever/$basearch/mirrors/srpms
+gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
+module_hotfixes=1
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
 
 # ---------------------------
 # EPEL (kept strict)

@@ -2,35 +2,35 @@
 
 [casjay-extras]
 name=Casjays Extras for server use
-mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/mirrors/extras
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/$releasever/$basearch/mirrors/extras
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/keys/RPM-GPG-KEY-casjay
 enabled=1
 gpgcheck=1
 
 [casjay-rpms]
 name=Casjays RPMs for server use
-mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/mirrors/rpms
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/$releasever/$basearch/mirrors/rpms
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/keys/RPM-GPG-KEY-casjay
 enabled=1
 gpgcheck=1
 
 [casjay-addons]
 name=Casjays Addons for server use
-mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/mirrors/addons
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/$releasever/$basearch/mirrors/addons
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/keys/RPM-GPG-KEY-casjay
 enabled=1
 gpgcheck=1
 
 [casjay-debug]
 name=Casjays debug packages
-mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/mirrors/debug
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/$releasever/$basearch/mirrors/debug
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/keys/RPM-GPG-KEY-casjay
 enabled=0
 gpgcheck=1
 
 [casjay-sources]
 name=Casjays source packages
-mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/mirrors/srpms
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/$releasever/$basearch/mirrors/srpms
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/keys/RPM-GPG-KEY-casjay
 enabled=0
 gpgcheck=1
