@@ -299,7 +299,7 @@ enabled=1
 gpgcheck=1
 gpgkey=https://mirror.ghettoforge.net/distributions/gf/RPM-GPG-KEY-gf.el$releasever
 skip_if_unavailable=1
-
+excludepkgs=qemu*
 
 # ---------------------------
 # COPR (i2pd, incus) - third party
@@ -356,14 +356,14 @@ enabled=1
 gpgkey=https://pgp.mongodb.com/server-8.0.asc
 skip_if_unavailable=1
 
-[casjay-nodejs]                                                                                                                                                                                                                                               
-name=Casjay NodeSource 22.x - $releasever $basearch                                                                                                                                                                                                                  
-baseurl=https://rpm.nodesource.com/pub_22.x/nodistro/nodejs/$basearch                                                                                                                                                                                         
-gpgkey=https://rpm.nodesource.com/gpgkey/ns-operations-public.key                                                                                                                                                                                             
-module_hotfixes=1                                                                                                                                                                                                                                             
-enabled=1                                                                                                                                                                                                                                                     
-gpgcheck=1                                                                                                                                                                                                                                                    
-skip_if_unavailable=1                                                                                                                                                                                                                                         
+[casjay-nodejs]
+name=Casjay NodeSource 22.x - $releasever $basearch
+baseurl=https://rpm.nodesource.com/pub_22.x/nodistro/nodejs/$basearch
+gpgkey=https://rpm.nodesource.com/gpgkey/ns-operations-public.key
+module_hotfixes=1
+enabled=1
+gpgcheck=1
+skip_if_unavailable=1
 
 [casjay-yarn]
 name=Casjay Yarn - $releasever $basearch
