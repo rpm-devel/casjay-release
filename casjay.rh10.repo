@@ -299,7 +299,7 @@ enabled=1
 gpgcheck=1
 gpgkey=https://mirror.ghettoforge.net/distributions/gf/RPM-GPG-KEY-gf.el$releasever
 skip_if_unavailable=1
-excludepkgs=qemu*
+excludepkgs=*qemu*
 
 # ---------------------------
 # COPR (i2pd, incus) - third party
