@@ -326,14 +326,13 @@ repo_gpgcheck=0
 enabled=1
 enabled_metadata=1
 
-
 # ---------------------------
 # MariaDB / PostgreSQL / MongoDB / Node.js / Yarn / Docker /
 # Webmin / Jenkins / Pritunl - third party
 # ---------------------------
 [casjay-mariadb]
-name=Casjay MariaDB 10.10 for RHEL - $releasever $basearch
-baseurl=http://yum.mariadb.org/10.10/rhel/$releasever/$basearch
+name=Casjay MariaDB 13.rolling for RHEL - $releasever $basearch
+baseurl=http://yum.mariadb.org/13.rolling/rhel/$releasever/$basearch
 gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
 module_hotfixes=1
 enabled=0
@@ -405,7 +404,6 @@ gpgcheck=1
 enabled=1
 gpgkey=https://raw.githubusercontent.com/pritunl/pgp/master/pritunl_repo_pub.asc
 skip_if_unavailable=1
-
 
 # ============================
 # Source Repositories (SRPMS)
@@ -500,7 +498,6 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-AlmaLinux-$releasever
 enabled=0
 gpgcheck=1
 
-
 # ---- EPEL SRPMs (kept strict) ----
 skip_if_unavailable=1
 [casjay-epel-srpm]
@@ -509,7 +506,6 @@ metalink=https://mirrors.fedoraproject.org/metalink?repo=epel-source-$releasever
 gpgkey=https://archive.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-$releasever
 enabled=0
 gpgcheck=1
-
 
 # ---- RPM Fusion SRPMs - third party ----
 skip_if_unavailable=1
@@ -529,7 +525,6 @@ enabled=0
 gpgcheck=1
 skip_if_unavailable=1
 
-
 # ---- Remi SRPMs - third party ----
 [casjay-remi-srpm]
 name=Casjay Remi SRPMS
@@ -546,7 +541,6 @@ gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2021
 enabled=0
 gpgcheck=1
 skip_if_unavailable=1
-
 
 # ---- ELRepo SRPMs - third party ----
 [casjay-elrepo-srpm]
@@ -572,7 +566,6 @@ gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org https://www.elrepo.org/RPM-
 enabled=0
 gpgcheck=1
 skip_if_unavailable=1
-
 
 # ---- Ghettoforge SRPMs - third party ----
 [casjay-gf-srpm]
@@ -603,11 +596,10 @@ gpgcheck=1
 repo_gpgcheck=0
 skip_if_unavailable=1
 
-
 # ---- Vendor SRPMs - third party (often missing/inconsistent; disabled) ----
 [casjay-mariadb-srpm]
-name=Casjay MariaDB 10.10 SRPMS - $releasever
-baseurl=https://archive.mariadb.org/mariadb-10.10/yum/rhel/$releasever/SRPMS/
+name=Casjay MariaDB 13.rolling SRPMS - $releasever
+baseurl=https://archive.mariadb.org/yum/13.rolling/rhel/$releasever/SRPMS/
 gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
 enabled=0
 gpgcheck=1

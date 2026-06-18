@@ -304,7 +304,7 @@ name=Casjay i2pd (COPR) - $releasever $basearch
 baseurl=https://download.copr.fedorainfracloud.org/results/supervillain/i2pd/epel-$releasever-$basearch/
 type=rpm-md
 gpgkey=https://download.copr.fedorainfracloud.org/results/supervillain/i2pd/pubkey.gpg
-enabled=1
+enabled=0
 enabled_metadata=1
 gpgcheck=1
 repo_gpgcheck=0
@@ -313,21 +313,21 @@ skip_if_unavailable=1
 [casjay-copr-incus]
 name=Casjay incus (COPR) - $releasever $basearch
 baseurl=https://download.copr.fedorainfracloud.org/results/neil/incus/epel-$releasever-$basearch/
+enabled=0
 type=rpm-md
-skip_if_unavailable=1
 gpgcheck=1
 gpgkey=https://download.copr.fedorainfracloud.org/results/neil/incus/pubkey.gpg
 repo_gpgcheck=0
-enabled=1
 enabled_metadata=1
+skip_if_unavailable=1
 
 # ---------------------------
 # MariaDB / PostgreSQL / MongoDB / Node.js / Yarn / Docker /
 # Webmin / Jenkins / Pritunl - third party
 # ---------------------------
 [casjay-mariadb]
-name=Casjay MariaDB 10.10 for RHEL - $releasever $basearch
-baseurl=http://yum.mariadb.org/10.10/rhel/$releasever/$basearch
+name=Casjay MariaDB 13.rolling for RHEL - $releasever $basearch
+baseurl=http://yum.mariadb.org/13.rolling/rhel/$releasever/$basearch
 gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
 module_hotfixes=1
 enabled=1
@@ -592,8 +592,8 @@ skip_if_unavailable=1
 
 # ---- Vendor SRPMs - third party (often missing/inconsistent; disabled) ----
 [casjay-mariadb-srpm]
-name=Casjay MariaDB 10.10 SRPMS - $releasever
-baseurl=https://archive.mariadb.org/mariadb-10.10/yum/rhel/$releasever/SRPMS/
+name=Casjay MariaDB 13.rolling SRPMS - $releasever
+baseurl=https://archive.mariadb.org/yum/13.rolling/rhel/$releasever/SRPMS/
 gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
 enabled=0
 gpgcheck=1
