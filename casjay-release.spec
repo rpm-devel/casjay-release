@@ -2,10 +2,11 @@ Summary: Casjays repos release file
 Name: casjay-release
 Version: 1.6
 Release: 1%{?dist}
-License: GPLv2
+License: GPL-2.0-only
 URL: http://rpm.casjaysdev.pro/
+ExclusiveArch: x86_64 aarch64
 
-SOURCE0: mock-files.tar.gz
+Source0: mock-files.tar.gz
 
 %if 0%{?rhel} >= 10
 %ifnarch x86_64 aarch64
@@ -62,7 +63,6 @@ contains custom mock files.
 %{__cp} -a %{SOURCE2} .
 
 %install
-%{__rm} -rf %{buildroot}
 %{__mkdir} -p %{buildroot}%{_sysconfdir}
 %{__tar} xfvz %{SOURCE0} -C %{buildroot}%{_sysconfdir}
 %{__install} -Dpm 0644 %{SOURCE1} %{buildroot}%{_sysconfdir}/yum.repos.d/casjay.repo
@@ -103,6 +103,9 @@ yum makecache -qy >/dev/null
 %{_sysconfdir}/mock/templates/casjay-8.tpl
 
 %changelog
+* Thu Jul 03 2026 CasjaysDev <rpm-devel@casjaysdev.pro> - 1.6-1
+- SPDX: GPLv2 -> GPL-2.0-only; fix SOURCE0 case; add ExclusiveArch; drop rm -rf %%{buildroot}
+
 * Fri Apr 24 2026 CasjaysDev <rpm-devel@casjaysdev.pro> - 1.6-1
 - Add RHEL 10 / AlmaLinux 10 support
 - Add EL10 repo file and mock configs
