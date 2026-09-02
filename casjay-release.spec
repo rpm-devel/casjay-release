@@ -1,6 +1,6 @@
 Summary: Casjays repos release file
 Name: casjay-release
-Version: 1.6
+Version: 1.7
 Release: 1%{?dist}
 License: GPL-2.0-only
 URL: http://rpm.casjaysdev.pro/
@@ -12,21 +12,39 @@ Source0: mock-files.tar.gz
 %ifnarch x86_64 aarch64
 %define  repo_replace false
 %endif
+%if 0%{?oraclelinux}
+Source1: https://github.com/rpm-devel/casjay-release/raw/main/oraclelinux.10.repo
+%elif 0%{?rocky}
+Source1: https://github.com/rpm-devel/casjay-release/raw/main/rockylinux.10.repo
+%else
 Source1: https://github.com/rpm-devel/casjay-release/raw/main/almalinux.10.repo
+%endif
 Source2: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
 %endif
 %if 0%{?rhel} == 9
 %ifnarch x86_64 aarch64
 %define  repo_replace false
 %endif
+%if 0%{?oraclelinux}
+Source1: https://github.com/rpm-devel/casjay-release/raw/main/oraclelinux.9.repo
+%elif 0%{?rocky}
+Source1: https://github.com/rpm-devel/casjay-release/raw/main/rockylinux.9.repo
+%else
 Source1: https://github.com/rpm-devel/casjay-release/raw/main/almalinux.9.repo
+%endif
 Source2: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
 %endif
 %if 0%{?rhel} == 8
 %ifnarch %{x86_64}
 %define  repo_replace true
 %endif
+%if 0%{?oraclelinux}
+Source1: https://github.com/rpm-devel/casjay-release/raw/main/oraclelinux.8.repo
+%elif 0%{?rocky}
+Source1: https://github.com/rpm-devel/casjay-release/raw/main/rockylinux.8.repo
+%else
 Source1: https://github.com/rpm-devel/casjay-release/raw/main/almalinux.8.repo
+%endif
 Source2: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
 %endif
 %if 0%{?rhel} == 7
@@ -103,6 +121,12 @@ yum makecache -qy >/dev/null
 %{_sysconfdir}/mock/templates/casjay-8.tpl
 
 %changelog
+* Tue Sep 02 2026 CasjaysDev <rpm-devel@casjaysdev.pro> - 1.7-1
+- Add Rocky Linux and Oracle Linux per-distro repo files (EL8/9/10)
+- Detect %%{?oraclelinux} and %%{?rocky} within each %%if rhel block
+- Keep casjay.rh9.repo as compat copy for scripts that curl it by old name
+- Installed repo file is always casjay.repo for all distros
+
 * Thu Jul 03 2026 CasjaysDev <rpm-devel@casjaysdev.pro> - 1.6-1
 - SPDX: GPLv2 -> GPL-2.0-only; fix SOURCE0 case; add ExclusiveArch; drop rm -rf %%{buildroot}
 
