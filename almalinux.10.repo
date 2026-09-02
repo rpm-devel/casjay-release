@@ -13,8 +13,8 @@ countme=1
 gpgkey=https://repo.almalinux.org/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 metadata_expire=86400
 enabled_metadata=1
-exclude=runc
 skip_if_unavailable=1
+exclude=runc
 
 [casjay-os-appstream]
 name=Casjay AppStream - $releasever $basearch
@@ -25,8 +25,8 @@ countme=1
 gpgkey=https://repo.almalinux.org/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 metadata_expire=86400
 enabled_metadata=1
-exclude=runc,php*,npm,nodejs
 skip_if_unavailable=1
+exclude=runc,php*,qemu-*-9.*,npm,nodejs
 
 [casjay-os-extras]
 name=Casjay Extras - $releasever $basearch
@@ -37,8 +37,8 @@ countme=1
 gpgkey=https://repo.almalinux.org/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 metadata_expire=86400
 enabled_metadata=0
-exclude=runc
 skip_if_unavailable=1
+exclude=runc
 
 [casjay-os-crb]
 name=Casjay CRB - $releasever $basearch
@@ -49,8 +49,8 @@ countme=1
 gpgkey=https://repo.almalinux.org/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 metadata_expire=86400
 enabled_metadata=0
-exclude=runc
 skip_if_unavailable=1
+exclude=runc
 
 [casjay-os-plus]
 name=Casjay Plus - $releasever $basearch
@@ -61,8 +61,8 @@ countme=1
 gpgkey=https://repo.almalinux.org/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 metadata_expire=86400
 enabled_metadata=0
-exclude=runc
 skip_if_unavailable=1
+exclude=runc
 
 [casjay-os-highavailability]
 name=Casjay HighAvailability - $releasever $basearch
@@ -73,8 +73,8 @@ countme=1
 gpgkey=https://repo.almalinux.org/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 metadata_expire=86400
 enabled_metadata=0
-exclude=runc,podman*
 skip_if_unavailable=1
+exclude=runc,podman*
 
 [casjay-os-nfv]
 name=Casjay NFV - $releasever $basearch
@@ -85,8 +85,8 @@ countme=1
 gpgkey=https://repo.almalinux.org/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 metadata_expire=86400
 enabled_metadata=0
-exclude=runc
 skip_if_unavailable=1
+exclude=runc
 
 [casjay-os-rt]
 name=Casjay RT - $releasever $basearch
@@ -97,8 +97,8 @@ countme=1
 gpgkey=https://repo.almalinux.org/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 metadata_expire=86400
 enabled_metadata=0
-exclude=runc
 skip_if_unavailable=1
+exclude=runc
 
 [casjay-os-resilientstorage]
 name=Casjay ResilientStorage - $releasever $basearch
@@ -109,8 +109,8 @@ countme=1
 gpgkey=https://repo.almalinux.org/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 metadata_expire=86400
 enabled_metadata=0
-exclude=runc
 skip_if_unavailable=1
+exclude=runc
 
 [casjay-os-saphana]
 name=Casjay SAPHANA - $releasever $basearch
@@ -121,8 +121,8 @@ countme=1
 gpgkey=https://repo.almalinux.org/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 metadata_expire=86400
 enabled_metadata=0
-exclude=runc
 skip_if_unavailable=1
+exclude=runc
 
 [casjay-os-sap]
 name=Casjay SAP - $releasever $basearch
@@ -135,7 +135,6 @@ metadata_expire=86400
 enabled_metadata=0
 exclude=runc
 skip_if_unavailable=1
-
 
 # ---------------------------
 # CasjaysDev repos (mirrorlists) - third party
@@ -198,7 +197,6 @@ gpgcheck=1
 exclude=runc,podman*,docker,php*
 skip_if_unavailable=1
 
-
 # ---------------------------
 # RPM Fusion - third party
 # ---------------------------
@@ -220,14 +218,13 @@ enabled=1
 gpgcheck=1
 skip_if_unavailable=1
 
-
 # ---------------------------
 # Remi - third party
 # ---------------------------
 [casjay-remi-base]
 name=Casjay Remi - $releasever $basearch
 baseurl=https://mirror.team-cymru.com/remi/enterprise/$releasever/remi/$basearch
-gpgkey=https://rpms.remirepo.net/enterprise/9/RPM-GPG-KEY-remi
+gpgkey=https://rpms.remirepo.net/enterprise/10/RPM-GPG-KEY-remi
 enabled=1
 gpgcheck=1
 skip_if_unavailable=1
@@ -235,7 +232,7 @@ skip_if_unavailable=1
 [casjay-remi-safe]
 name=Casjay Remi Safe - $releasever $basearch
 baseurl=https://mirror.team-cymru.com/remi/enterprise/$releasever/safe/$basearch
-gpgkey=https://rpms.remirepo.net/enterprise/9/RPM-GPG-KEY-remi
+gpgkey=https://rpms.remirepo.net/enterprise/10/RPM-GPG-KEY-remi
 enabled=1
 gpgcheck=1
 skip_if_unavailable=1
@@ -243,7 +240,7 @@ skip_if_unavailable=1
 [casjay-remi-php]
 name=Casjay Remi PHP 7.4 - $releasever $basearch
 baseurl=https://mirror.team-cymru.com/remi/enterprise/$releasever/php74/$basearch
-gpgkey=https://rpms.remirepo.net/enterprise/9/RPM-GPG-KEY-remi
+gpgkey=https://rpms.remirepo.net/enterprise/10/RPM-GPG-KEY-remi
 enabled=1
 gpgcheck=1
 skip_if_unavailable=1
@@ -251,12 +248,11 @@ skip_if_unavailable=1
 [casjay-remi-modular]
 name=Casjay Remi Modular - $releasever - $basearch
 mirrorlist=https://mirror.team-cymru.com/remi/enterprise/$releasever/modular/$basearch/mirror
-gpgkey=https://rpms.remirepo.net/enterprise/9/RPM-GPG-KEY-remi
+gpgkey=https://rpms.remirepo.net/enterprise/10/RPM-GPG-KEY-remi https://rpms.remirepo.net/RPM-GPG-KEY-remi2026
 enabled=1
 gpgcheck=1
 repo_gpgcheck=1
 skip_if_unavailable=1
-
 
 # ---------------------------
 # ELRepo - third party
@@ -287,7 +283,6 @@ module_hotfixes=1
 enabled=1
 gpgcheck=1
 skip_if_unavailable=1
-
 
 # ---------------------------
 # Ghettoforge - third party
@@ -326,12 +321,13 @@ repo_gpgcheck=0
 enabled=1
 enabled_metadata=1
 
+
 # ---------------------------
 # MariaDB / PostgreSQL / MongoDB / Node.js / Yarn / Docker /
 # Webmin / Jenkins / Pritunl - third party
 # ---------------------------
 [casjay-mariadb]
-name=Casjay MariaDB 13.rolling for RHEL - $releasever $basearch
+name=Casjay MariaDB 10.10 for RHEL - $releasever $basearch
 baseurl=https://yum.mariadb.org/13.rolling/rhel/$releasever/$basearch
 gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
 module_hotfixes=1
@@ -404,6 +400,7 @@ gpgcheck=1
 enabled=1
 gpgkey=https://raw.githubusercontent.com/pritunl/pgp/master/pritunl_repo_pub.asc
 skip_if_unavailable=1
+
 
 # ============================
 # Source Repositories (SRPMS)
@@ -525,6 +522,7 @@ enabled=0
 gpgcheck=1
 skip_if_unavailable=1
 
+
 # ---- Remi SRPMs - third party ----
 [casjay-remi-srpm]
 name=Casjay Remi SRPMS
@@ -541,6 +539,7 @@ gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2021
 enabled=0
 gpgcheck=1
 skip_if_unavailable=1
+
 
 # ---- ELRepo SRPMs - third party ----
 [casjay-elrepo-srpm]
@@ -567,6 +566,7 @@ enabled=0
 gpgcheck=1
 skip_if_unavailable=1
 
+
 # ---- Ghettoforge SRPMs - third party ----
 [casjay-gf-srpm]
 name=Casjay Ghettoforge Source - $releasever
@@ -575,7 +575,7 @@ gpgkey=https://mirror.ghettoforge.net/distributions/gf/RPM-GPG-KEY-gf.el$release
 enabled=0
 gpgcheck=1
 skip_if_unavailable=1
-excludepkgs=*qemu*
+
 
 # ---- COPR SRPMs - third party (verify layout; disabled by default) ----
 [casjay-i2pd-srpm]
@@ -596,10 +596,11 @@ gpgcheck=1
 repo_gpgcheck=0
 skip_if_unavailable=1
 
+
 # ---- Vendor SRPMs - third party (often missing/inconsistent; disabled) ----
 [casjay-mariadb-srpm]
-name=Casjay MariaDB 13.rolling SRPMS - $releasever
-baseurl=https://archive.mariadb.org/yum/13.rolling/rhel/$releasever/SRPMS/
+name=Casjay MariaDB 10.10 SRPMS - $releasever
+baseurl=https://archive.mariadb.org/mariadb-10.10/yum/rhel/$releasever/SRPMS/
 gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
 enabled=0
 gpgcheck=1

@@ -12,39 +12,39 @@ Source0: mock-files.tar.gz
 %ifnarch x86_64 aarch64
 %define  repo_replace false
 %endif
-Source1: https://github.com/rpm-devel/casjay-release/raw/main/casjay.rh10.repo
+Source1: https://github.com/rpm-devel/casjay-release/raw/main/almalinux.10.repo
 Source2: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
 %endif
 %if 0%{?rhel} == 9
 %ifnarch x86_64 aarch64
 %define  repo_replace false
 %endif
-Source1: https://github.com/rpm-devel/casjay-release/raw/main/casjay.rh9.repo
+Source1: https://github.com/rpm-devel/casjay-release/raw/main/almalinux.9.repo
 Source2: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
 %endif
 %if 0%{?rhel} == 8
 %ifnarch %{x86_64}
 %define  repo_replace true
 %endif
-Source1: https://github.com/rpm-devel/casjay-release/raw/main/casjay.rh8.repo
+Source1: https://github.com/rpm-devel/casjay-release/raw/main/almalinux.8.repo
 Source2: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
 %endif
 %if 0%{?rhel} == 7
 %ifnarch %{x86_64}
 %define  repo_replace true
 %endif
-Source1: https://github.com/rpm-devel/casjay-release/raw/main/casjay.rh.repo
+Source1: https://github.com/rpm-devel/casjay-release/raw/main/centos.7.repo
 Source2: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
 %endif
 %if 0%{?rhel} < 7
 %ifnarch %{x86_64}
 %define  repo_replace true
 %endif
-Source1: https://github.com/rpm-devel/casjay-release/raw/main/casjay.rh.repo
+Source1: https://github.com/rpm-devel/casjay-release/raw/main/centos.6.repo
 Source2: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
 %endif
 %if 0%{?fedora}
-Source1: https://github.com/rpm-devel/casjay-release/raw/main/casjay.fc.repo
+Source1: https://github.com/rpm-devel/casjay-release/raw/main/fedora.repo
 Source2: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/keys/RPM-GPG-KEY-casjay
 %endif
 
