@@ -96,40 +96,40 @@ skip_if_unavailable=1
 # ---------------------------
 [casjay-extras]
 name=Casjays Extras - 6 $basearch
-mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/6/$basearch/mirrors/extras
-gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/EL/6/$basearch/mirrors/extras
+gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/EL/keys/RPM-GPG-KEY-casjay
 enabled=1
 gpgcheck=1
 skip_if_unavailable=1
 
 [casjay-rpms]
 name=Casjays RPMs - 6 $basearch
-mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/6/$basearch/mirrors/rpms
-gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/EL/6/$basearch/mirrors/rpms
+gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/EL/keys/RPM-GPG-KEY-casjay
 enabled=1
 gpgcheck=1
 skip_if_unavailable=1
 
 [casjay-addons]
 name=Casjays Addons - 6 $basearch
-mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/6/$basearch/mirrors/addons
-gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/EL/6/$basearch/mirrors/addons
+gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/EL/keys/RPM-GPG-KEY-casjay
 enabled=1
 gpgcheck=1
 skip_if_unavailable=1
 
 [casjay-debug]
 name=Casjays Debug - 6 $basearch
-mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/6/$basearch/mirrors/debug
-gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/EL/6/$basearch/mirrors/debug
+gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/EL/keys/RPM-GPG-KEY-casjay
 enabled=0
 gpgcheck=1
 skip_if_unavailable=1
 
 [casjay-sources]
 name=Casjays Sources - 6
-mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/6/mirrors/srpms
-gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/EL/6/mirrors/srpms
+gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/EL/keys/RPM-GPG-KEY-casjay
 enabled=0
 gpgcheck=1
 skip_if_unavailable=1

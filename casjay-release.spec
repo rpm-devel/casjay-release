@@ -19,7 +19,7 @@ Source1: https://github.com/rpm-devel/casjay-release/raw/main/rockylinux.10.repo
 %else
 Source1: https://github.com/rpm-devel/casjay-release/raw/main/almalinux.10.repo
 %endif
-Source2: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
+Source2: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/EL/keys/RPM-GPG-KEY-casjay
 %endif
 %if 0%{?rhel} == 9
 %ifnarch x86_64 aarch64
@@ -32,7 +32,7 @@ Source1: https://github.com/rpm-devel/casjay-release/raw/main/rockylinux.9.repo
 %else
 Source1: https://github.com/rpm-devel/casjay-release/raw/main/almalinux.9.repo
 %endif
-Source2: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
+Source2: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/EL/keys/RPM-GPG-KEY-casjay
 %endif
 %if 0%{?rhel} == 8
 %ifnarch %{x86_64}
@@ -45,21 +45,21 @@ Source1: https://github.com/rpm-devel/casjay-release/raw/main/rockylinux.8.repo
 %else
 Source1: https://github.com/rpm-devel/casjay-release/raw/main/almalinux.8.repo
 %endif
-Source2: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
+Source2: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/EL/keys/RPM-GPG-KEY-casjay
 %endif
 %if 0%{?rhel} == 7
 %ifnarch %{x86_64}
 %define  repo_replace true
 %endif
 Source1: https://github.com/rpm-devel/casjay-release/raw/main/centos.7.repo
-Source2: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
+Source2: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/EL/keys/RPM-GPG-KEY-casjay
 %endif
 %if 0%{?rhel} < 7
 %ifnarch %{x86_64}
 %define  repo_replace true
 %endif
 Source1: https://github.com/rpm-devel/casjay-release/raw/main/centos.6.repo
-Source2: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
+Source2: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/EL/keys/RPM-GPG-KEY-casjay
 %endif
 %if 0%{?fedora}
 Source1: https://github.com/rpm-devel/casjay-release/raw/main/fedora.repo
@@ -74,7 +74,7 @@ Source1: https://github.com/rpm-devel/casjay-release/raw/main/opensuse.tumblewee
 %else
 Source1: https://github.com/rpm-devel/casjay-release/raw/main/opensuse.leap15.repo
 %endif
-Source2: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
+Source2: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/EL/keys/RPM-GPG-KEY-casjay
 %endif
 
 %description
@@ -101,8 +101,8 @@ contains custom mock files.
 %endif
 %{__install} -Dpm 0644 %{SOURCE2} %{buildroot}%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-casjay
 %if "%{repo_replace}" == "true"
-sed -i 's|.*http://mirrors.elrepo.org/mirrors-elrepo.*|baseurl=https://rpm-devel.sourceforge.io/repo/RHEL/$releasever/$basearch/empty|g' %{buildroot}%{_sysconfdir}/yum.repos.d/casjay.repo
-sed -i 's|.*https://mirror.usi.edu/pub/remi/enterprise/.*|baseurl=https://rpm-devel.sourceforge.io/repo/RHEL/$releasever/$basearch/empty|g' %{buildroot}%{_sysconfdir}/etc/yum.repos.d/casjay.repo
+sed -i 's|.*http://mirrors.elrepo.org/mirrors-elrepo.*|baseurl=https://rpm-devel.sourceforge.io/repo/EL/$releasever/$basearch/empty|g' %{buildroot}%{_sysconfdir}/yum.repos.d/casjay.repo
+sed -i 's|.*https://mirror.usi.edu/pub/remi/enterprise/.*|baseurl=https://rpm-devel.sourceforge.io/repo/EL/$releasever/$basearch/empty|g' %{buildroot}%{_sysconfdir}/etc/yum.repos.d/casjay.repo
 %endif
 
 %post
@@ -160,7 +160,7 @@ yum makecache -qy >/dev/null
 - SPDX: GPLv2 -> GPL-2.0-only; fix SOURCE0 case; add ExclusiveArch; drop rm -rf %%{buildroot}
 
 * Fri Apr 24 2026 CasjaysDev <rpm-devel@casjaysdev.pro> - 1.6-1
-- Add RHEL 10 / AlmaLinux 10 support
+- Add EL 10 / AlmaLinux 10 support
 - Add EL10 repo file and mock configs
 - Fix %if condition syntax
 - Remove deprecated Group, %clean, %defattr

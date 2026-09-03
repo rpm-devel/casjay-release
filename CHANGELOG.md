@@ -1,3 +1,15 @@
+## 2026-07-05 — EL9/EL10 mock template additions
+
+- Add `mock/templates/casjay-9.tpl`: EL9 org-level mock template
+  (AlmaLinux 9, crb repo, MariaDB 10.11, PHP 8.1)
+- Add `mock/templates/casjay-10.tpl`: EL10 org-level mock template
+  (AlmaLinux 10, crb repo, MariaDB 11.4, PHP 8.3)
+- Add `mock/casjay-9-{x86_64,aarch64}.cfg`: EL9 org-level mock wrapper configs
+- Add `mock/casjay-10-{x86_64,aarch64}.cfg`: EL10 org-level mock wrapper configs
+- Rebuild `mock-files.tar.gz` bundling all EL8/9/10 templates and wrapper configs
+
+----
+
 ## 🗃️ Changelog: 2025-08-26 at 23:54:49 🗃️  
 
 🗃️ Committing everything that changed 🗃️  
@@ -272,7 +284,7 @@ casjay-release.spec
   
 RPM-GPG-KEY-casjay  
 ZREPO/Fedora/keys/RPM-GPG-KEY-casjay  
-ZREPO/RHEL/keys/RPM-GPG-KEY-casjay  
+ZREPO/EL/keys/RPM-GPG-KEY-casjay  
 
 
 ### 🗃️ End of changes for 202309080019-git 🗃️  
@@ -381,9 +393,9 @@ casjay.rh9.repo
 🗃️ Committing everything that changed 🗃️  
   
   
-ZREPO/RHEL/mirrors/empty  
-ZREPO/RHEL/mirrors/emtpy  
-ZREPO/RHEL/mirrors/srpms  
+ZREPO/EL/mirrors/empty  
+ZREPO/EL/mirrors/emtpy  
+ZREPO/EL/mirrors/srpms  
 
 
 ### 🗃️ End of changes for 202308201357-git 🗃️  
@@ -407,8 +419,8 @@ casjay.rh9.repo
   
   
 casjay-release.spec  
-ZREPO/RHEL/mirrors/empty  
-ZREPO/RHEL/mirrors/remi  
+ZREPO/EL/mirrors/empty  
+ZREPO/EL/mirrors/remi  
 
 
 ### 🗃️ End of changes for 202308192224-git 🗃️  
@@ -419,7 +431,7 @@ ZREPO/RHEL/mirrors/remi
 🗃️ Committing everything that changed 🗃️  
   
   
-ZREPO/RHEL/keys/RPM-GPG-KEY-casjay  
+ZREPO/EL/keys/RPM-GPG-KEY-casjay  
 
 
 ### 🗃️ End of changes for 202308191031-git 🗃️  
@@ -1074,27 +1086,27 @@ ZREPO/Fedora/rpmfusion-free.repo : 🗃️  Committing everything that changed �
 ZREPO/Fedora/rpmfusion-free-updates.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
 ZREPO/Fedora/rpmfusion-nonfree.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
 ZREPO/Fedora/rpmfusion-nonfree-updates.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/casjay.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/NODESOURCE-GPG-SIGNING-KEY-EL : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-CentOS-7 : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-CentOS-Debug-7 : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-CentOS-Testing-7 : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-elrepo.org : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-EPEL-7 : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-nux.ro : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-remi : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-remi2017 : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-remi2018 : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-remi2019 : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-remi2020 : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-remi2021 : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-remi.el8 : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-rpmfusion-free-el-7 : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-rpmfusion-free-el-8 : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-rpmfusion-nonfree-el-7 : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-rpmfusion-nonfree-el-8 : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-ZABBIX : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-ZABBIX-A14FE591 : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/casjay.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/NODESOURCE-GPG-SIGNING-KEY-EL : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-CentOS-7 : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-CentOS-Debug-7 : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-CentOS-Testing-7 : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-elrepo.org : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-EPEL-7 : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-nux.ro : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-remi : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-remi2017 : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-remi2018 : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-remi2019 : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-remi2020 : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-remi2021 : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-remi.el8 : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-rpmfusion-free-el-7 : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-rpmfusion-free-el-8 : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-rpmfusion-nonfree-el-7 : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-rpmfusion-nonfree-el-8 : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-ZABBIX : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-ZABBIX-A14FE591 : 🗃️  Committing everything that changed 🗃️ 🚀  
   
 #### End of changes for  - 2023-04-01 at 13:41:53  
   
@@ -1121,11 +1133,11 @@ ZREPO/Fedora/rpmfusion-free.repo : 🗃️  Committing everything that changed �
 ZREPO/Fedora/rpmfusion-free-updates.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
 ZREPO/Fedora/rpmfusion-nonfree.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
 ZREPO/Fedora/rpmfusion-nonfree-updates.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/casjay.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/elrepo.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/epel.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/rpmfusion-free-updates.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/rpmfusion-nonfree-updates.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/casjay.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/elrepo.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/epel.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/rpmfusion-free-updates.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/rpmfusion-nonfree-updates.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
   
 #### End of changes for  - 2023-04-01 at 13:23:43  
   
@@ -1430,65 +1442,65 @@ ZREPO/Fedora/rpmfusion-free.repo : 🗃️  Committing everything that changed �
 ZREPO/Fedora/rpmfusion-free-updates.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
 ZREPO/Fedora/rpmfusion-nonfree.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
 ZREPO/Fedora/rpmfusion-nonfree-updates.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/6 : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/7 : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/8 : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/casjay.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/elrepo.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/epel.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/ : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/mariadb.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/mirrors/ : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/ntop.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/nux-dextop.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/postfix.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/remi-glpi93.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/remi-php72.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/remi.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/remi-safe.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/casjay.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/elrepo.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/epel.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/NODESOURCE-GPG-SIGNING-KEY-EL : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-casjay : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-CentOS-7 : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-CentOS-Debug-7 : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-CentOS-Testing-7 : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-elrepo.org : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-EPEL-7 : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-nux.ro : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-remi : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-remi2017 : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-remi2018 : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-remi2019 : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-remi2020 : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-remi2021 : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-remi.el8 : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-rpmfusion-free-el-7 : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-rpmfusion-free-el-8 : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-rpmfusion-nonfree-el-7 : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-rpmfusion-nonfree-el-8 : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-ZABBIX : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-ZABBIX-A14FE591 : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/mariadb.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/mirrors/addons : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/mirrors/extras : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/mirrors/remi : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/mirrors/rpms : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/mirrors/srpms : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/ntop.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/nux-dextop.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/postfix.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/remi-glpi93.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/remi-php72.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/remi.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/remi-safe.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/rpmfusion-free-updates.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/rpmfusion-nonfree-updates.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/zabbix.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/rpmfusion-free-updates.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/rpmfusion-nonfree-updates.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/zabbix.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/6 : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/7 : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/8 : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/casjay.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/elrepo.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/epel.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/ : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/mariadb.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/mirrors/ : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/ntop.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/nux-dextop.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/postfix.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/remi-glpi93.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/remi-php72.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/remi.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/remi-safe.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/casjay.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/elrepo.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/epel.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/NODESOURCE-GPG-SIGNING-KEY-EL : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-casjay : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-CentOS-7 : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-CentOS-Debug-7 : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-CentOS-Testing-7 : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-elrepo.org : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-EPEL-7 : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-nux.ro : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-remi : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-remi2017 : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-remi2018 : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-remi2019 : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-remi2020 : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-remi2021 : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-remi.el8 : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-rpmfusion-free-el-7 : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-rpmfusion-free-el-8 : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-rpmfusion-nonfree-el-7 : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-rpmfusion-nonfree-el-8 : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-ZABBIX : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-ZABBIX-A14FE591 : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/mariadb.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/mirrors/addons : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/mirrors/extras : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/mirrors/remi : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/mirrors/rpms : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/mirrors/srpms : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/ntop.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/nux-dextop.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/postfix.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/remi-glpi93.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/remi-php72.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/remi.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/remi-safe.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/rpmfusion-free-updates.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/rpmfusion-nonfree-updates.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/zabbix.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/rpmfusion-free-updates.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/rpmfusion-nonfree-updates.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/zabbix.repo : 🗃️  Committing everything that changed 🗃️ 🚀  
   
 #### End of changes for  - 2023-04-01 at 13:02:27  
   
@@ -1500,11 +1512,11 @@ ZREPO/Fedora/mirrors/addons : 🗃️  Committing everything that changed 🗃�
 ZREPO/Fedora/mirrors/extras : 🗃️  Committing everything that changed 🗃️ 🚀  
 ZREPO/Fedora/mirrors/rpms : 🗃️  Committing everything that changed 🗃️ 🚀  
 ZREPO/Fedora/mirrors/srpms : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/mirrors/addons : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/mirrors/extras : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/mirrors/remi : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/mirrors/rpms : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/mirrors/srpms : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/mirrors/addons : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/mirrors/extras : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/mirrors/remi : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/mirrors/rpms : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/mirrors/srpms : 🗃️  Committing everything that changed 🗃️ 🚀  
   
 #### End of changes for  - 2023-04-01 at 12:55:04  
   
@@ -1516,11 +1528,11 @@ ZREPO/Fedora/mirrors/addons : 🗃️  Committing everything that changed 🗃�
 ZREPO/Fedora/mirrors/extras : 🗃️  Committing everything that changed 🗃️ 🚀  
 ZREPO/Fedora/mirrors/rpms : 🗃️  Committing everything that changed 🗃️ 🚀  
 ZREPO/Fedora/mirrors/srpms : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/mirrors/addons : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/mirrors/extras : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/mirrors/remi : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/mirrors/rpms : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/mirrors/srpms : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/mirrors/addons : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/mirrors/extras : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/mirrors/remi : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/mirrors/rpms : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/mirrors/srpms : 🗃️  Committing everything that changed 🗃️ 🚀  
   
 #### End of changes for  - 2023-04-01 at 11:54:49  
   
@@ -1539,7 +1551,7 @@ casjay.rh8.repo : 🗃️  Committing everything that changed 🗃️ 🚀
 casjay-release.spec : 🗃️  Committing everything that changed 🗃️ 🚀  
 RPM-GPG-KEY-casjay : 🗃️  Committing everything that changed 🗃️ 🚀  
 ZREPO/Fedora/keys/RPM-GPG-KEY-casjay : 🗃️  Committing everything that changed 🗃️ 🚀  
-ZREPO/RHEL/keys/RPM-GPG-KEY-casjay : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/keys/RPM-GPG-KEY-casjay : 🗃️  Committing everything that changed 🗃️ 🚀  
   
 #### End of changes for  - 2023-04-01 at 10:17:43  
   
@@ -1620,7 +1632,7 @@ casjay.rh8.repo : 🗃️  Committing everything that changed 🗃️ 🚀
   
 #### Changelog: 2023-03-30 at 14:17:02  
 
-ZREPO/RHEL/mirrors/remi : 🗃️  Committing everything that changed 🗃️ 🚀  
+ZREPO/EL/mirrors/remi : 🗃️  Committing everything that changed 🗃️ 🚀  
   
 #### End of changes for  - 2023-03-30 at 14:17:02  
   
