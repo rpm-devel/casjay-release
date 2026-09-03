@@ -1,0 +1,291 @@
+# CasjaysDev openSUSE Tumbleweed Repo Config (x86_64, aarch64)
+# Docker image for testing: opensuse/tumbleweed
+# Rolling release — no $releasever in official URLs; tumbleweed hardcoded.
+# CasjaysDev mirrorlists use $releasever from os-release (snapshot date).
+
+# ---------------------------
+# openSUSE Tumbleweed official repos
+# ---------------------------
+[casjay-os-oss]
+name=Casjay OSS - Tumbleweed $basearch
+baseurl=https://download.opensuse.org/tumbleweed/repo/oss/
+gpgkey=https://download.opensuse.org/tumbleweed/repo/oss/repodata/repomd.xml.key
+enabled=1
+gpgcheck=1
+autorefresh=1
+skip_if_unavailable=1
+
+[casjay-os-non-oss]
+name=Casjay Non-OSS - Tumbleweed $basearch
+baseurl=https://download.opensuse.org/tumbleweed/repo/non-oss/
+gpgkey=https://download.opensuse.org/tumbleweed/repo/non-oss/repodata/repomd.xml.key
+enabled=1
+gpgcheck=1
+autorefresh=1
+skip_if_unavailable=1
+
+[casjay-os-updates]
+name=Casjay Updates - Tumbleweed $basearch
+baseurl=https://download.opensuse.org/update/tumbleweed/
+gpgkey=https://download.opensuse.org/tumbleweed/repo/oss/repodata/repomd.xml.key
+enabled=1
+gpgcheck=1
+autorefresh=1
+skip_if_unavailable=1
+
+# ---------------------------
+# Packman Tumbleweed (multimedia/codecs) - third party
+# ---------------------------
+[casjay-packman-essentials]
+name=Casjay Packman Essentials - Tumbleweed $basearch
+baseurl=https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/Essentials/
+gpgkey=https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/Essentials/repodata/repomd.xml.key
+enabled=1
+gpgcheck=1
+autorefresh=1
+skip_if_unavailable=1
+
+[casjay-packman-multimedia]
+name=Casjay Packman Multimedia - Tumbleweed $basearch
+baseurl=https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/Multimedia/
+gpgkey=https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/Multimedia/repodata/repomd.xml.key
+enabled=1
+gpgcheck=1
+autorefresh=1
+skip_if_unavailable=1
+
+# ---------------------------
+# CasjaysDev repos (mirrorlists) - third party
+# ---------------------------
+[casjay-extras]
+name=Casjay Extras - Tumbleweed $basearch
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/openSUSE/tumbleweed/$basearch/mirrors/extras
+gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/openSUSE/keys/RPM-GPG-KEY-casjay
+module_hotfixes=1
+enabled=1
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-rpms]
+name=Casjay RPMs - Tumbleweed $basearch
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/openSUSE/tumbleweed/$basearch/mirrors/rpms
+gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/openSUSE/keys/RPM-GPG-KEY-casjay
+module_hotfixes=1
+enabled=1
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-addons]
+name=Casjay Addons - Tumbleweed $basearch
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/openSUSE/tumbleweed/$basearch/mirrors/addons
+gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/openSUSE/keys/RPM-GPG-KEY-casjay
+module_hotfixes=1
+enabled=1
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-debug]
+name=Casjay Debug - Tumbleweed $basearch
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/openSUSE/tumbleweed/$basearch/mirrors/debug
+gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/openSUSE/keys/RPM-GPG-KEY-casjay
+module_hotfixes=1
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-sources]
+name=Casjay Sources - Tumbleweed
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/openSUSE/tumbleweed/mirrors/srpms
+gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/openSUSE/keys/RPM-GPG-KEY-casjay
+module_hotfixes=1
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+# ---------------------------
+# OBS extras (i2pd, incus) - third party
+# ---------------------------
+[casjay-i2pd]
+name=Casjay i2pd (OBS) - Tumbleweed $basearch
+baseurl=https://download.opensuse.org/repositories/home:/supervillain/openSUSE_Tumbleweed/
+gpgkey=https://download.opensuse.org/repositories/home:/supervillain/openSUSE_Tumbleweed/repodata/repomd.xml.key
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-incus]
+name=Casjay incus (OBS) - Tumbleweed $basearch
+baseurl=https://download.opensuse.org/repositories/home:/alvistack:/ppa/openSUSE_Tumbleweed/
+gpgkey=https://download.opensuse.org/repositories/home:/alvistack:/ppa/openSUSE_Tumbleweed/repodata/repomd.xml.key
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+# ---------------------------
+# MariaDB / PostgreSQL / MongoDB / Node.js / Yarn / Docker /
+# Webmin / Jenkins - third party
+# ---------------------------
+[casjay-mariadb]
+name=Casjay MariaDB 13.rolling for openSUSE Tumbleweed $basearch
+baseurl=https://downloads.mariadb.com/MariaDB/mariadb-13.rolling/zypper/opensuse/tumbleweed/$basearch/
+gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+module_hotfixes=1
+enabled=1
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-postgresql]
+name=Casjay PostgreSQL 15 for openSUSE Tumbleweed - $basearch
+baseurl=https://download.postgresql.org/pub/repos/zypp/15/openSUSE/openSUSE_Tumbleweed/
+enabled=1
+gpgcheck=1
+gpgkey=https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG
+skip_if_unavailable=1
+
+# Note: MongoDB does not officially support Tumbleweed; SLES 15 packages used
+[casjay-mongodb]
+name=Casjay MongoDB 8.0 - Tumbleweed - $basearch
+baseurl=https://repo.mongodb.org/zypper/suse/15/mongodb-org/8.0/$basearch/
+gpgcheck=1
+enabled=0
+gpgkey=https://pgp.mongodb.com/server-8.0.asc
+skip_if_unavailable=1
+
+[casjay-nodejs]
+name=Casjay NodeJS (OBS) - Tumbleweed $basearch
+baseurl=https://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Tumbleweed/
+gpgkey=https://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Tumbleweed/repodata/repomd.xml.key
+enabled=1
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-yarn]
+name=Casjay Yarn - Tumbleweed $basearch
+baseurl=https://dl.yarnpkg.com/rpm/
+gpgkey=https://dl.yarnpkg.com/rpm/pubkey.gpg
+enabled=1
+gpgcheck=1
+skip_if_unavailable=1
+
+# Note: Docker CE targets SLES 15 for SUSE platforms
+[casjay-docker]
+name=Casjay Docker CE - Tumbleweed $basearch
+baseurl=https://download.docker.com/linux/sles/15/$basearch/stable
+gpgkey=https://download.docker.com/linux/sles/gpg
+module_hotfixes=1
+enabled=1
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-webmin]
+name=Casjay Webmin Releases
+baseurl=https://download.webmin.com/download/newkey/yum
+gpgkey=https://download.webmin.com/developers-key.asc
+enabled=1
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-jenkins]
+name=Casjay Jenkins
+baseurl=https://pkg.jenkins.io/opensuse-stable
+gpgkey=https://pkg.jenkins.io/redhat/jenkins.io-2023.key
+enabled=1
+gpgcheck=1
+skip_if_unavailable=1
+
+# ============================
+# Source Repositories (SRPMS)
+# Pattern: <name>-srpm
+# ============================
+
+# ---- openSUSE Tumbleweed official source repos ----
+[casjay-os-oss-srpm]
+name=Casjay OSS Source - Tumbleweed
+baseurl=https://download.opensuse.org/source/tumbleweed/repo/oss/
+gpgkey=https://download.opensuse.org/tumbleweed/repo/oss/repodata/repomd.xml.key
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-os-non-oss-srpm]
+name=Casjay Non-OSS Source - Tumbleweed
+baseurl=https://download.opensuse.org/source/tumbleweed/repo/non-oss/
+gpgkey=https://download.opensuse.org/tumbleweed/repo/non-oss/repodata/repomd.xml.key
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+# ---- Packman source - third party ----
+[casjay-packman-essentials-srpm]
+name=Casjay Packman Essentials Source - Tumbleweed
+baseurl=https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/Essentials/src/
+gpgkey=https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Tumbleweed/Essentials/repodata/repomd.xml.key
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+# ---- OBS SRPMs - third party ----
+[casjay-i2pd-srpm]
+name=Casjay i2pd (OBS) SRPMS - Tumbleweed
+baseurl=https://download.opensuse.org/repositories/home:/supervillain/openSUSE_Tumbleweed/src/
+gpgkey=https://download.opensuse.org/repositories/home:/supervillain/openSUSE_Tumbleweed/repodata/repomd.xml.key
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-incus-srpm]
+name=Casjay incus (OBS) SRPMS - Tumbleweed
+baseurl=https://download.opensuse.org/repositories/home:/alvistack:/ppa/openSUSE_Tumbleweed/src/
+gpgkey=https://download.opensuse.org/repositories/home:/alvistack:/ppa/openSUSE_Tumbleweed/repodata/repomd.xml.key
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+# ---- Vendor SRPMs - third party (disabled; upstream availability varies) ----
+[casjay-mariadb-srpm]
+name=Casjay MariaDB 13.rolling SRPMS - Tumbleweed
+baseurl=https://archive.mariadb.org/mariadb-13.rolling/zypper/opensuse/tumbleweed/SRPMS/
+gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-postgresql-srpm]
+name=Casjay PostgreSQL 15 SRPMS - Tumbleweed
+baseurl=https://download.postgresql.org/pub/repos/zypp/15/openSUSE/openSUSE_Tumbleweed/src/
+gpgkey=https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-nodejs-srpm]
+name=Casjay NodeJS (OBS) SRPMS - Tumbleweed
+baseurl=https://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Tumbleweed/src/
+gpgkey=https://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Tumbleweed/repodata/repomd.xml.key
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-docker-srpm]
+name=Casjay Docker CE SRPMS - Tumbleweed
+baseurl=https://download.docker.com/linux/sles/15/SRPMS
+gpgkey=https://download.docker.com/linux/sles/gpg
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-webmin-srpm]
+name=Casjay Webmin SRPMS
+baseurl=https://download.webmin.com/download/SRPMS/
+gpgkey=https://download.webmin.com/developers-key.asc
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-jenkins-srpm]
+name=Casjay Jenkins SRPMS
+baseurl=https://pkg.jenkins.io/opensuse-stable/srpms/
+gpgkey=https://pkg.jenkins.io/redhat/jenkins.io-2023.key
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1

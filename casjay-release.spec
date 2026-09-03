@@ -1,6 +1,6 @@
 Summary: Casjays repos release file
 Name: casjay-release
-Version: 1.7
+Version: 1.8
 Release: 1%{?dist}
 License: GPL-2.0-only
 URL: http://rpm.casjaysdev.pro/
@@ -65,6 +65,17 @@ Source2: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RP
 Source1: https://github.com/rpm-devel/casjay-release/raw/main/fedora.repo
 Source2: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/Fedora/keys/RPM-GPG-KEY-casjay
 %endif
+%if 0%{?suse_version}
+%ifnarch x86_64 aarch64
+%define  repo_replace false
+%endif
+%if 0%{?suse_version} >= 1599
+Source1: https://github.com/rpm-devel/casjay-release/raw/main/opensuse.tumbleweed.repo
+%else
+Source1: https://github.com/rpm-devel/casjay-release/raw/main/opensuse.leap15.repo
+%endif
+Source2: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/RHEL/keys/RPM-GPG-KEY-casjay
+%endif
 
 %description
 This package contains yum configuration for the casjaysdev.pro Linux Repository, as well as the public GPG keys used to sign packages.
@@ -83,7 +94,11 @@ contains custom mock files.
 %install
 %{__mkdir} -p %{buildroot}%{_sysconfdir}
 %{__tar} xfvz %{SOURCE0} -C %{buildroot}%{_sysconfdir}
+%if 0%{?suse_version}
+%{__install} -Dpm 0644 %{SOURCE1} %{buildroot}%{_sysconfdir}/zypp/repos.d/casjay.repo
+%else
 %{__install} -Dpm 0644 %{SOURCE1} %{buildroot}%{_sysconfdir}/yum.repos.d/casjay.repo
+%endif
 %{__install} -Dpm 0644 %{SOURCE2} %{buildroot}%{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-casjay
 %if "%{repo_replace}" == "true"
 sed -i 's|.*http://mirrors.elrepo.org/mirrors-elrepo.*|baseurl=https://rpm-devel.sourceforge.io/repo/RHEL/$releasever/$basearch/empty|g' %{buildroot}%{_sysconfdir}/yum.repos.d/casjay.repo
@@ -103,10 +118,18 @@ else
   sed -i '/^\[main\]/a best=True' "/etc/yum.conf" &>/dev/null
 fi
 %endif
+%if 0%{?suse_version}
+zypper refresh >/dev/null 2>&1 || true
+%else
 yum makecache -qy >/dev/null
+%endif
 
 %files
+%if 0%{?suse_version}
+%config %{_sysconfdir}/zypp/repos.d/casjay.repo
+%else
 %config %{_sysconfdir}/yum.repos.d/casjay.repo
+%endif
 %pubkey %{_sysconfdir}/pki/rpm-gpg/RPM-GPG-KEY-casjay
 
 %files devel
@@ -121,6 +144,12 @@ yum makecache -qy >/dev/null
 %{_sysconfdir}/mock/templates/casjay-8.tpl
 
 %changelog
+* Tue Sep 02 2026 CasjaysDev <rpm-devel@casjaysdev.pro> - 1.8-1
+- Add openSUSE Leap 15 and Tumbleweed repo files from scratch
+- Detect %%{?suse_version} >= 1599 for Tumbleweed vs Leap 15.x
+- Install to /etc/zypp/repos.d/casjay.repo on SUSE platforms
+- Run zypper refresh in %%post on SUSE; yum makecache elsewhere
+
 * Tue Sep 02 2026 CasjaysDev <rpm-devel@casjaysdev.pro> - 1.7-1
 - Add Rocky Linux and Oracle Linux per-distro repo files (EL8/9/10)
 - Detect %%{?oraclelinux} and %%{?rocky} within each %%if rhel block

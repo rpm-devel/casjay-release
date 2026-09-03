@@ -1,0 +1,328 @@
+# CasjaysDev openSUSE Leap 15 Repo Config (x86_64, aarch64)
+# Docker image for testing: opensuse/leap:15
+# $releasever expands to the full Leap minor version e.g. 15.6
+# Note: some vendor repos require the base major version (15); those
+#       are hardcoded and will need updating if Leap 16 is released.
+
+# ---------------------------
+# openSUSE Leap official repos
+# ---------------------------
+[casjay-os-oss]
+name=Casjay OSS - $releasever $basearch
+baseurl=https://download.opensuse.org/distribution/leap/$releasever/repo/oss/
+gpgkey=https://download.opensuse.org/distribution/leap/$releasever/repo/oss/repodata/repomd.xml.key
+enabled=1
+gpgcheck=1
+autorefresh=1
+skip_if_unavailable=1
+
+[casjay-os-non-oss]
+name=Casjay Non-OSS - $releasever $basearch
+baseurl=https://download.opensuse.org/distribution/leap/$releasever/repo/non-oss/
+gpgkey=https://download.opensuse.org/distribution/leap/$releasever/repo/non-oss/repodata/repomd.xml.key
+enabled=1
+gpgcheck=1
+autorefresh=1
+skip_if_unavailable=1
+
+[casjay-os-updates]
+name=Casjay Updates OSS - $releasever $basearch
+baseurl=https://download.opensuse.org/update/leap/$releasever/oss/
+gpgkey=https://download.opensuse.org/update/leap/$releasever/oss/repodata/repomd.xml.key
+enabled=1
+gpgcheck=1
+autorefresh=1
+skip_if_unavailable=1
+
+[casjay-os-updates-non-oss]
+name=Casjay Updates Non-OSS - $releasever $basearch
+baseurl=https://download.opensuse.org/update/leap/$releasever/non-oss/
+gpgkey=https://download.opensuse.org/update/leap/$releasever/non-oss/repodata/repomd.xml.key
+enabled=1
+gpgcheck=1
+autorefresh=1
+skip_if_unavailable=1
+
+[casjay-os-backports]
+name=Casjay Backports - $releasever $basearch
+baseurl=https://download.opensuse.org/update/leap/$releasever/backports/
+gpgkey=https://download.opensuse.org/update/leap/$releasever/backports/repodata/repomd.xml.key
+enabled=1
+gpgcheck=1
+autorefresh=1
+skip_if_unavailable=1
+
+[casjay-os-sle]
+name=Casjay SLE Updates - $releasever $basearch
+baseurl=https://download.opensuse.org/update/leap/$releasever/sle/
+gpgkey=https://download.opensuse.org/update/leap/$releasever/sle/repodata/repomd.xml.key
+enabled=1
+gpgcheck=1
+autorefresh=1
+skip_if_unavailable=1
+
+# ---------------------------
+# Packman (multimedia/codecs — openSUSE RPM Fusion equivalent) - third party
+# ---------------------------
+[casjay-packman-essentials]
+name=Casjay Packman Essentials - $releasever $basearch
+baseurl=https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Leap_$releasever/Essentials/
+gpgkey=https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Leap_$releasever/Essentials/repodata/repomd.xml.key
+enabled=1
+gpgcheck=1
+autorefresh=1
+skip_if_unavailable=1
+
+[casjay-packman-multimedia]
+name=Casjay Packman Multimedia - $releasever $basearch
+baseurl=https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Leap_$releasever/Multimedia/
+gpgkey=https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Leap_$releasever/Multimedia/repodata/repomd.xml.key
+enabled=1
+gpgcheck=1
+autorefresh=1
+skip_if_unavailable=1
+
+# ---------------------------
+# CasjaysDev repos (mirrorlists) - third party
+# ---------------------------
+[casjay-extras]
+name=Casjay Extras - $releasever $basearch
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/openSUSE/$releasever/$basearch/mirrors/extras
+gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/openSUSE/keys/RPM-GPG-KEY-casjay
+module_hotfixes=1
+enabled=1
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-rpms]
+name=Casjay RPMs - $releasever $basearch
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/openSUSE/$releasever/$basearch/mirrors/rpms
+gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/openSUSE/keys/RPM-GPG-KEY-casjay
+module_hotfixes=1
+enabled=1
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-addons]
+name=Casjay Addons - $releasever $basearch
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/openSUSE/$releasever/$basearch/mirrors/addons
+gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/openSUSE/keys/RPM-GPG-KEY-casjay
+module_hotfixes=1
+enabled=1
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-debug]
+name=Casjay Debug - $releasever $basearch
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/openSUSE/$releasever/$basearch/mirrors/debug
+gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/openSUSE/keys/RPM-GPG-KEY-casjay
+module_hotfixes=1
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-sources]
+name=Casjay Sources - $releasever
+mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/openSUSE/$releasever/mirrors/srpms
+gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/openSUSE/keys/RPM-GPG-KEY-casjay
+module_hotfixes=1
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+# ---------------------------
+# OBS extras (i2pd, incus) - third party
+# ---------------------------
+[casjay-i2pd]
+name=Casjay i2pd (OBS) - $releasever $basearch
+baseurl=https://download.opensuse.org/repositories/home:/supervillain/openSUSE_Leap_$releasever/
+gpgkey=https://download.opensuse.org/repositories/home:/supervillain/openSUSE_Leap_$releasever/repodata/repomd.xml.key
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-incus]
+name=Casjay incus (OBS) - $releasever $basearch
+baseurl=https://download.opensuse.org/repositories/home:/alvistack:/ppa/openSUSE_Leap_$releasever/
+gpgkey=https://download.opensuse.org/repositories/home:/alvistack:/ppa/openSUSE_Leap_$releasever/repodata/repomd.xml.key
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+# ---------------------------
+# MariaDB / PostgreSQL / MongoDB / Node.js / Yarn / Docker /
+# Webmin / Jenkins - third party
+# ---------------------------
+[casjay-mariadb]
+name=Casjay MariaDB 13.rolling for openSUSE - $releasever $basearch
+baseurl=https://downloads.mariadb.com/MariaDB/mariadb-13.rolling/zypper/opensuse/$releasever/$basearch/
+gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+module_hotfixes=1
+enabled=1
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-postgresql]
+name=Casjay PostgreSQL 15 for openSUSE $releasever - $basearch
+baseurl=https://download.postgresql.org/pub/repos/zypp/15/openSUSE/openSUSE_Leap_$releasever/
+enabled=1
+gpgcheck=1
+gpgkey=https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG
+skip_if_unavailable=1
+
+# Note: MongoDB zypper path uses major version 15, not minor ($releasever)
+[casjay-mongodb]
+name=Casjay MongoDB 8.0 - $releasever - $basearch
+baseurl=https://repo.mongodb.org/zypper/suse/15/mongodb-org/8.0/$basearch/
+gpgcheck=1
+enabled=1
+gpgkey=https://pgp.mongodb.com/server-8.0.asc
+skip_if_unavailable=1
+
+# Note: NodeSource does not maintain openSUSE packages; using OBS nodejs repo
+[casjay-nodejs]
+name=Casjay NodeJS (OBS) - $releasever $basearch
+baseurl=https://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_$releasever/
+gpgkey=https://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_$releasever/repodata/repomd.xml.key
+enabled=1
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-yarn]
+name=Casjay Yarn - $releasever $basearch
+baseurl=https://dl.yarnpkg.com/rpm/
+gpgkey=https://dl.yarnpkg.com/rpm/pubkey.gpg
+enabled=1
+gpgcheck=1
+skip_if_unavailable=1
+
+# Note: Docker CE targets SLES; base major version 15 hardcoded
+[casjay-docker]
+name=Casjay Docker CE - $releasever $basearch
+baseurl=https://download.docker.com/linux/sles/15/$basearch/stable
+gpgkey=https://download.docker.com/linux/sles/gpg
+module_hotfixes=1
+enabled=1
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-webmin]
+name=Casjay Webmin Releases
+baseurl=https://download.webmin.com/download/newkey/yum
+gpgkey=https://download.webmin.com/developers-key.asc
+enabled=1
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-jenkins]
+name=Casjay Jenkins
+baseurl=https://pkg.jenkins.io/opensuse-stable
+gpgkey=https://pkg.jenkins.io/redhat/jenkins.io-2023.key
+enabled=1
+gpgcheck=1
+skip_if_unavailable=1
+
+# ============================
+# Source Repositories (SRPMS)
+# Pattern: <name>-srpm
+# ============================
+
+# ---- openSUSE official source repos ----
+[casjay-os-oss-srpm]
+name=Casjay OSS Source - $releasever
+baseurl=https://download.opensuse.org/source/distribution/leap/$releasever/repo/oss/
+gpgkey=https://download.opensuse.org/source/distribution/leap/$releasever/repo/oss/repodata/repomd.xml.key
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-os-non-oss-srpm]
+name=Casjay Non-OSS Source - $releasever
+baseurl=https://download.opensuse.org/source/distribution/leap/$releasever/repo/non-oss/
+gpgkey=https://download.opensuse.org/source/distribution/leap/$releasever/repo/non-oss/repodata/repomd.xml.key
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+# ---- Packman source - third party ----
+[casjay-packman-essentials-srpm]
+name=Casjay Packman Essentials Source - $releasever
+baseurl=https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Leap_$releasever/Essentials/src/
+gpgkey=https://ftp.gwdg.de/pub/linux/misc/packman/suse/openSUSE_Leap_$releasever/Essentials/repodata/repomd.xml.key
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+# ---- OBS SRPMs - third party ----
+[casjay-i2pd-srpm]
+name=Casjay i2pd (OBS) - SRPMS - $releasever
+baseurl=https://download.opensuse.org/repositories/home:/supervillain/openSUSE_Leap_$releasever/src/
+gpgkey=https://download.opensuse.org/repositories/home:/supervillain/openSUSE_Leap_$releasever/repodata/repomd.xml.key
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-incus-srpm]
+name=Casjay incus (OBS) - SRPMS - $releasever
+baseurl=https://download.opensuse.org/repositories/home:/alvistack:/ppa/openSUSE_Leap_$releasever/src/
+gpgkey=https://download.opensuse.org/repositories/home:/alvistack:/ppa/openSUSE_Leap_$releasever/repodata/repomd.xml.key
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+# ---- Vendor SRPMs - third party (disabled; upstream availability varies) ----
+[casjay-mariadb-srpm]
+name=Casjay MariaDB 13.rolling SRPMS - $releasever
+baseurl=https://archive.mariadb.org/mariadb-13.rolling/zypper/opensuse/$releasever/SRPMS/
+gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-postgresql-srpm]
+name=Casjay PostgreSQL 15 SRPMS - $releasever
+baseurl=https://download.postgresql.org/pub/repos/zypp/15/openSUSE/openSUSE_Leap_$releasever/src/
+gpgkey=https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-mongodb-srpm]
+name=Casjay MongoDB 8.0 SRPMS - $releasever
+baseurl=https://repo.mongodb.org/zypper/suse/15/mongodb-org/8.0/SRPMS/
+gpgkey=https://pgp.mongodb.com/server-8.0.asc
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-nodejs-srpm]
+name=Casjay NodeJS (OBS) SRPMS - $releasever
+baseurl=https://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_$releasever/src/
+gpgkey=https://download.opensuse.org/repositories/devel:/languages:/nodejs/openSUSE_Leap_$releasever/repodata/repomd.xml.key
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-docker-srpm]
+name=Casjay Docker CE SRPMS - $releasever
+baseurl=https://download.docker.com/linux/sles/15/SRPMS
+gpgkey=https://download.docker.com/linux/sles/gpg
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-webmin-srpm]
+name=Casjay Webmin SRPMS
+baseurl=https://download.webmin.com/download/SRPMS/
+gpgkey=https://download.webmin.com/developers-key.asc
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
+
+[casjay-jenkins-srpm]
+name=Casjay Jenkins SRPMS
+baseurl=https://pkg.jenkins.io/opensuse-stable/srpms/
+gpgkey=https://pkg.jenkins.io/redhat/jenkins.io-2023.key
+enabled=0
+gpgcheck=1
+skip_if_unavailable=1
