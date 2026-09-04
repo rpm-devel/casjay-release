@@ -71,7 +71,7 @@ skip_if_unavailable=1
 [casjay-elrepo]
 name=Casjay ELRepo - $releasever $basearch
 mirrorlist=https://mirrors.elrepo.org/mirrors-elrepo.el7
-gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org https://www.elrepo.org/RPM-GPG-KEY-v2-elrepo.org
+gpgkey=https://www.elrepo.org/RPM-GPG-KEY-v2-elrepo.org
 enabled=0
 gpgcheck=1
 skip_if_unavailable=1
@@ -79,7 +79,7 @@ skip_if_unavailable=1
 [casjay-elrepo-kernel]
 name=Casjay ELRepo Kernel - $releasever $basearch
 mirrorlist=https://mirrors.elrepo.org/mirrors-elrepo-kernel.el7
-gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org https://www.elrepo.org/RPM-GPG-KEY-v2-elrepo.org
+gpgkey=https://www.elrepo.org/RPM-GPG-KEY-v2-elrepo.org
 enabled=0
 gpgcheck=1
 skip_if_unavailable=1
@@ -87,7 +87,7 @@ skip_if_unavailable=1
 [casjay-elrepo-extras]
 name=Casjay ELRepo Extras - $releasever $basearch
 mirrorlist=https://mirrors.elrepo.org/mirrors-elrepo-extras.el7
-gpgkey=https://www.elrepo.org/RPM-GPG-KEY-elrepo.org https://www.elrepo.org/RPM-GPG-KEY-v2-elrepo.org
+gpgkey=https://www.elrepo.org/RPM-GPG-KEY-v2-elrepo.org
 enabled=0
 gpgcheck=1
 skip_if_unavailable=1
