@@ -189,7 +189,10 @@ skip_if_unavailable=1
 # ---------------------------
 [casjay-epel]
 name=Casjay EPEL $releasever - $basearch
-baseurl=https://download.fedoraproject.org/pub/epel/$releasever/Everything/$basearch
+# EPEL 10 is branched per RHEL minor and $releasever alone resolves to the
+# newest branched minor, which outruns AlmaLinux/Rocky by a release and
+# pulls packages built against a not-yet-shipped baseos
+baseurl=https://download.fedoraproject.org/pub/epel/$releasever_major.$releasever_minor/Everything/$basearch
 gpgkey=https://archive.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-$releasever
 module_hotfixes=1
 enabled=1

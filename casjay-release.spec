@@ -54,7 +54,9 @@ Source2: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/EL/keys/RPM-
 Source1: https://github.com/rpm-devel/casjay-release/raw/main/centos.7.repo
 Source2: https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/EL/keys/RPM-GPG-KEY-casjay
 %endif
-%if 0%{?rhel} < 7
+# %{?rhel} is undefined on Fedora and SUSE, where a bare `< 7` compares 0 and
+# wrongly fires this branch alongside the fedora/suse one, defining Source1 twice
+%if 0%{?rhel} && 0%{?rhel} < 7
 %ifnarch %{x86_64}
 %define  repo_replace true
 %endif
