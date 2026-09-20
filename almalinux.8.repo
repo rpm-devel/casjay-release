@@ -13,8 +13,8 @@ countme=1
 gpgkey=https://repo.almalinux.org/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 metadata_expire=86400
 enabled_metadata=1
+exclude=runc
 skip_if_unavailable=1
-exclude=runc,php*,npm,nodejs
 
 [casjay-os-appstream]
 name=Casjay AppStream - $releasever $basearch
@@ -25,8 +25,8 @@ countme=1
 gpgkey=https://repo.almalinux.org/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 metadata_expire=86400
 enabled_metadata=1
-skip_if_unavailable=1
 exclude=runc,php*,npm,nodejs
+skip_if_unavailable=1
 
 [casjay-os-extras]
 name=Casjay Extras - $releasever $basearch
@@ -37,20 +37,20 @@ countme=1
 gpgkey=https://repo.almalinux.org/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 metadata_expire=86400
 enabled_metadata=0
+exclude=runc
 skip_if_unavailable=1
-exclude=runc,php*,npm,nodejs
 
 [casjay-os-crb]
-name=Casjay PowerTools - $releasever $basearch
-mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/powertools
+name=Casjay CRB - $releasever $basearch
+mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/crb
 enabled=1
 gpgcheck=1
 countme=1
 gpgkey=https://repo.almalinux.org/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 metadata_expire=86400
 enabled_metadata=0
+exclude=runc
 skip_if_unavailable=1
-exclude=runc,php*,npm,nodejs
 
 [casjay-os-plus]
 name=Casjay Plus - $releasever $basearch
@@ -61,23 +61,23 @@ countme=1
 gpgkey=https://repo.almalinux.org/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 metadata_expire=86400
 enabled_metadata=0
+exclude=runc
 skip_if_unavailable=1
-exclude=runc,php*,npm,nodejs
 
 [casjay-os-highavailability]
 name=Casjay HighAvailability - $releasever $basearch
-mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/ha
+mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/highavailability
 enabled=0
 gpgcheck=1
 countme=1
 gpgkey=https://repo.almalinux.org/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 metadata_expire=86400
 enabled_metadata=0
+exclude=runc,podman*
 skip_if_unavailable=1
-exclude=runc,php*,npm,nodejs
 
 [casjay-os-nfv]
-name=Casjay Real Time for NFV - $releasever $basearch
+name=Casjay NFV - $releasever $basearch
 mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/nfv
 enabled=0
 gpgcheck=1
@@ -89,7 +89,7 @@ exclude=runc
 skip_if_unavailable=1
 
 [casjay-os-rt]
-name=Casjay Real Time - $releasever $basearch
+name=Casjay RT - $releasever $basearch
 mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/rt
 enabled=0
 gpgcheck=1
@@ -97,8 +97,8 @@ countme=1
 gpgkey=https://repo.almalinux.org/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 metadata_expire=86400
 enabled_metadata=0
+exclude=runc
 skip_if_unavailable=1
-exclude=runc,php*,npm,nodejs
 
 [casjay-os-resilientstorage]
 name=Casjay ResilientStorage - $releasever $basearch
@@ -109,11 +109,11 @@ countme=1
 gpgkey=https://repo.almalinux.org/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 metadata_expire=86400
 enabled_metadata=0
+exclude=runc
 skip_if_unavailable=1
-exclude=runc,php*,npm,nodejs
 
 [casjay-os-saphana]
-name=Casjay SAP HANA - $releasever $basearch
+name=Casjay SAPHANA - $releasever $basearch
 mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/saphana
 enabled=0
 gpgcheck=1
@@ -121,8 +121,8 @@ countme=1
 gpgkey=https://repo.almalinux.org/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 metadata_expire=86400
 enabled_metadata=0
+exclude=runc
 skip_if_unavailable=1
-exclude=runc,php*,npm,nodejs
 
 [casjay-os-sap]
 name=Casjay SAP - $releasever $basearch
@@ -133,8 +133,9 @@ countme=1
 gpgkey=https://repo.almalinux.org/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 metadata_expire=86400
 enabled_metadata=0
-exclude=runc,php*,npm,nodejs
+exclude=runc
 skip_if_unavailable=1
+
 
 # ---------------------------
 # CasjaysDev repos (mirrorlists) - third party
@@ -176,7 +177,7 @@ gpgcheck=1
 skip_if_unavailable=1
 
 [casjay-sources]
-name=Casjay Sources - $releasever
+name=Casjay Sources - $releasever $basearch
 mirrorlist=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/EL/$releasever/mirrors/srpms
 gpgkey=https://github.com/rpm-devel/casjay-release/raw/main/ZREPO/EL/keys/RPM-GPG-KEY-casjay
 module_hotfixes=1
@@ -188,7 +189,7 @@ skip_if_unavailable=1
 # EPEL (kept strict)
 # ---------------------------
 [casjay-epel]
-name=Casjay EPEL $releasever - $basearch
+name=Casjay EPEL - $releasever $basearch
 baseurl=https://download.fedoraproject.org/pub/epel/$releasever/Everything/$basearch
 gpgkey=https://archive.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-$releasever
 module_hotfixes=1
@@ -196,6 +197,16 @@ enabled=1
 gpgcheck=1
 exclude=runc,podman*,docker,php*
 skip_if_unavailable=1
+
+# ---------------------------
+# NVIDIA CUDA
+# ---------------------------
+[casjay-nvidia-cuda]
+name=Casjay NVIDIA CUDA - $releasever $basearch
+baseurl=https://developer.download.nvidia.com/compute/cuda/repos/rhel$releasever/$basearch
+enabled=1
+gpgcheck=1
+gpgkey=https://developer.download.nvidia.com/compute/cuda/repos/rhel$releasever/$basearch/D42D0685.pub
 
 # ---------------------------
 # RPM Fusion - third party
@@ -217,6 +228,7 @@ module_hotfixes=1
 enabled=1
 gpgcheck=1
 skip_if_unavailable=1
+
 
 # ---------------------------
 # Remi - third party
@@ -246,18 +258,19 @@ gpgcheck=1
 skip_if_unavailable=1
 
 [casjay-remi-modular]
-name=Casjay Remi Modular - $releasever - $basearch
+name=Casjay Remi Modular - - $releasever $basearch
 mirrorlist=https://mirror.team-cymru.com/remi/enterprise/$releasever/modular/$basearch/mirror
 gpgkey=https://rpms.remirepo.net/enterprise/$releasever/RPM-GPG-KEY-remi
 enabled=1
 gpgcheck=1
 skip_if_unavailable=1
 
+
 # ---------------------------
 # ELRepo - third party
 # ---------------------------
 [casjay-elrepo]
-name=Casjay ELRepo - el$releasever - $basearch
+name=Casjay ELRepo - $releasever $basearch
 mirrorlist=https://elrepo.org/mirrors-elrepo.el$releasever
 gpgkey=https://www.elrepo.org/RPM-GPG-KEY-v2-elrepo.org
 module_hotfixes=1
@@ -266,7 +279,7 @@ gpgcheck=1
 skip_if_unavailable=1
 
 [casjay-elrepo-kernel]
-name=Casjay ELRepo Kernel - el$releasever - $basearch
+name=Casjay ELRepo Kernel - $releasever $basearch
 mirrorlist=https://elrepo.org/mirrors-elrepo-kernel.el$releasever
 gpgkey=https://www.elrepo.org/RPM-GPG-KEY-v2-elrepo.org
 module_hotfixes=1
@@ -275,7 +288,7 @@ gpgcheck=1
 skip_if_unavailable=1
 
 [casjay-elrepo-extras]
-name=Casjay ELRepo Extras - el$releasever - $basearch
+name=Casjay ELRepo Extras - $releasever $basearch
 mirrorlist=https://elrepo.org/mirrors-elrepo-extras.el$releasever
 gpgkey=https://www.elrepo.org/RPM-GPG-KEY-v2-elrepo.org
 module_hotfixes=1
@@ -283,13 +296,14 @@ enabled=1
 gpgcheck=1
 skip_if_unavailable=1
 
+
 # ---------------------------
 # Ghettoforge - third party
 # ---------------------------
 [casjay-gf]
 name=Casjay Ghettoforge - $releasever $basearch
 mirrorlist=http://mirrorlist.ghettoforge.net/el/$releasever/gf/$basearch/mirrorlist
-enabled=0
+enabled=1
 gpgcheck=1
 gpgkey=https://mirror.ghettoforge.net/distributions/gf/RPM-GPG-KEY-gf.el$releasever
 skip_if_unavailable=1
@@ -303,7 +317,7 @@ name=Casjay i2pd (COPR) - $releasever $basearch
 baseurl=https://download.copr.fedorainfracloud.org/results/supervillain/i2pd/epel-$releasever-$basearch/
 type=rpm-md
 gpgkey=https://download.copr.fedorainfracloud.org/results/supervillain/i2pd/pubkey.gpg
-enabled=0
+enabled=1
 enabled_metadata=1
 gpgcheck=1
 repo_gpgcheck=0
@@ -312,13 +326,13 @@ skip_if_unavailable=1
 [casjay-copr-incus]
 name=Casjay incus (COPR) - $releasever $basearch
 baseurl=https://download.copr.fedorainfracloud.org/results/neil/incus/epel-$releasever-$basearch/
-enabled=0
 type=rpm-md
+skip_if_unavailable=1
 gpgcheck=1
 gpgkey=https://download.copr.fedorainfracloud.org/results/neil/incus/pubkey.gpg
 repo_gpgcheck=0
+enabled=1
 enabled_metadata=1
-skip_if_unavailable=1
 
 # ---------------------------
 # MariaDB / PostgreSQL / MongoDB / Node.js / Yarn / Docker /
@@ -329,20 +343,20 @@ name=Casjay MariaDB 13.rolling for EL - $releasever $basearch
 baseurl=https://yum.mariadb.org/13.rolling/rhel/$releasever/$basearch
 gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
 module_hotfixes=1
-enabled=1
+enabled=0
 gpgcheck=1
 skip_if_unavailable=1
 
 [casjay-postgresql]
-name=Casjay PostgreSQL 15 for EL $releasever - $basearch
+name=Casjay PostgreSQL 15 for EL - $releasever $basearch
 baseurl=https://download.postgresql.org/pub/repos/yum/15/redhat/rhel-$releasever-$basearch
-enabled=1
+enabled=0
 gpgcheck=1
 gpgkey=https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG
 skip_if_unavailable=1
 
 [casjay-mongodb]
-name=Casjay MongoDB 8.0 - $releasever - $basearch
+name=Casjay MongoDB 8.0 - - $releasever $basearch
 baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/8.0/$basearch/
 gpgcheck=1
 enabled=1
@@ -430,8 +444,8 @@ gpgcheck=1
 skip_if_unavailable=1
 
 [casjay-os-crb-srpm]
-name=Casjay PowerTools Source - $releasever
-baseurl=https://vault.almalinux.org/$releasever/PowerTools/Source/
+name=Casjay CRB Source - $releasever
+baseurl=https://vault.almalinux.org/$releasever/CRB/Source/
 gpgkey=https://repo.almalinux.org/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 enabled=0
 gpgcheck=1
@@ -454,7 +468,7 @@ gpgcheck=1
 skip_if_unavailable=1
 
 [casjay-os-nfv-srpm]
-name=Casjay Real Time for NFV Source - $releasever
+name=Casjay NFV Source - $releasever
 baseurl=https://vault.almalinux.org/$releasever/NFV/Source/
 gpgkey=https://repo.almalinux.org/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 enabled=0
@@ -462,7 +476,7 @@ gpgcheck=1
 skip_if_unavailable=1
 
 [casjay-os-rt-srpm]
-name=Casjay Real Time Source - $releasever
+name=Casjay RT Source - $releasever
 baseurl=https://vault.almalinux.org/$releasever/RT/Source/
 gpgkey=https://repo.almalinux.org/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 enabled=0
@@ -478,7 +492,7 @@ gpgcheck=1
 skip_if_unavailable=1
 
 [casjay-os-saphana-srpm]
-name=Casjay SAP HANA Source - $releasever
+name=Casjay SAPHANA Source - $releasever
 baseurl=https://vault.almalinux.org/$releasever/SAPHANA/Source/
 gpgkey=https://repo.almalinux.org/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 enabled=0
@@ -569,6 +583,7 @@ gpgkey=https://mirror.ghettoforge.net/distributions/gf/RPM-GPG-KEY-gf.el$release
 enabled=0
 gpgcheck=1
 skip_if_unavailable=1
+excludepkgs=*qemu*
 
 # ---- COPR SRPMs - third party (verify layout; disabled by default) ----
 [casjay-i2pd-srpm]
