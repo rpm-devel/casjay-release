@@ -114,6 +114,17 @@ exclude=runc,podman*,docker,php*
 skip_if_unavailable=1
 
 # ---------------------------
+# NVIDIA CUDA
+# ---------------------------
+[casjay-nvidia-cuda]
+name=Casjay NVIDIA CUDA - $releasever $basearch
+baseurl=https://developer.download.nvidia.com/compute/cuda/repos/rhel$releasever/$basearch
+enabled=1
+gpgcheck=1
+gpgkey=https://developer.download.nvidia.com/compute/cuda/repos/rhel$releasever/$basearch/CDF6BA43.pub
+skip_if_unavailable=1
+
+# ---------------------------
 # RPM Fusion - third party
 # ---------------------------
 [casjay-rpmfusion-free-updates]
