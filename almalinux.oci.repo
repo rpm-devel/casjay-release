@@ -29,7 +29,7 @@ enabled=1
 
 [casjay-powertools]
 name=OS powertools $releasever ($basearch)
-baseurl=https://ord.mirror.rackspace.com/almalinux/$releasever/PowerTools/$basearch/os/
+baseurl=https://ord.mirror.rackspace.com/almalinux/$releasever/CRB/$basearch/os/
 gpgkey=https://ord.mirror.rackspace.com/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 gpgcheck=1
 enabled=1
@@ -71,8 +71,8 @@ enabled=1
 
 [casjay-mariadb]
 name=mariadb $releasever ($basearch)
-baseurl=https://mirror.its.dal.ca/mariadb/yum/10.6/centos$releasever-$basearch
-gpgkey=https://mirror.its.dal.ca/mariadb/yum/RPM-GPG-KEY-MariaDB
+baseurl=https://yum.mariadb.org/10.6/rhel/$releasever/$basearch
+gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
 enabled=1
 module_hotfixes=1
 gpgcheck=1

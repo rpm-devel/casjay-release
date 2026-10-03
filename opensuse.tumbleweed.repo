@@ -128,10 +128,10 @@ skip_if_unavailable=1
 
 [casjay-postgresql]
 name=Casjay PostgreSQL 15 for openSUSE Tumbleweed - $basearch
-baseurl=https://download.postgresql.org/pub/repos/zypp/15/openSUSE/openSUSE_Tumbleweed/
+baseurl=https://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Tumbleweed/
 enabled=1
 gpgcheck=1
-gpgkey=https://download.postgresql.org/pub/repos/zypp/keys/PGDG-RPM-GPG-KEY-SLES15
+gpgkey=https://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Tumbleweed/repodata/repomd.xml.key
 skip_if_unavailable=1
 
 # Note: MongoDB does not officially support Tumbleweed; SLES 15 packages used
@@ -162,8 +162,8 @@ skip_if_unavailable=1
 # Note: Docker CE targets SLES 15 for SUSE platforms
 [casjay-docker]
 name=Casjay Docker CE - Tumbleweed $basearch
-baseurl=https://download.docker.com/linux/sles/15/$basearch/stable
-gpgkey=https://download.docker.com/linux/sles/gpg
+baseurl=https://download.opensuse.org/repositories/Virtualization:/containers/openSUSE_Tumbleweed/
+gpgkey=https://download.opensuse.org/repositories/Virtualization:/containers/openSUSE_Tumbleweed/repodata/repomd.xml.key
 module_hotfixes=1
 enabled=1
 gpgcheck=1
@@ -236,8 +236,8 @@ skip_if_unavailable=1
 
 [casjay-postgresql-srpm]
 name=Casjay PostgreSQL 15 SRPMS - Tumbleweed
-baseurl=https://download.postgresql.org/pub/repos/zypp/15/openSUSE/openSUSE_Tumbleweed/src/
-gpgkey=https://download.postgresql.org/pub/repos/zypp/keys/PGDG-RPM-GPG-KEY-SLES15
+baseurl=https://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Tumbleweed/src/
+gpgkey=https://download.opensuse.org/repositories/server:/database:/postgresql/openSUSE_Tumbleweed/repodata/repomd.xml.key
 enabled=0
 gpgcheck=1
 skip_if_unavailable=1
@@ -252,8 +252,8 @@ skip_if_unavailable=1
 
 [casjay-docker-srpm]
 name=Casjay Docker CE SRPMS - Tumbleweed
-baseurl=https://download.docker.com/linux/sles/15/SRPMS
-gpgkey=https://download.docker.com/linux/sles/gpg
+baseurl=https://download.opensuse.org/repositories/Virtualization:/containers/openSUSE_Tumbleweed/src/
+gpgkey=https://download.opensuse.org/repositories/Virtualization:/containers/openSUSE_Tumbleweed/repodata/repomd.xml.key
 enabled=0
 gpgcheck=1
 skip_if_unavailable=1

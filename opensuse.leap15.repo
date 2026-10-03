@@ -156,7 +156,7 @@ skip_if_unavailable=1
 
 [casjay-postgresql]
 name=Casjay PostgreSQL 15 for openSUSE $releasever - $basearch
-baseurl=https://download.postgresql.org/pub/repos/zypp/15/openSUSE/openSUSE_Leap_$releasever/
+baseurl=https://download.postgresql.org/pub/repos/zypp/15/suse/sles-$releasever-$basearch/
 enabled=1
 gpgcheck=1
 gpgkey=https://download.postgresql.org/pub/repos/zypp/keys/PGDG-RPM-GPG-KEY-SLES15
@@ -191,8 +191,8 @@ skip_if_unavailable=1
 # Note: Docker CE targets SLES; base major version 15 hardcoded
 [casjay-docker]
 name=Casjay Docker CE - $releasever $basearch
-baseurl=https://download.docker.com/linux/sles/15/$basearch/stable
-gpgkey=https://download.docker.com/linux/sles/gpg
+baseurl=https://download.opensuse.org/repositories/Virtualization:/containers/$releasever/
+gpgkey=https://download.opensuse.org/repositories/Virtualization:/containers/$releasever/repodata/repomd.xml.key
 module_hotfixes=1
 enabled=1
 gpgcheck=1
@@ -265,7 +265,7 @@ skip_if_unavailable=1
 
 [casjay-postgresql-srpm]
 name=Casjay PostgreSQL 15 SRPMS - $releasever
-baseurl=https://download.postgresql.org/pub/repos/zypp/15/openSUSE/openSUSE_Leap_$releasever/src/
+baseurl=https://download.postgresql.org/pub/repos/zypp/15/suse/sles-$releasever-$basearch/src/
 gpgkey=https://download.postgresql.org/pub/repos/zypp/keys/PGDG-RPM-GPG-KEY-SLES15
 enabled=0
 gpgcheck=1
@@ -289,8 +289,8 @@ skip_if_unavailable=1
 
 [casjay-docker-srpm]
 name=Casjay Docker CE SRPMS - $releasever
-baseurl=https://download.docker.com/linux/sles/15/SRPMS
-gpgkey=https://download.docker.com/linux/sles/gpg
+baseurl=https://download.opensuse.org/repositories/Virtualization:/containers/$releasever/src/
+gpgkey=https://download.opensuse.org/repositories/Virtualization:/containers/$releasever/repodata/repomd.xml.key
 enabled=0
 gpgcheck=1
 skip_if_unavailable=1
