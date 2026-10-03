@@ -229,33 +229,30 @@ skip_if_unavailable=1
 # ---------------------------
 # ELRepo - third party
 # ---------------------------
-# Disabled because this upstream has no EL8 aarch64 repository and this shared file has no per-architecture switch.
 [casjay-elrepo]
 name=Casjay ELRepo - el$releasever - $basearch
 mirrorlist=https://elrepo.org/mirrors-elrepo.el$releasever
 gpgkey=https://www.elrepo.org/RPM-GPG-KEY-v2-elrepo.org
 module_hotfixes=1
-enabled=0
+enabled=1
 gpgcheck=1
 skip_if_unavailable=1
 
-# Disabled because this upstream has no EL8 aarch64 repository and this shared file has no per-architecture switch.
 [casjay-elrepo-kernel]
 name=Casjay ELRepo Kernel - el$releasever - $basearch
 mirrorlist=https://elrepo.org/mirrors-elrepo-kernel.el$releasever
 gpgkey=https://www.elrepo.org/RPM-GPG-KEY-v2-elrepo.org
 module_hotfixes=1
-enabled=0
+enabled=1
 gpgcheck=1
 skip_if_unavailable=1
 
-# Disabled because this upstream has no EL8 aarch64 repository and this shared file has no per-architecture switch.
 [casjay-elrepo-extras]
 name=Casjay ELRepo Extras - el$releasever - $basearch
 mirrorlist=https://elrepo.org/mirrors-elrepo-extras.el$releasever
 gpgkey=https://www.elrepo.org/RPM-GPG-KEY-v2-elrepo.org
 module_hotfixes=1
-enabled=0
+enabled=1
 gpgcheck=1
 skip_if_unavailable=1
 
