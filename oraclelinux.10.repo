@@ -118,10 +118,10 @@ skip_if_unavailable=1
 # ---------------------------
 [casjay-nvidia-cuda]
 name=Casjay NVIDIA CUDA - $releasever $basearch
-baseurl=https://developer.download.nvidia.com/compute/cuda/repos/rhel$releasever/$basearch
+baseurl=https://developer.download.nvidia.com/compute/cuda/repos/rhel$releasever/x86_64 https://developer.download.nvidia.com/compute/cuda/repos/rhel$releasever/sbsa
 enabled=1
 gpgcheck=1
-gpgkey=https://developer.download.nvidia.com/compute/cuda/repos/rhel$releasever/$basearch/CDF6BA43.pub
+gpgkey=https://developer.download.nvidia.com/compute/cuda/repos/rhel$releasever/sbsa/CDF6BA43.pub
 skip_if_unavailable=1
 
 # ---------------------------

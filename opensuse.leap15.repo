@@ -154,20 +154,22 @@ enabled=1
 gpgcheck=1
 skip_if_unavailable=1
 
+# Disabled because the upstream repository has no aarch64 packages and this shared file has no per-architecture enable switch.
 [casjay-postgresql]
 name=Casjay PostgreSQL 15 for openSUSE $releasever - $basearch
 baseurl=https://download.postgresql.org/pub/repos/zypp/15/suse/sles-$releasever-$basearch/
-enabled=1
+enabled=0
 gpgcheck=1
 gpgkey=https://download.postgresql.org/pub/repos/zypp/keys/PGDG-RPM-GPG-KEY-SLES15
 skip_if_unavailable=1
 
 # Note: MongoDB zypper path uses major version 15, not minor ($releasever)
+# Disabled because the upstream repository has no aarch64 packages and this shared file has no per-architecture enable switch.
 [casjay-mongodb]
 name=Casjay MongoDB 8.0 - $releasever - $basearch
 baseurl=https://repo.mongodb.org/zypper/suse/15/mongodb-org/8.0/$basearch/
 gpgcheck=1
-enabled=1
+enabled=0
 gpgkey=https://pgp.mongodb.com/server-8.0.asc
 skip_if_unavailable=1
 

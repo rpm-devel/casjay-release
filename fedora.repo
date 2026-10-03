@@ -35,7 +35,7 @@ mirrorlist=https://mirrors.fedoraproject.org/mirrorlist?repo=updates-testing-f$r
 enabled=0
 gpgcheck=1
 countme=1
-gpgkey=https://fedoraproject.org/static/fedora.gpg
+gpgkey=https://fedoraproject.org/fedora.gpg
 metadata_expire=86400
 enabled_metadata=0
 exclude=runc
@@ -240,7 +240,7 @@ name=Casjay Fedora Rawhide - $basearch
 mirrorlist=https://mirrors.fedoraproject.org/mirrorlist?repo=rawhide&arch=$basearch
 enabled=0
 gpgcheck=1
-gpgkey=https://fedoraproject.org/static/fedora.gpg
+gpgkey=https://fedoraproject.org/fedora.gpg
 metadata_expire=86400
 enabled_metadata=0
 skip_if_unavailable=1
@@ -250,7 +250,7 @@ name=Casjay Fedora Rawhide Updates - $basearch
 mirrorlist=https://mirrors.fedoraproject.org/mirrorlist?repo=updates-testing-rawhide&arch=$basearch
 enabled=0
 gpgcheck=1
-gpgkey=https://fedoraproject.org/static/fedora.gpg
+gpgkey=https://fedoraproject.org/fedora.gpg
 metadata_expire=86400
 enabled_metadata=0
 skip_if_unavailable=1
@@ -265,7 +265,7 @@ skip_if_unavailable=1
 [casjay-os-release-srpm]
 name=Casjay Fedora $releasever Source
 metalink=https://mirrors.fedoraproject.org/metalink?repo=fedora-source-$releasever&arch=$basearch
-gpgkey=https://fedoraproject.org/static/fedora.gpg
+gpgkey=https://fedoraproject.org/fedora.gpg
 enabled=0
 gpgcheck=1
 skip_if_unavailable=1
@@ -273,7 +273,7 @@ skip_if_unavailable=1
 [casjay-os-updates-srpm]
 name=Casjay Fedora $releasever Updates Source
 metalink=https://mirrors.fedoraproject.org/metalink?repo=updates-released-source-f$releasever&arch=$basearch
-gpgkey=https://fedoraproject.org/static/fedora.gpg
+gpgkey=https://fedoraproject.org/fedora.gpg
 enabled=0
 gpgcheck=1
 skip_if_unavailable=1
@@ -282,7 +282,7 @@ skip_if_unavailable=1
 [casjay-rpmfusion-free-srpm]
 name=Casjay RPM Fusion Free for Fedora - Source - $releasever
 baseurl=https://download1.rpmfusion.org/free/fedora/releases/$releasever/Everything/SRPMS/
-gpgkey=https://download1.rpmfusion.org/free/fedora/RPM-GPG-KEY-rpmfusion-free-fedora-$releasever
+gpgkey=https://download1.rpmfusion.org/free/fedora/RPM-GPG-KEY-rpmfusion-free-fedora-2020
 enabled=0
 gpgcheck=1
 skip_if_unavailable=1
@@ -290,7 +290,7 @@ skip_if_unavailable=1
 [casjay-rpmfusion-nonfree-srpm]
 name=Casjay RPM Fusion Nonfree for Fedora - Source - $releasever
 baseurl=https://download1.rpmfusion.org/nonfree/fedora/releases/$releasever/Everything/SRPMS/
-gpgkey=https://download1.rpmfusion.org/nonfree/fedora/RPM-GPG-KEY-rpmfusion-nonfree-fedora-$releasever
+gpgkey=https://download1.rpmfusion.org/nonfree/fedora/RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020
 enabled=0
 gpgcheck=1
 skip_if_unavailable=1

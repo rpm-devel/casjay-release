@@ -41,8 +41,8 @@ exclude=runc
 skip_if_unavailable=1
 
 [casjay-os-crb]
-name=Casjay CRB - $releasever $basearch
-mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/crb
+name=Casjay PowerTools - $releasever $basearch
+mirrorlist=https://mirrors.almalinux.org/mirrorlist/$releasever/powertools
 enabled=1
 gpgcheck=1
 countme=1
@@ -269,30 +269,33 @@ skip_if_unavailable=1
 # ---------------------------
 # ELRepo - third party
 # ---------------------------
+# Disabled because this upstream has no EL8 aarch64 repository and this shared file has no per-architecture switch.
 [casjay-elrepo]
 name=Casjay ELRepo - $releasever $basearch
 mirrorlist=https://elrepo.org/mirrors-elrepo.el$releasever
 gpgkey=https://www.elrepo.org/RPM-GPG-KEY-v2-elrepo.org
 module_hotfixes=1
-enabled=1
+enabled=0
 gpgcheck=1
 skip_if_unavailable=1
 
+# Disabled because this upstream has no EL8 aarch64 repository and this shared file has no per-architecture switch.
 [casjay-elrepo-kernel]
 name=Casjay ELRepo Kernel - $releasever $basearch
 mirrorlist=https://elrepo.org/mirrors-elrepo-kernel.el$releasever
 gpgkey=https://www.elrepo.org/RPM-GPG-KEY-v2-elrepo.org
 module_hotfixes=1
-enabled=1
+enabled=0
 gpgcheck=1
 skip_if_unavailable=1
 
+# Disabled because this upstream has no EL8 aarch64 repository and this shared file has no per-architecture switch.
 [casjay-elrepo-extras]
 name=Casjay ELRepo Extras - $releasever $basearch
 mirrorlist=https://elrepo.org/mirrors-elrepo-extras.el$releasever
 gpgkey=https://www.elrepo.org/RPM-GPG-KEY-v2-elrepo.org
 module_hotfixes=1
-enabled=1
+enabled=0
 gpgcheck=1
 skip_if_unavailable=1
 
@@ -300,10 +303,11 @@ skip_if_unavailable=1
 # ---------------------------
 # Ghettoforge - third party
 # ---------------------------
+# Disabled because this upstream has no EL8 aarch64 repository and this shared file has no per-architecture switch.
 [casjay-gf]
 name=Casjay Ghettoforge - $releasever $basearch
 mirrorlist=http://mirrorlist.ghettoforge.net/el/$releasever/gf/$basearch/mirrorlist
-enabled=1
+enabled=0
 gpgcheck=1
 gpgkey=https://mirror.ghettoforge.net/distributions/gf/RPM-GPG-KEY-gf.el$releasever
 skip_if_unavailable=1
@@ -416,8 +420,8 @@ gpgcheck=1
 skip_if_unavailable=1
 
 [casjay-os-crb-srpm]
-name=Casjay CRB Source - $releasever
-baseurl=https://vault.almalinux.org/$releasever/CRB/Source/
+name=Casjay PowerTools Source - $releasever
+baseurl=https://vault.almalinux.org/$releasever/PowerTools/Source/
 gpgkey=https://repo.almalinux.org/almalinux/RPM-GPG-KEY-AlmaLinux-$releasever
 enabled=0
 gpgcheck=1
