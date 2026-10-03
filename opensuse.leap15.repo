@@ -133,18 +133,10 @@ skip_if_unavailable=1
 # ---------------------------
 # OBS extras (i2pd, incus) - third party
 # ---------------------------
-[casjay-i2pd]
-name=Casjay i2pd (OBS) - $releasever $basearch
-baseurl=https://download.opensuse.org/repositories/home:/supervillain/openSUSE_Leap_$releasever/
-gpgkey=https://download.opensuse.org/repositories/home:/supervillain/openSUSE_Leap_$releasever/repodata/repomd.xml.key
-enabled=0
-gpgcheck=1
-skip_if_unavailable=1
-
 [casjay-incus]
 name=Casjay incus (OBS) - $releasever $basearch
-baseurl=https://download.opensuse.org/repositories/home:/alvistack:/ppa/openSUSE_Leap_$releasever/
-gpgkey=https://download.opensuse.org/repositories/home:/alvistack:/ppa/openSUSE_Leap_$releasever/repodata/repomd.xml.key
+baseurl=https://download.opensuse.org/repositories/home:/alvistack/openSUSE_Leap_$releasever/
+gpgkey=https://download.opensuse.org/repositories/home:/alvistack/openSUSE_Leap_$releasever/repodata/repomd.xml.key
 enabled=0
 gpgcheck=1
 skip_if_unavailable=1
@@ -167,7 +159,7 @@ name=Casjay PostgreSQL 15 for openSUSE $releasever - $basearch
 baseurl=https://download.postgresql.org/pub/repos/zypp/15/openSUSE/openSUSE_Leap_$releasever/
 enabled=1
 gpgcheck=1
-gpgkey=https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG
+gpgkey=https://download.postgresql.org/pub/repos/zypp/keys/PGDG-RPM-GPG-KEY-SLES15
 skip_if_unavailable=1
 
 # Note: MongoDB zypper path uses major version 15, not minor ($releasever)
@@ -254,18 +246,10 @@ gpgcheck=1
 skip_if_unavailable=1
 
 # ---- OBS SRPMs - third party ----
-[casjay-i2pd-srpm]
-name=Casjay i2pd (OBS) - SRPMS - $releasever
-baseurl=https://download.opensuse.org/repositories/home:/supervillain/openSUSE_Leap_$releasever/src/
-gpgkey=https://download.opensuse.org/repositories/home:/supervillain/openSUSE_Leap_$releasever/repodata/repomd.xml.key
-enabled=0
-gpgcheck=1
-skip_if_unavailable=1
-
 [casjay-incus-srpm]
 name=Casjay incus (OBS) - SRPMS - $releasever
-baseurl=https://download.opensuse.org/repositories/home:/alvistack:/ppa/openSUSE_Leap_$releasever/src/
-gpgkey=https://download.opensuse.org/repositories/home:/alvistack:/ppa/openSUSE_Leap_$releasever/repodata/repomd.xml.key
+baseurl=https://download.opensuse.org/repositories/home:/alvistack/openSUSE_Leap_$releasever/src/
+gpgkey=https://download.opensuse.org/repositories/home:/alvistack/openSUSE_Leap_$releasever/repodata/repomd.xml.key
 enabled=0
 gpgcheck=1
 skip_if_unavailable=1
@@ -282,7 +266,7 @@ skip_if_unavailable=1
 [casjay-postgresql-srpm]
 name=Casjay PostgreSQL 15 SRPMS - $releasever
 baseurl=https://download.postgresql.org/pub/repos/zypp/15/openSUSE/openSUSE_Leap_$releasever/src/
-gpgkey=https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG
+gpgkey=https://download.postgresql.org/pub/repos/zypp/keys/PGDG-RPM-GPG-KEY-SLES15
 enabled=0
 gpgcheck=1
 skip_if_unavailable=1

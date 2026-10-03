@@ -165,7 +165,7 @@ name=Casjay EPEL $releasever - $basearch
 # EPEL 10 is branched per RHEL minor and $releasever alone resolves to the
 # newest branched minor, which outruns AlmaLinux/Rocky by a release and
 # pulls packages built against a not-yet-shipped baseos
-baseurl=https://download.fedoraproject.org/pub/epel/$releasever_major.$releasever_minor/Everything/$basearch
+baseurl=https://download.fedoraproject.org/pub/epel/$releasever_major/Everything/$basearch
 gpgkey=https://archive.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-$releasever
 module_hotfixes=1
 enabled=1
@@ -325,7 +325,7 @@ name=Casjay PostgreSQL 15 for EL $releasever - $basearch
 baseurl=https://download.postgresql.org/pub/repos/yum/15/redhat/rhel-$releasever-$basearch
 enabled=0
 gpgcheck=1
-gpgkey=https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG
+gpgkey=https://download.postgresql.org/pub/repos/yum/keys/PGDG-RPM-GPG-KEY-RHEL
 skip_if_unavailable=1
 
 [casjay-mongodb]
@@ -493,15 +493,7 @@ skip_if_unavailable=1
 [casjay-remi-srpm]
 name=Casjay Remi SRPMS
 baseurl=https://rpms.remirepo.net/SRPMS/
-gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2021
-enabled=0
-gpgcheck=1
-skip_if_unavailable=1
-
-[casjay-remi-modular-srpm]
-name=Casjay Remi Modular - SRPMS - $releasever
-baseurl=https://rpms.remirepo.net/enterprise/$releasever/modular/SRPMS/
-gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2021
+gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2026
 enabled=0
 gpgcheck=1
 skip_if_unavailable=1
@@ -571,7 +563,7 @@ skip_if_unavailable=1
 [casjay-postgresql-srpm]
 name=Casjay PostgreSQL 15 SRPMS - $releasever
 baseurl=https://download.postgresql.org/pub/repos/yum/srpms/15/redhat/rhel-$releasever-$basearch
-gpgkey=https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG
+gpgkey=https://download.postgresql.org/pub/repos/yum/keys/PGDG-RPM-GPG-KEY-RHEL
 enabled=0
 gpgcheck=1
 skip_if_unavailable=1

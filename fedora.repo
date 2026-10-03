@@ -11,7 +11,7 @@ mirrorlist=https://mirrors.fedoraproject.org/mirrorlist?repo=fedora-$releasever&
 enabled=1
 gpgcheck=1
 countme=1
-gpgkey=https://fedoraproject.org/static/fedora.gpg
+gpgkey=https://src.fedoraproject.org/rpms/fedora-repos/raw/rawhide/f/RPM-GPG-KEY-fedora-42-primary
 metadata_expire=86400
 enabled_metadata=1
 exclude=runc,php*,npm,nodejs
@@ -23,7 +23,7 @@ mirrorlist=https://mirrors.fedoraproject.org/mirrorlist?repo=updates-released-f$
 enabled=1
 gpgcheck=1
 countme=1
-gpgkey=https://fedoraproject.org/static/fedora.gpg
+gpgkey=https://src.fedoraproject.org/rpms/fedora-repos/raw/rawhide/f/RPM-GPG-KEY-fedora-42-primary
 metadata_expire=86400
 enabled_metadata=1
 exclude=runc,php*,npm,nodejs
@@ -97,7 +97,7 @@ skip_if_unavailable=1
 [casjay-rpmfusion-free]
 name=Casjay RPM Fusion Free for Fedora - $releasever $basearch
 mirrorlist=https://mirrors.rpmfusion.org/mirrorlist?repo=free-fedora-$releasever&arch=$basearch
-gpgkey=https://download1.rpmfusion.org/free/fedora/RPM-GPG-KEY-rpmfusion-free-fedora-$releasever
+gpgkey=https://download1.rpmfusion.org/free/fedora/RPM-GPG-KEY-rpmfusion-free-fedora-2020
 module_hotfixes=1
 enabled=1
 gpgcheck=1
@@ -106,7 +106,7 @@ skip_if_unavailable=1
 [casjay-rpmfusion-nonfree]
 name=Casjay RPM Fusion Nonfree for Fedora - $releasever $basearch
 mirrorlist=https://mirrors.rpmfusion.org/mirrorlist?repo=nonfree-fedora-$releasever&arch=$basearch
-gpgkey=https://download1.rpmfusion.org/nonfree/fedora/RPM-GPG-KEY-rpmfusion-nonfree-fedora-$releasever
+gpgkey=https://download1.rpmfusion.org/nonfree/fedora/RPM-GPG-KEY-rpmfusion-nonfree-fedora-2020
 module_hotfixes=1
 enabled=1
 gpgcheck=1
@@ -119,23 +119,7 @@ skip_if_unavailable=1
 [casjay-remi-base]
 name=Casjay Remi - $releasever $basearch
 baseurl=https://rpms.remirepo.net/fedora/$releasever/remi/$basearch/
-gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2021
-enabled=1
-gpgcheck=1
-skip_if_unavailable=1
-
-[casjay-remi-safe]
-name=Casjay Remi Safe - $releasever $basearch
-baseurl=https://rpms.remirepo.net/fedora/$releasever/safe/$basearch/
-gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2021
-enabled=1
-gpgcheck=1
-skip_if_unavailable=1
-
-[casjay-remi-php]
-name=Casjay Remi PHP 7.4 - $releasever $basearch
-baseurl=https://rpms.remirepo.net/fedora/$releasever/php74/$basearch/
-gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2021
+gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2025 https://rpms.remirepo.net/RPM-GPG-KEY-remi2026
 enabled=1
 gpgcheck=1
 skip_if_unavailable=1
@@ -143,7 +127,7 @@ skip_if_unavailable=1
 [casjay-remi-modular]
 name=Casjay Remi Modular - $releasever - $basearch
 baseurl=https://rpms.remirepo.net/fedora/$releasever/modular/$basearch/
-gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2021
+gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2025 https://rpms.remirepo.net/RPM-GPG-KEY-remi2026
 enabled=0
 gpgcheck=1
 repo_gpgcheck=1
@@ -194,7 +178,7 @@ name=Casjay PostgreSQL 15 for Fedora $releasever - $basearch
 baseurl=https://download.postgresql.org/pub/repos/yum/15/fedora/fedora-$releasever-$basearch
 enabled=0
 gpgcheck=1
-gpgkey=https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG
+gpgkey=https://download.postgresql.org/pub/repos/yum/keys/PGDG-RPM-GPG-KEY-Fedora
 skip_if_unavailable=1
 
 [casjay-mongodb]
@@ -315,7 +299,7 @@ skip_if_unavailable=1
 [casjay-remi-srpm]
 name=Casjay Remi SRPMS
 baseurl=https://rpms.remirepo.net/SRPMS/
-gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2021
+gpgkey=https://rpms.remirepo.net/RPM-GPG-KEY-remi2026
 enabled=0
 gpgcheck=1
 skip_if_unavailable=1
@@ -351,7 +335,7 @@ skip_if_unavailable=1
 [casjay-postgresql-srpm]
 name=Casjay PostgreSQL 15 SRPMS - $releasever
 baseurl=https://download.postgresql.org/pub/repos/yum/srpms/15/fedora/fedora-$releasever-$basearch
-gpgkey=https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG
+gpgkey=https://download.postgresql.org/pub/repos/yum/keys/PGDG-RPM-GPG-KEY-Fedora
 enabled=0
 gpgcheck=1
 skip_if_unavailable=1

@@ -166,7 +166,7 @@ skip_if_unavailable=1
 [casjay-postgresql]
 name=Casjay PostgreSQL 15 - $releasever $basearch
 baseurl=https://download.postgresql.org/pub/repos/yum/15/redhat/rhel-7-$basearch/
-gpgkey=https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG
+gpgkey=https://download.postgresql.org/pub/repos/yum/keys/PGDG-RPM-GPG-KEY-RHEL7
 enabled=1
 gpgcheck=1
 skip_if_unavailable=1
@@ -174,7 +174,7 @@ skip_if_unavailable=1
 [casjay-postgresql-common]
 name=Casjay PostgreSQL Common - $releasever $basearch
 baseurl=https://download.postgresql.org/pub/repos/yum/common/redhat/rhel-7-$basearch/
-gpgkey=https://download.postgresql.org/pub/repos/yum/RPM-GPG-KEY-PGDG
+gpgkey=https://download.postgresql.org/pub/repos/yum/keys/PGDG-RPM-GPG-KEY-RHEL7
 enabled=1
 gpgcheck=1
 skip_if_unavailable=1
